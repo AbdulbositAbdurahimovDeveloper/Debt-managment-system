@@ -1,0 +1,72 @@
+server:
+  port: 8080
+
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+
+  #  ai:
+  #    openai:
+  #      # Groq-dan olgan kalitingni qo'y
+  #      api-key: ${GROQ_API_KEY}
+  #      # OpenAI o'rniga Groq manzili
+  #      base-url: https://api.groq.com/openai
+  #      chat:
+  #        options:
+  #          # Groq-dagi eng kuchli model
+  #          model: llama-3.3-70b-versatile
+
+
+  banner:
+    location: classpath:banner.txt
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/debts_ai
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+      format_sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+application:
+  jwt:
+    secret: ${JWT_SECRET_KEY}
+    access-token-expiration: ${ACCESS_TOKEN_EXPIRATION}
+    refresh-token-expiration: ${REFRESH_TOKEN_EXPIRATION}
+
+google:
+  sheets:
+    application-name: NotUzBot
+    credentials-path: /google-key.json
+    spreadsheet-id: 1qrCUMqbiXM2yuYAOwK6jhX99JcXq3CvjGJlDZB16qKE
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN}
+    username: ${TELEGRAM_BOT_USERNAME}
+    webhook-path: ${TELEGRAM_BOT_PATH}
+    secret-token: ${TELEGRAM_BOT_SECRET_TOKENT}
+  health:
+    token: ${TELEGRAM_HEALTH_TOKEN}
+    username: ${TELEGRAM_HEALTH_USERNAME}
+    webhook-path: ${TELEGRAM_HEALTH_PATH}
+    secret-token: ${TELEGRAM_HEALTH_SECRET_TOKENT}
+    develop-chat-id: ${TELEGRAM_HEALTH_DEVELOP_CHAT_ID}
+
+

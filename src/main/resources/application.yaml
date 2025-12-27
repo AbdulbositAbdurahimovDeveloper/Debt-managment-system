@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Qarzdorlar-AI
+
+  profiles:
+    active: dev
