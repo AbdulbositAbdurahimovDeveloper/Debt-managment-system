@@ -1,10 +1,10 @@
 package uz.qarzdorlar_ai.service;
 
 import lombok.RequiredArgsConstructor;
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 import uz.qarzdorlar_ai.exception.EntityNotFoundException;
 import uz.qarzdorlar_ai.mapper.CurrencyMapper;
 import uz.qarzdorlar_ai.model.Currency;
