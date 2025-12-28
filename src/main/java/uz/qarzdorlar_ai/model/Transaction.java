@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.experimental.FieldNameConstants;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
+import uz.qarzdorlar_ai.enums.TransactionStatus;
 import uz.qarzdorlar_ai.enums.TransactionType;
 import uz.qarzdorlar_ai.model.embedded.AbsLongEntity;
 
@@ -40,8 +41,12 @@ public class Transaction extends AbsLongEntity {
     @Column(nullable = false)
     private TransactionType type; // SALE, PAYMENT, RETURN, TRANSFER
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TransactionStatus status; // PENDING, CANCELLED
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "currency_id", nullable = false)
+    @JoinColumn(name = "currency_id", nullable = true)
     private Currency currency; // Currency used in this transaction (Ex: Paid in UZS)
 
     @Column(nullable = false, precision = 19, scale = 4)
@@ -50,14 +55,14 @@ public class Transaction extends AbsLongEntity {
     @Column(nullable = false, precision = 19, scale = 4)
     private BigDecimal clientExchangeRate; // Rate: 1 USD = ? Client Balance Currency (Ex: 3.67 for AED)
 
-    @Column(nullable = false, precision = 19, scale = 4)
+    @Column(nullable = true, precision = 19, scale = 4)
     private BigDecimal originalAmount; // Exact amount given by client (Ex: 1,280,000 UZS)
 
     @Column(precision = 19, scale = 4)
     private BigDecimal receiverExchangeRate; // Receiver's rate (Ex: 3.67 for AED)
 
     @Column(nullable = false, precision = 19, scale = 4)
-    private BigDecimal usdAmount; // Calculated value in USD (Ex: 100 USD)
+    private BigDecimal usdAmount; // Calculated value in USD (Ex: 100 USD) // 2000$
 
     @Column(nullable = false, precision = 19, scale = 4)
     private BigDecimal balanceAmount; // Final amount to affect Client's Ledger (Ex: 100 USD or 367 AED)

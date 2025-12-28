@@ -1,677 +1,181 @@
-2025-12-26 00:00:00 INFO  [task-8] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-26 00:00:02 INFO  [task-8] u.q.service.sheet.SheetServiceImpl - Header updated successfully: Data inserted date 26.12.2025 time 00:00:02
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  💾 Sheets data size 258 
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 1 Item added to list for AI: HP OmniStudio X 32"|Intel Core Ultra7 155H|DDR5 32GB|1TB SSD|31,5inch 4K UHD IPS|RTX 4050 6GB|WIN 11HOME
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 2 Item added to list for AI: HP Pavilion 32|Intel Core i7-13700T|DDR4 16GB|1TB SSD M.2 Nvme|31.5 QHD 2K|NVIDIA GeForce RTX 3050 4GB|Win 11H|Black (6J6L2AV)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 3 Item added to list for AI: HP EliteOne 870 G9|Intel Core i7-14700T|DDR5 16GB 4800Mhz Sodimm|SSD 1TB M.2 NVMe|27" QHD IPS|TOUCH SCREEN (C21HPPT)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 4 Item added to list for AI: HP EliteOne 870 G9|Intel Core i7-14700T|DDR5 16GB 4800Mhz Sodimm|SSD 1TB M.2 NVMe|27" FHD IPS| NON TOUCH (C21HQPT)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 5 Item added to list for AI: HP Pavilion 27-ca2008ny|Intel Core i7-13700T|DDR4 16GB|512GB SSD M2 Nvme|Nvidia RTX 3050 4GB|27" FHD IPS|Free Dos|White (9R7C5EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 6 Item added to list for AI: HP Pavilion 27-ca2023ny|Intel Core i7-13700T|DDR4 16GB|512GB SSD SSD M.2 Nvme|NVIDIA RTX 3050 4GB|27" QHD Touchscreen|Snowflake White (8G4J1EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 7 Item added to list for AI: HP Pavilion 27|Intel Core i7-10700T|DDR4 16GB|256GB SSD SSD M.2 Nvme|1TB HDD|NVIDIA GeForce MX 350 4GB|27" FHD IPS Touch|White (3UR11AA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 8 Item added to list for AI: HP ProOne 440 G9|Intel Core i5-12500T|DDR4 16GB|256GB SSD M2 Nvme|24" FHD IPS|Black|С регулируемой по высоте и по кругу подставкой (564F8AV)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 9 Item added to list for AI: HP 27-cr0034ny/Intel Core i7-1355U/DDR4 16GB/512GB SSD/White (AE0A4EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 10 Item added to list for AI: HP 27-cr0067ny|Intel Core i7-1355U|DDR4 16GB|512GB SSD M.2 Nvme|Intel Iris X Graphics|27" FHD IPS|Shell White|Free DOS
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 11 Item added to list for AI: HP 27-CR0008ci|Intel Core i5-1335U|DDR4 16GB|512GB SSD M.2 Nvme|27" FHD IPS|Shell White|Free DOS
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 12 Item added to list for AI: HP 27-CD1004NH|Intel Core i7-1255U|DDR4 16GB|1TB SSDM.2 Nvme|27" FHD IPS TOUCH|White (6M828EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 13 Item added to list for AI: HP 27-CB1010NY|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme|27" FHD IPS TOUCH|White (6P141EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 14 Item added to list for AI: HP 27-CB1010NY|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme|27" FHD IPS NON TOUCH|White (6P141EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 15 Item added to list for AI: HP 27-DP1079NY|Intel Core i5-1135G7|DDR4 4GB|1TB HDD|27" FHD IPS TOUCH|Silver(4X5E3EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 16 Item added to list for AI: HP 24-CR0032NY|Intel Core i5-1335U|DDR4 8GB|512GB SSD M.2 Nvme|24" FHD IPS|White
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 17 Item added to list for AI: HP 24-CB1013nh|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme| 24" FHD IPS|White (6M805EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 18 Item added to list for AI: HP 24-1026|Intel Core i5-1235U|DDR4 8GB|512GB SSD M.2 Nvme|24"FHD IPS|Black (6V340EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 19 Item added to list for AI: HP 24-DF1059NY|Intel Core i5-1135G7|DDR4 4GB|1TB HDD|24"FHD IPS Touch|White (4X5F2EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 20 Item added to list for AI: HP 24-DF1059NY|Intel Core i5-1135G7|DDR4 4GB|256GB HDD|24"FHD IPS Touch|White (4X5F2EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 21 Item added to list for AI: HP 24-CB1445NH|Intel Core i3-1215U|DDR4 8GB|512GB SSD M.2 Nvme|24" FHD IPS|White (929F2EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 22 Item added to list for AI: HP 24-CB1274NH|Intel Core i3-1215U|DDR4 4GB|256GB SSD M.2 Nvme|24"FHD IPS|Black (7H375EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 23 Item added to list for AI: HP 24-CB1288NH|Intel Core i3-1215U|DDR4 8GB|512GB SSD M.2 Nvme|24"FHD IPS (B73TXEA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 24 Item added to list for AI: Lenovo IdeaCentre AIO 27IRH9/Intel Core i7-13620H|16GB DDR5|512GB SSD M.2 Nvme|27" FHD IPS|Cloud Grey
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 25 Item added to list for AI: Lenovo Ideacentre AIO 27IRH9|Intel Core i5-13420H|8GB DDR5|512GB SSD M.2 Nvme|27"FHD IPS|Luna Grey
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 26 Item added to list for AI: Lenovo Ideacentre AIO 27IRH9|Intel Core i5-13420H|8GB DDR5|512GB SSD M.2 Nvme|27"FHD IPS|Luna  Grey|NON TOUCH|Win11H
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 27 Item added to list for AI: Lenovo Ideacentre AIO 27AAR9|AMD Ryzen5-8645HS|16GB DDR5|1TB SSD M.2 Nvme|27"FHD IPS|Luna Grey|TOUCH| Win11H
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 28 Item added to list for AI: Acer Veriton Z4714G 23.8"FullHD non-touch IPS|Intel core i3-13100|8 GB DDR4|512 GB M.2 NVME SSD|ESHE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 29 Item added to list for AI: Acer Veriton Z4714G 23.8"FullHD non-touch IPS|Intel Core i5-13400|8 GB DDR4|512 GB M.2 NVME SSD|ESHE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 30 Item added to list for AI: HP Spectre x360 14-eu0013dx/Intel Core Ultra 7-155H/RAM 16GB/1TB SSD/14'' 2.8K OLED/Black/Win11H (979L2UA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 31 Item added to list for AI: Hp OmniBook Ultra Flip 14-fh0033dx/Intel Core Ultra 9-288V/32GB DDR5/2TB SSD/14.0" 3K UWVA OLED (400 nits, 48-120Hz, VRR)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 32 Item added to list for AI: Hp OmniBook 5 Flip 14-fp0023dx/Intel Core 7-150U/RAM 16GB/512GB SSD/14.0" 2K IPS LED / Touchscreen
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 33 Item added to list for AI: Hp OmniBook 5 Flip 14-fp0013dx/Intel Core 5-120U/RAM 8GB/512GB SSD/14.0" 2K IPS LED / Touchscreen
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 34 Item added to list for AI: HP Envy x360 14-es1013dx/Intel Core 5-120U/RAM 8GB/512GB SSD/14"FHD IPS LED/Silver/Win11H(9R8R2UA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 35 Item added to list for AI: HP EliteBook 840 G10/Intel Core i7-1355U/16GB DDR5/512GB SSD/14" WUXGA IPS/Silver (8A414EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 36 Item added to list for AI: HP ProBook 440 14 inch G11/Intel Core Ultra 5 125U/16 GB DDR5/512GB SSD/WUXGA/Pike silver (A22ZLEA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 37 Item added to list for AI: HP ProBook 460 16 inch G11/Intel Core Ultra 7 155U/8 GB DDR5/512GB SSD/WUXGA/Pike silver (A23A1EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 38 Item added to list for AI: HP ProBook 460 16 inch G11/Intel Core Ultra 5 125U/8 GB DDR5/512GB SSD/WUXGA/Pike silver (B9ZF2ET)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 39 Item added to list for AI: HP ProBook 450 15.6 inch G10|Intel Core i5-1335U|8GB DDR4|512GB SSD|UHD IPS|Silver Color Backlit
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 40 Item added to list for AI: HP Victus 15-fa2317tx/Intel core i7-13620H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 4050 6GB Blue
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 41 Item added to list for AI: HP Victus 15-fa2318tx/Intel core i7-13620H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 3050 6GB Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 42 Item added to list for AI: HP Victus 15-fb3093dx/AMD Ryzen 7-7445HS/DDR5 16GB/512GB SSD/15.6 FHD IPS 144HZ/NVIDIA GeForce RTX 4050 6GB Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 43 Item added to list for AI: HP Victus 16-r0016nia/Intel core i5-13500H/DDR5 16 GB/512 SSD/ 16 FHD IPS LED/ NVIDIA GeForce RTX 3050 6GB Blue
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 44 Item added to list for AI: HP Victus 15-fa2013dx/Intel core i5-13420H/DDR4 8GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 3050 6GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 45 Item added to list for AI: HP Victus 15-fa2082wm/Intel core i5-13420H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 4050 6GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 46 Item added to list for AI: HP OMEN 16-ap0167ax/AMD Ryzen 9 8940HX/DDR5 16GB/512GB SSD/RTX 5060 8GB/16.0" 2K IPS LED (300nits, 60-144HZ . VRR)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 47 Item added to list for AI: HP OMEN 16-ae0010st/Intel core i7-14650HX/DDR5 16GB/512 SSD/RTX 4060 8GB/16.1" FHD IPS LED (300nits, 144HZ)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 48 Item added to list for AI: HP Pavilion Gaming 15-ec2355nw/AMD Ryzen 7-5800H//DDR4 16GB/512 GB SSD/NVIDIA GeForce RTX 3050 4GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 49 Item added to list for AI: HP Pavilion16-ag0070wm / AMD Ryzen 7 8840U / DDR5 8GB / 512GB SSD / 16" WUXGA IPS / Win11 / Silver
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 50 Item added to list for AI: HP 15-fd0250wm/Intel Core™ i5-1334U/8GB DDR4/512GB SSD/15.6 HD / Keyboard Backlit/Silver
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 51 Item added to list for AI: HP 15-fd0007ny/Intel Core™ i5-1334U/16GB DDR4/512GB SSD/15.6 FHD IPS LED / Keyboard Backlit/Silver
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 52 Item added to list for AI: HP 15-fd0150wm / Intel core 5-120U / DDR4 8GB / 512GB SSD / 15.6" FHD IPS Touch / Win11 / Silver
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 53 Item added to list for AI: HP 15-fd0150wm / Intel core i5-1334U / DDR4 8GB / 512GB SSD / 15.6" FHD IPS Touch / Win11 / Silver
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 54 Item added to list for AI: HP 15-fd00095wm/Intel Core i5-1235U/8GB DDR4/256GB SSD/15.6 FHD IPS / Silver (A2BZ9UA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 55 Item added to list for AI: Hp Laptop 15-f0180nia|Intel Core i3-1315U|DDR4 8GB|512GB SSD|15.6" FHD LED|Silver (C92MFEA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 56 Item added to list for AI: HP Laptop 15-fd0336nia/Intel Core i3-1315U/DDR4 4GB/256GB SSD/15.6" FHD/Silver/Backlit (943W4EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 57 Item added to list for AI: HP Laptop 15-fd0333nia/Intel Core i3-1315U/DDR4 4GB/256GB SSD/15.6" FHD/Gold/Backlit (943W1EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 58 Item added to list for AI: HP 250 G8/Intel Core i3-1115G4/DDR4 8GB/256GB SSD/FHD/(6F2B2EA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 59 Item added to list for AI: Acer Aspire 5/ Intel Core i5-1235U/DDR4 8GB/512GB SSD/RTX 2050 4GB/16" FHD IPS SlimBezel
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 60 Item added to list for AI: Asus Zenbook 14 OLED UX3405C|Intel Core Ultra9-285H|DDR5 32GB|SSD 1TB|14.0" OLED WUXGA 120Hz TouchScreen|WIN 11 home
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 61 Item added to list for AI: Asus Vivobook /Intel core i5-12500H/DDR4 8gb/512 SSD/FHD LCD/WIN11 Touch
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 62 Item added to list for AI: Asus Vivobook Go 15-E1504F/AMD Ryzen 3 7320U/DDR4 8GB (ON BD)/128GB SSD/MIXED BLACK
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 63 Item added to list for AI: Lenovo ThinkPad X1 Yoga/Intel Core i7-8565U/DDR4 16 GB/512 GB SSD
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 64 Item added to list for AI: Lenovo Legion 5 15IRX10 Intel Core i7-14700HX/DDR5 16gb/1TB SSD/RTX 5060 8GB/WIN 11 home / 15.1 " WQXGA OLED
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 65 Item added to list for AI: Lenovo Thinkpad E16|Ultra 7-255H|16GB DDR5|512GB SSD|16" FHD IPS 300nits WUXGA|Backlit ENG KB, Top Load Case
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 66 Item added to list for AI: Lenovo LOQ 15IRX9 Intel Core i7-14700HX|DDR5 16GB|512GB SSD|15.6 " FHD|NVDIA GeForce RTX 4060 8GB|Luna GREY
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 67 Item added to list for AI: Microsoft Surface Pro 12|Snapdragon X Plus|16GB RAM|256GB SSD|12inch 120Hz|Platinum|No Charger
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 68 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|32GB RAM|1TB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 69 Item added to list for AI: Microsoft Surface Pro11 With 5G|Snapdragon X Elite|16GB RAM|512GB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 70 Item added to list for AI: Microsoft Surface Pro11 With 5G|Snapdragon X Plus|16GB RAM|256GB SSD|13inch OLED 120Hz| Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 71 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|1TB SSD|13inch OLED 120Hz|Black|No Charger
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 72 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|1TB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 73 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|512GB SSD|13inch OLED 120Hz|Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 74 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Plus|16GB RAM|512GB SSD|13inch OLED 120Hz| Black Ekranida Dogi bor
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 75 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Plus|16GB RAM|512GB SSD|13inch OLED 120Hz| Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 76 Item added to list for AI: Microsoft Surface Pro 10 for Business|Intel Core Ultra 5-135U|8GB RAM|256GB SSD|13inch FHD IPS|Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 77 Item added to list for AI: Microsoft Surface Pro 10 for Business/ Intel Core Ultra 7-165U/16GB RAM/512GB SSD/Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 78 Item added to list for AI: Microsoft Surface Pro 9|Intel Core i7-12TH GEN|16GB RAM/256GB SSD|13inch FHD IPS|PLATINUM
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 79 Item added to list for AI: Microsoft Surface Pro 8|Intel Core  i5 -11TH GEN|8GB RAM|128Gb SSD|13inch FHD|LTE|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 80 Item added to list for AI: Microsoft Surface Pro 7+|Intel Core i7-11TH GEN|16GB RAM|256GB SSD|13inch FHD|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 81 Item added to list for AI: Microsoft Surface Pro7 |Intel Core i5-10TH|DDR4 8GB|SSD 256GB|Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 82 Item added to list for AI: Microsoft Surface GO 2|4GB RAM|64GB STORAGE|Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 83 Item added to list for AI: Microsoft USB-C Travel Hub
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 84 Item added to list for AI: Microsoft Audio Dock
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 85 Item added to list for AI: Microsoft Pen Slim 2
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 86 Item added to list for AI: Microsoft Pen 1 Red
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 87 Item added to list for AI: Microsoft Pen 1 Stylet|White
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 88 Item added to list for AI: Microsoft Bluetooth Ergonomic Mouse
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 89 Item added to list for AI: Microsoft Mouse Souris Arc (WHITE)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 90 Item added to list for AI: Microsoft Mouse Souris Arc (BLACK)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 91 Item added to list for AI: Incase Mouse (PLATINUM)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 92 Item added to list for AI: Incase Mouse (BLACK)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 93 Item added to list for AI: Microsoft Power Supply 65W
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 94 Item added to list for AI: Microsoft Power Supply 44W
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 95 Item added to list for AI: Microsoft Mouse 1850
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 96 Item added to list for AI: Microsoft Pro 12 Keyboard Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 97 Item added to list for AI: Microsoft Keyboard WITH SLIM PEN 2 Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 98 Item added to list for AI: Microsoft Keyboard WITH SLIM PEN 2 Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 99 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Gold
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 100 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Sapphire
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 101 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 102 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Platinum
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 103 Item added to list for AI: Microsoft Keyboard Black Pro 7 (TYPE COVER)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 104 Item added to list for AI: Case
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 105 Item added to list for AI: HDD 1TB SEAGATE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 106 Item added to list for AI: HDD 1TB TOSHIBA
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 107 Item added to list for AI: HDD 1TB WD BLUE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 108 Item added to list for AI: HDD WD PURPLE 1TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 109 Item added to list for AI: HDD WD PURPLE 2TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 110 Item added to list for AI: HDD WD PURPLE 4TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 111 Item added to list for AI: USB HDD 1TB TRANSCEND
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 112 Item added to list for AI: USB HDD 2TB TRANSCEND
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 113 Item added to list for AI: USB HDD 4TB TRANSCEND
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 114 Item added to list for AI: USB HDD 1TB SEAGATE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 115 Item added to list for AI: USB HDD 2TB SEAGATE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 116 Item added to list for AI: USB HDD 4TB SEAGATE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 117 Item added to list for AI: USB HDD 1TB TOSHIBA
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 118 Item added to list for AI: SSD M2 NVME LEXAR 4TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 119 Item added to list for AI: SSD M2 NVME LEXAR 2TB LNM790
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 120 Item added to list for AI: SSD M2 NVME TEAMGROUP 2TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 121 Item added to list for AI: SSD M2 NVME CRUCIAL 1TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 122 Item added to list for AI: SSD M2 NVME LEXAR 1TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 123 Item added to list for AI: SSD M2 NVME DATO 1TB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 124 Item added to list for AI: SSD M2 NVME DATO 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 125 Item added to list for AI: SSD M2 NVME SURFACE 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 126 Item added to list for AI: SSD M2 NVME SURFACE 256GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 127 Item added to list for AI: SSD M2 NVME LEXAR 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 128 Item added to list for AI: SSD M2 NVME HP 500GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 129 Item added to list for AI: SSD M2 NVME TEAMGROUP 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 130 Item added to list for AI: SSD M2 NVME 512GB CRUCIAL
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 131 Item added to list for AI: SSD M2 NVME 256GB LEXAR
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 132 Item added to list for AI: SSD M2 NVME 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 133 Item added to list for AI: SSD M2 NVME 256GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 134 Item added to list for AI: SSD SATA CRUCIAL 1000GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 135 Item added to list for AI: SSD SATA LEXAR 512GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 136 Item added to list for AI: SSD SATA LEXAR 256GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 137 Item added to list for AI: SoDDR5 32GB/5600 CRUCIAL
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 138 Item added to list for AI: SoDDR5 32GB/5600 LEXAR
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 139 Item added to list for AI: SoDDR5 16GB/5600 TEAMGROUP
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 140 Item added to list for AI: SoDDR5 16GB/4800 CRUCIAL
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 141 Item added to list for AI: SoDDR5 8GB/5200 KINGSTON
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 142 Item added to list for AI: SoDDR5 8GB/4800 CRUCIAL
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 143 Item added to list for AI: SoDDR5 8GB/5600 SAMSUNG
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 144 Item added to list for AI: SoDDR4 32GB/3200 LEXAR
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 145 Item added to list for AI: SoDDR4 16GB/3200 LEXAR
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 146 Item added to list for AI: SoDDR4 16/3200 SAMSUNG
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 147 Item added to list for AI: SoDDR4 8GB/3200 LEXAR
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 148 Item added to list for AI: SoDDR4 8GB/3200 SAMSUNG
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 149 Item added to list for AI: SoDDR4 4GB/SAMSUNG
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 150 Item added to list for AI: SoDDR3 2GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 151 Item added to list for AI: SoDDR3 1GB
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 152 Item added to list for AI: SoDDR4 16GB/3200 CRUCAL
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 153 Item added to list for AI: Laser Jet M111a
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 154 Item added to list for AI: Laser Jet M111w
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 155 Item added to list for AI: Canon G3430 рангли
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 156 Item added to list for AI: Canon i-sensys LBP223dw
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 157 Item added to list for AI: Canon i-sensys MF463dw
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 158 Item added to list for AI: Canon i-sensys MF3010
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 159 Item added to list for AI: Canon i-sensys MF272dw
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 160 Item added to list for AI: Canon imegclass MF3010
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 161 Item added to list for AI: Canon MF275dw
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 162 Item added to list for AI: Canon imegclass LBP6030w
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 163 Item added to list for AI: Canon PIXMA G2470
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 164 Item added to list for AI: Epson Ecotank L5290
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 165 Item added to list for AI: Epson Ecotank L3252
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 166 Item added to list for AI: Epson EcotanknL8050
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 167 Item added to list for AI: Epson LX-300+
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 168 Item added to list for AI: Pantum M6500W
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 169 Item added to list for AI: Pantium M6553NW
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 170 Item added to list for AI: Pantium M7100DW
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 171 Item added to list for AI: Pantium M6503
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 172 Item added to list for AI: Pantium M6503W
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 173 Item added to list for AI: Pantium BM5201ADW
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 174 Item added to list for AI: Hp pavilion gaming keyboard 800
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 175 Item added to list for AI: Hp pavilion gaming keyboard 550
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 176 Item added to list for AI: Hp pavilion (oq)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 177 Item added to list for AI: Hp pavilion (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 178 Item added to list for AI: Hp klaviatura (simsiz oq)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 179 Item added to list for AI: Hp klaviatura (simsiz qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 180 Item added to list for AI: Hp klaviatura (simli)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 181 Item added to list for AI: Hp CS900 (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 182 Item added to list for AI: Hp CS10 (oq)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 183 Item added to list for AI: Hp CS10(qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 184 Item added to list for AI: hp cs710
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 185 Item added to list for AI: Lenova klaviatura (simsiz)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 186 Item added to list for AI: Rapoo 9050M (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 187 Item added to list for AI: Rapoo X125S (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 188 Item added to list for AI: Rapoo E9500M (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 189 Item added to list for AI: Rapoo xk100
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 190 Item added to list for AI: rapoo 900m black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 191 Item added to list for AI: rapoo 900m white
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 192 Item added to list for AI: rapoo e2710
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 193 Item added to list for AI: Metoo C20 combo (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 194 Item added to list for AI: Skyline 895
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 195 Item added to list for AI: Logitech K120
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 196 Item added to list for AI: Logitech K230
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 197 Item added to list for AI: Logitech MK 240 NANO
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 198 Item added to list for AI: logitech k400
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 199 Item added to list for AI: TF-200
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 200 Item added to list for AI: DW 300
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 201 Item added to list for AI: Hp s1000 plus (qora)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 202 Item added to list for AI: Hp s1000 plus (oq)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 203 Item added to list for AI: Hp 9500
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 204 Item added to list for AI: Hp FM510a
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 205 Item added to list for AI: Hp S1500
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 206 Item added to list for AI: Hp mishka simsiz
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 207 Item added to list for AI: Logitech M170
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 208 Item added to list for AI: Logitech M185
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 209 Item added to list for AI: Logitech M190
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 210 Item added to list for AI: Logitech M275
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 211 Item added to list for AI: Logetech M330
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 212 Item added to list for AI: Logitech  CORDLES
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 213 Item added to list for AI: Logitech G102 black
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 214 Item added to list for AI: Logitech G102 white
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 215 Item added to list for AI: RAZER
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 216 Item added to list for AI: Logitech M350S
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 217 Item added to list for AI: Logitech M196
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 218 Item added to list for AI: metoo
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 219 Item added to list for AI: Cobra
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 220 Item added to list for AI: Air desktop-2
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 221 Item added to list for AI: Avt DW222
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 222 Item added to list for AI: Avtech NW207
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 223 Item added to list for AI: Avtech G11-590FX
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 224 Item added to list for AI: Avtech Zero Delay
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 225 Item added to list for AI: HYPERX Cloud III Signatura Comfort
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 226 Item added to list for AI: Hp H231R naushnik
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 227 Item added to list for AI: Logitech Zone Vibe 100
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 228 Item added to list for AI: Logitech H540
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 229 Item added to list for AI: Logitech H390
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 230 Item added to list for AI: Logitech H340
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 231 Item added to list for AI: Archer C24
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 232 Item added to list for AI: Archer C54
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 233 Item added to list for AI: Archer C50
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 234 Item added to list for AI: Archer C6
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 235 Item added to list for AI: Archer C64
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 236 Item added to list for AI: Archer C6U
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 237 Item added to list for AI: Archer C60
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 238 Item added to list for AI: Archer C80
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 239 Item added to list for AI: Archer AX72
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 240 Item added to list for AI: Archer AX73
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 241 Item added to list for AI: Archer AX12
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 242 Item added to list for AI: Archer AX23
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 243 Item added to list for AI: TL-WA1201
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 244 Item added to list for AI: TL-MR6400
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 245 Item added to list for AI: TL-WR840N
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 246 Item added to list for AI: TL-SG1016D 16-port
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 247 Item added to list for AI: TL-WA855RE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 248 Item added to list for AI: TL-WA850RE
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 249 Item added to list for AI: TL-SG1008D
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 250 Item added to list for AI: TL_WA901ND
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 251 Item added to list for AI: TL_WR845N
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 252 Item added to list for AI: LS1008
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 253 Item added to list for AI: Deco AC1900 S7(2 pack)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 254 Item added to list for AI: Deco AC1900 S7(3 pack)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 255 Item added to list for AI: 27 Asus ProArt PA279CV
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 256 Item added to list for AI: Hp M24F
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 257 Item added to list for AI: hp E24m G4 FHD Conferencing USB-C (40Z32AA)
-2025-12-26 00:00:02 INFO  [task-8] u.q.s.GoogleSheetDataUpdates -  ➕ 258 Item added to list for AI: Lenovo Y27q-30   LEGION
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 1
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 2
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 3
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 4
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 5
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 6
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 7
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 8
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 9
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 10
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 11
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 12
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 13
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 14
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 15
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 16
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 17
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 18
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 19
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 20
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 21
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 22
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 23
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 24
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 25
-2025-12-26 00:00:03 INFO  [task-8] u.q.s.GoogleSheetDataUpdates - Batch processed: 26
-2025-12-26 00:51:29 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-26 00:51:29 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-26 00:51:29 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-26 00:51:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-26 00:51:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-26 16:23:52 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-26 16:23:52 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 21.0.8 with PID 67241 (/home/abdulbosit/IdeaProjects/notuz/Qarzdorlar-AI/target/classes started by abdulbosit in /home/abdulbosit/IdeaProjects/notuz/Qarzdorlar-AI)
-2025-12-26 16:23:52 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-26 16:23:53 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-26 16:23:53 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
-2025-12-26 16:23:53 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-26 16:23:53 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-26 16:23:53 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-26 16:23:53 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-26 16:23:53 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-26 16:23:53 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1376 ms
-2025-12-26 16:23:54 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-26 16:23:54 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-26 16:23:54 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-26 16:23:54 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-26 16:23:54 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-26 16:23:54 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-26 16:23:54 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@633cad4d
-2025-12-26 16:23:54 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-26 16:23:54 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-28 11:24:06 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-28 11:24:06 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 14096 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-28 11:24:06 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-28 11:24:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-28 11:24:08 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 298 ms. Found 5 JPA repository interfaces.
+2025-12-28 11:24:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 11:24:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 11:24:09 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 11:24:09 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-28 11:24:09 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-28 11:24:09 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3090 ms
+2025-12-28 11:24:09 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-28 11:24:09 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-28 11:24:09 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-28 11:24:09 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-28 11:24:10 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c3b0cc8
+2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-28 11:24:11 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
-	Database version: 17.6
+	Database version: 18.1
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-26 16:23:55 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukrdxh7tq2xs66r485cc8dkxt77" of relation "brand" does not exist, skipping
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjgbii7eaw72fc9llajcdeyjb" of relation "client" does not exist, skipping
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uksl8ny8en581rfgjfq3d0tv0ab" of relation "client" does not exist, skipping
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk1ixfyfepst9sjbo9op1v65fg0" of relation "client" does not exist, skipping
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukagsvbr4mhfj49c96foedgq8wk" of relation "telegram_user" does not exist, skipping
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-26 16:23:55 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uke5h89rk3ijvdmaiig4srogdc6" of relation "user_profiles" does not exist, skipping
-2025-12-26 16:23:55 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-26 16:23:56 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
-2025-12-26 16:23:56 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
-2025-12-26 16:23:56 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
-2025-12-26 16:23:57 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-12-26 16:23:57 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-12-26 16:23:57 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 5.478 seconds (process running for 6.707)
-2025-12-26 17:43:48 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-26 17:43:50 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Header updated successfully: Data inserted date 26.12.2025 time 17:43:50
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  💾 Sheets data size 260 
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 1 Item added to list for AI: HP OmniStudio X 32"|Intel Core Ultra7 155H|DDR5 32GB|1TB SSD|31,5inch 4K UHD IPS|RTX 4050 6GB|WIN 11HOME
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 2 Item added to list for AI: HP Pavilion 32|Intel Core i7-13700T|DDR4 16GB|1TB SSD M.2 Nvme|31.5 QHD 2K|NVIDIA GeForce RTX 3050 4GB|Win 11H|Black (6J6L2AV)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 3 Item added to list for AI: HP EliteOne 870 G9|Intel Core i7-14700T|DDR5 16GB 4800Mhz Sodimm|SSD 1TB M.2 NVMe|27" QHD IPS|TOUCH SCREEN (C21HPPT)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 4 Item added to list for AI: HP EliteOne 870 G9|Intel Core i7-14700T|DDR5 16GB 4800Mhz Sodimm|SSD 1TB M.2 NVMe|27" FHD IPS| NON TOUCH (C21HQPT)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 5 Item added to list for AI: HP Pavilion 27-ca2008ny|Intel Core i7-13700T|DDR4 16GB|512GB SSD M2 Nvme|Nvidia RTX 3050 4GB|27" FHD IPS|Free Dos|White (9R7C5EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 6 Item added to list for AI: HP Pavilion 27-ca2023ny|Intel Core i7-13700T|DDR4 16GB|512GB SSD SSD M.2 Nvme|NVIDIA RTX 3050 4GB|27" QHD Touchscreen|Snowflake White (8G4J1EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 7 Item added to list for AI: HP Pavilion 27|Intel Core i7-10700T|DDR4 16GB|256GB SSD SSD M.2 Nvme|1TB HDD|NVIDIA GeForce MX 350 4GB|27" FHD IPS Touch|White (3UR11AA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 8 Item added to list for AI: HP ProOne 440 G9|Intel Core i5-12500T|DDR4 16GB|256GB SSD M2 Nvme|24" FHD IPS|Black|С регулируемой по высоте и по кругу подставкой (564F8AV)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 9 Item added to list for AI: HP 27-cr0034ny/Intel Core i7-1355U/DDR4 16GB/512GB SSD/White (AE0A4EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 10 Item added to list for AI: HP 27-cr0067ny|Intel Core i7-1355U|DDR4 16GB|512GB SSD M.2 Nvme|Intel Iris X Graphics|27" FHD IPS|Shell White|Free DOS
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 11 Item added to list for AI: HP 27-CR0008ci|Intel Core i5-1335U|DDR4 16GB|512GB SSD M.2 Nvme|27" FHD IPS|Shell White|Free DOS
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 12 Item added to list for AI: HP 27-CD1004NH|Intel Core i7-1255U|DDR4 16GB|1TB SSDM.2 Nvme|27" FHD IPS TOUCH|White (6M828EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 13 Item added to list for AI: HP 27-CB1010NY|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme|27" FHD IPS TOUCH|White (6P141EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 14 Item added to list for AI: HP 27-CB1010NY|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme|27" FHD IPS NON TOUCH|White (6P141EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 15 Item added to list for AI: HP 27-DP1079NY|Intel Core i5-1135G7|DDR4 4GB|1TB HDD|27" FHD IPS TOUCH|Silver(4X5E3EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 16 Item added to list for AI: HP 24-CR0032NY|Intel Core i5-1335U|DDR4 8GB|512GB SSD M.2 Nvme|24" FHD IPS|White
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 17 Item added to list for AI: HP 24-CB1013nh|Intel Core i7-1255U|DDR4 8GB|512GB SSD M.2 Nvme| 24" FHD IPS|White (6M805EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 18 Item added to list for AI: HP 24-1026|Intel Core i5-1235U|DDR4 8GB|512GB SSD M.2 Nvme|24"FHD IPS|Black (6V340EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 19 Item added to list for AI: HP 24-DF1059NY|Intel Core i5-1135G7|DDR4 4GB|1TB HDD|24"FHD IPS Touch|White (4X5F2EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 20 Item added to list for AI: HP 24-DF1059NY|Intel Core i5-1135G7|DDR4 4GB|256GB HDD|24"FHD IPS Touch|White (4X5F2EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 21 Item added to list for AI: HP 24-CB1445NH|Intel Core i3-1215U|DDR4 8GB|512GB SSD M.2 Nvme|24" FHD IPS|White (929F2EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 22 Item added to list for AI: HP 24-CB1274NH|Intel Core i3-1215U|DDR4 4GB|256GB SSD M.2 Nvme|24"FHD IPS|Black (7H375EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 23 Item added to list for AI: HP 24-CB1288NH|Intel Core i3-1215U|DDR4 8GB|512GB SSD M.2 Nvme|24"FHD IPS (B73TXEA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 24 Item added to list for AI: Lenovo IdeaCentre AIO 27IRH9/Intel Core i7-13620H|16GB DDR5|512GB SSD M.2 Nvme|27" FHD IPS|Cloud Grey
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 25 Item added to list for AI: Lenovo Ideacentre AIO 27IRH9|Intel Core i5-13420H|8GB DDR5|512GB SSD M.2 Nvme|27"FHD IPS|Luna Grey
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 26 Item added to list for AI: Lenovo Ideacentre AIO 27IRH9|Intel Core i5-13420H|8GB DDR5|512GB SSD M.2 Nvme|27"FHD IPS|Luna  Grey|NON TOUCH|Win11H
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 27 Item added to list for AI: Lenovo Ideacentre AIO 27AAR9|AMD Ryzen5-8645HS|16GB DDR5|1TB SSD M.2 Nvme|27"FHD IPS|Luna Grey|TOUCH| Win11H
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 28 Item added to list for AI: Acer Veriton Z4714G 23.8"FullHD non-touch IPS|Intel core i3-13100|8 GB DDR4|512 GB M.2 NVME SSD|ESHE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 29 Item added to list for AI: Acer Veriton Z4714G 23.8"FullHD non-touch IPS|Intel Core i5-13400|8 GB DDR4|512 GB M.2 NVME SSD|ESHE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 30 Item added to list for AI: HP Spectre x360 14-eu0013dx/Intel Core Ultra 7-155H/RAM 16GB/1TB SSD/14'' 2.8K OLED/Black/Win11H (979L2UA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 31 Item added to list for AI: Hp OmniBook Ultra Flip 14-fh0033dx/Intel Core Ultra 9-288V/32GB DDR5/2TB SSD/14.0" 3K UWVA OLED (400 nits, 48-120Hz, VRR)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 32 Item added to list for AI: Hp OmniBook 5 Flip 14-fp0023dx/Intel Core 7-150U/RAM 16GB/512GB SSD/14.0" 2K IPS LED / Touchscreen
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 33 Item added to list for AI: Hp OmniBook 5 Flip 14-fp0013dx/Intel Core 5-120U/RAM 8GB/512GB SSD/14.0" 2K IPS LED / Touchscreen
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 34 Item added to list for AI: HP Envy x360 14-es1013dx/Intel Core 5-120U/RAM 8GB/512GB SSD/14"FHD IPS LED/Silver/Win11H(9R8R2UA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 35 Item added to list for AI: HP EliteBook 840 G10/Intel Core i7-1355U/16GB DDR5/512GB SSD/14" WUXGA IPS/Silver (8A414EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 36 Item added to list for AI: HP ProBook 440 14 inch G11/Intel Core Ultra 5 125U/16 GB DDR5/512GB SSD/WUXGA/Pike silver (A22ZLEA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 37 Item added to list for AI: HP ProBook 460 16 inch G11/Intel Core Ultra 7 155U/8 GB DDR5/512GB SSD/WUXGA/Pike silver (A23A1EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 38 Item added to list for AI: HP ProBook 460 16 inch G11/Intel Core Ultra 5 125U/8 GB DDR5/512GB SSD/WUXGA/Pike silver (B9ZF2ET)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 39 Item added to list for AI: HP ProBook 450 15.6 inch G10|Intel Core i5-1335U|8GB DDR4|512GB SSD|UHD IPS|Silver Color Backlit
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 40 Item added to list for AI: HP Victus 15-fa2317tx/Intel core i7-13620H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 4050 6GB Blue
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 41 Item added to list for AI: HP Victus 15-fa2318tx/Intel core i7-13620H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 3050 6GB Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 42 Item added to list for AI: HP Victus 15-fb3093dx/AMD Ryzen 7-7445HS/DDR5 16GB/512GB SSD/15.6 FHD IPS 144HZ/NVIDIA GeForce RTX 4050 6GB Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 43 Item added to list for AI: HP Victus 16-r0016nia/Intel core i5-13500H/DDR5 16 GB/512 SSD/ 16 FHD IPS LED/ NVIDIA GeForce RTX 3050 6GB Blue
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 44 Item added to list for AI: HP Victus 15-fa2013dx/Intel core i5-13420H/DDR4 8GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 3050 6GB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 45 Item added to list for AI: HP Victus 15-fa2082wm/Intel core i5-13420H/DDR4 16 GB/512 SSD/ 15.6 FHD IPS 144HZ/ NVIDIA GeForce RTX 4050 6GB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 46 Item added to list for AI: HP OMEN 16-ap0167ax/AMD Ryzen 9 8940HX/DDR5 16GB/512GB SSD/RTX 5060 8GB/16.0" 2K IPS LED (300nits, 60-144HZ . VRR)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 47 Item added to list for AI: HP OMEN 16-ae0010st/Intel core i7-14650HX/DDR5 16GB/512 SSD/RTX 4060 8GB/16.1" FHD IPS LED (300nits, 144HZ)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 48 Item added to list for AI: HP Pavilion Gaming 15-ec2355nw/AMD Ryzen 7-5800H//DDR4 16GB/512 GB SSD/NVIDIA GeForce RTX 3050 4GB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 49 Item added to list for AI: HP Pavilion16-ag0070wm / AMD Ryzen 7 8840U / DDR5 8GB / 512GB SSD / 16" WUXGA IPS / Win11 / Silver
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 50 Item added to list for AI: HP 15-fd0250wm/Intel Core™ i5-1334U/8GB DDR4/512GB SSD/15.6 HD / Keyboard Backlit/Silver
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 51 Item added to list for AI: HP 15-fd0007ny/Intel Core™ i5-1334U/16GB DDR4/512GB SSD/15.6 FHD IPS LED / Keyboard Backlit/Silver
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 52 Item added to list for AI: HP 15-fd0150wm / Intel core 5-120U / DDR4 8GB / 512GB SSD / 15.6" FHD IPS Touch / Win11 / Silver
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 53 Item added to list for AI: HP 15-fd0150wm / Intel core i5-1334U / DDR4 8GB / 512GB SSD / 15.6" FHD IPS Touch / Win11 / Silver
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 54 Item added to list for AI: HP 15-fd00095wm/Intel Core i5-1235U/8GB DDR4/256GB SSD/15.6 FHD IPS / Silver (A2BZ9UA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 55 Item added to list for AI: Hp Laptop 15-f0180nia|Intel Core i3-1315U|DDR4 8GB|512GB SSD|15.6" FHD LED|Silver (C92MFEA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 56 Item added to list for AI: HP Laptop 15-fd0336nia/Intel Core i3-1315U/DDR4 4GB/256GB SSD/15.6" FHD/Silver/Backlit (943W4EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 57 Item added to list for AI: HP Laptop 15-fd0333nia/Intel Core i3-1315U/DDR4 4GB/256GB SSD/15.6" FHD/Gold/Backlit (943W1EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 58 Item added to list for AI: HP 250 G8/Intel Core i3-1115G4/DDR4 8GB/256GB SSD/FHD/(6F2B2EA)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 59 Item added to list for AI: Acer Aspire 5/ Intel Core i5-1235U/DDR4 8GB/512GB SSD/RTX 2050 4GB/16" FHD IPS SlimBezel
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 60 Item added to list for AI: Asus Zenbook 14 OLED UX3405C|Intel Core Ultra9-285H|DDR5 32GB|SSD 1TB|14.0" OLED WUXGA 120Hz TouchScreen|WIN 11 home
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 61 Item added to list for AI: Asus Vivobook /Intel core i5-12500H/DDR4 8gb/512 SSD/FHD LCD/WIN11 Touch
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 62 Item added to list for AI: Asus Vivobook Go 15-E1504F/AMD Ryzen 3 7320U/DDR4 8GB (ON BD)/128GB SSD/MIXED BLACK
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 63 Item added to list for AI: Lenovo ThinkPad X1 Yoga/Intel Core i7-8565U/DDR4 16 GB/512 GB SSD
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 64 Item added to list for AI: Lenovo Legion 5 15IRX10 Intel Core i7-14700HX/DDR5 16gb/1TB SSD/RTX 5060 8GB/WIN 11 home / 15.1 " WQXGA OLED
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 65 Item added to list for AI: Lenovo Thinkpad E16|Ultra 7-255H|16GB DDR5|512GB SSD|16" FHD IPS 300nits WUXGA|Backlit ENG KB, Top Load Case
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 66 Item added to list for AI: Lenovo LOQ 15IRX9 Intel Core i7-14700HX|DDR5 16GB|512GB SSD|15.6 " FHD|NVDIA GeForce RTX 4060 8GB|Luna GREY
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 67 Item added to list for AI: Microsoft Surface Pro 12|Snapdragon X Plus|16GB RAM|256GB SSD|12inch 120Hz|Platinum|No Charger
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 68 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|32GB RAM|1TB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 69 Item added to list for AI: Microsoft Surface Pro11 With 5G|Snapdragon X Elite|16GB RAM|512GB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 70 Item added to list for AI: Microsoft Surface Pro11 With 5G|Snapdragon X Plus|16GB RAM|256GB SSD|13inch OLED 120Hz| Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 71 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|1TB SSD|13inch OLED 120Hz|Black|No Charger
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 72 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|1TB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 73 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Elite|16GB RAM|512GB SSD|13inch OLED 120Hz|Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 74 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Plus|16GB RAM|512GB SSD|13inch OLED 120Hz| Black Ekranida Dogi bor
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 75 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Plus|16GB RAM|512GB SSD|13inch OLED 120Hz| Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 76 Item added to list for AI: Microsoft Surface Pro 11|Snapdragon X Plus|16GB RAM|512GB SSD|13inch OLED 120Hz| Dune
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 77 Item added to list for AI: Microsoft Surface Pro 10 for Business|Intel Core Ultra 5-135U|8GB RAM|256GB SSD|13inch FHD IPS|Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 78 Item added to list for AI: Microsoft Surface Pro 10 for Business/ Intel Core Ultra 7-165U/16GB RAM/512GB SSD/Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 79 Item added to list for AI: Microsoft Surface Pro 9|Intel Core i7-12TH GEN|16GB RAM/256GB SSD|13inch FHD IPS|PLATINUM
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 80 Item added to list for AI: Microsoft Surface Pro 8|Intel Core  i5 -11TH GEN|8GB RAM|128Gb SSD|13inch FHD|LTE|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 81 Item added to list for AI: Microsoft Surface Pro 7+|Intel Core i7-11TH GEN|16GB RAM|256GB SSD|13inch FHD|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 82 Item added to list for AI: Microsoft Surface Pro7 |Intel Core i5-10TH|DDR4 8GB|SSD 256GB|Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 83 Item added to list for AI: Microsoft Surface GO 2|4GB RAM|64GB STORAGE|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 84 Item added to list for AI: Microsoft Surface Laptop |Snapdragon X Plus|16GB RAM|256GB SSD|13inch OLED 120Hz|Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 85 Item added to list for AI: Microsoft USB-C Travel Hub
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 86 Item added to list for AI: Microsoft Audio Dock
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 87 Item added to list for AI: Microsoft Pen Slim 2
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 88 Item added to list for AI: Microsoft Pen 1 Red
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 89 Item added to list for AI: Microsoft Pen 1 Stylet|White
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 90 Item added to list for AI: Microsoft Bluetooth Ergonomic Mouse
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 91 Item added to list for AI: Microsoft Mouse Souris Arc (WHITE)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 92 Item added to list for AI: Microsoft Mouse Souris Arc (BLACK)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 93 Item added to list for AI: Incase Mouse (PLATINUM)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 94 Item added to list for AI: Incase Mouse (BLACK)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 95 Item added to list for AI: Microsoft Power Supply 65W
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 96 Item added to list for AI: Microsoft Power Supply 44W
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 97 Item added to list for AI: Microsoft Mouse 1850
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 98 Item added to list for AI: Microsoft Pro 12 Keyboard Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 99 Item added to list for AI: Microsoft Keyboard WITH SLIM PEN 2 Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 100 Item added to list for AI: Microsoft Keyboard WITH SLIM PEN 2 Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 101 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Gold
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 102 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Sapphire
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 103 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Black
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 104 Item added to list for AI: Microsoft Keyboard Siganture Alcantara Platinum
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 105 Item added to list for AI: Microsoft Keyboard Black Pro 7 (TYPE COVER)
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 106 Item added to list for AI: Case
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 107 Item added to list for AI: HDD 1TB SEAGATE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 108 Item added to list for AI: HDD 1TB TOSHIBA
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 109 Item added to list for AI: HDD 1TB WD BLUE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 110 Item added to list for AI: HDD WD PURPLE 1TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 111 Item added to list for AI: HDD WD PURPLE 2TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 112 Item added to list for AI: HDD WD PURPLE 4TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 113 Item added to list for AI: USB HDD 1TB TRANSCEND
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 114 Item added to list for AI: USB HDD 2TB TRANSCEND
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 115 Item added to list for AI: USB HDD 4TB TRANSCEND
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 116 Item added to list for AI: USB HDD 1TB SEAGATE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 117 Item added to list for AI: USB HDD 2TB SEAGATE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 118 Item added to list for AI: USB HDD 4TB SEAGATE
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 119 Item added to list for AI: USB HDD 1TB TOSHIBA
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 120 Item added to list for AI: SSD M2 NVME LEXAR 4TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 121 Item added to list for AI: SSD M2 NVME LEXAR 2TB LNM790
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 122 Item added to list for AI: SSD M2 NVME TEAMGROUP 2TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 123 Item added to list for AI: SSD M2 NVME CRUCIAL 1TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 124 Item added to list for AI: SSD M2 NVME LEXAR 1TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 125 Item added to list for AI: SSD M2 NVME DATO 1TB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 126 Item added to list for AI: SSD M2 NVME DATO 512GB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 127 Item added to list for AI: SSD M2 NVME SURFACE 512GB
-2025-12-26 17:43:50 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 128 Item added to list for AI: SSD M2 NVME SURFACE 256GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 129 Item added to list for AI: SSD M2 NVME LEXAR 512GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 130 Item added to list for AI: SSD M2 NVME HP 500GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 131 Item added to list for AI: SSD M2 NVME TEAMGROUP 512GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 132 Item added to list for AI: SSD M2 NVME 512GB CRUCIAL
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 133 Item added to list for AI: SSD M2 NVME 256GB LEXAR
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 134 Item added to list for AI: SSD M2 NVME 512GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 135 Item added to list for AI: SSD M2 NVME 256GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 136 Item added to list for AI: SSD SATA CRUCIAL 1000GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 137 Item added to list for AI: SSD SATA LEXAR 512GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 138 Item added to list for AI: SSD SATA LEXAR 256GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 139 Item added to list for AI: SoDDR5 32GB/5600 CRUCIAL
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 140 Item added to list for AI: SoDDR5 32GB/5600 LEXAR
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 141 Item added to list for AI: SoDDR5 16GB/5600 TEAMGROUP
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 142 Item added to list for AI: SoDDR5 16GB/4800 CRUCIAL
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 143 Item added to list for AI: SoDDR5 8GB/5200 KINGSTON
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 144 Item added to list for AI: SoDDR5 8GB/4800 CRUCIAL
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 145 Item added to list for AI: SoDDR5 8GB/5600 SAMSUNG
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 146 Item added to list for AI: SoDDR4 32GB/3200 LEXAR
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 147 Item added to list for AI: SoDDR4 16GB/3200 LEXAR
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 148 Item added to list for AI: SoDDR4 16/3200 SAMSUNG
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 149 Item added to list for AI: SoDDR4 8GB/3200 LEXAR
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 150 Item added to list for AI: SoDDR4 8GB/3200 SAMSUNG
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 151 Item added to list for AI: SoDDR4 4GB/SAMSUNG
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 152 Item added to list for AI: SoDDR3 2GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 153 Item added to list for AI: SoDDR3 1GB
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 154 Item added to list for AI: SoDDR4 16GB/3200 CRUCAL
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 155 Item added to list for AI: Laser Jet M111a
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 156 Item added to list for AI: Laser Jet M111w
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 157 Item added to list for AI: Canon G3430 рангли
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 158 Item added to list for AI: Canon i-sensys LBP223dw
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 159 Item added to list for AI: Canon i-sensys MF463dw
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 160 Item added to list for AI: Canon i-sensys MF3010
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 161 Item added to list for AI: Canon i-sensys MF272dw
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 162 Item added to list for AI: Canon imegclass MF3010
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 163 Item added to list for AI: Canon MF275dw
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 164 Item added to list for AI: Canon imegclass LBP6030w
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 165 Item added to list for AI: Canon PIXMA G2470
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 166 Item added to list for AI: Epson Ecotank L5290
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 167 Item added to list for AI: Epson Ecotank L3252
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 168 Item added to list for AI: Epson EcotanknL8050
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 169 Item added to list for AI: Epson LX-300+
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 170 Item added to list for AI: Pantum M6500W
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 171 Item added to list for AI: Pantium M6553NW
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 172 Item added to list for AI: Pantium M7100DW
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 173 Item added to list for AI: Pantium M6503
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 174 Item added to list for AI: Pantium M6503W
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 175 Item added to list for AI: Pantium BM5201ADW
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 176 Item added to list for AI: Hp pavilion gaming keyboard 800
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 177 Item added to list for AI: Hp pavilion gaming keyboard 550
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 178 Item added to list for AI: Hp pavilion (oq)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 179 Item added to list for AI: Hp pavilion (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 180 Item added to list for AI: Hp klaviatura (simsiz oq)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 181 Item added to list for AI: Hp klaviatura (simsiz qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 182 Item added to list for AI: Hp klaviatura (simli)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 183 Item added to list for AI: Hp CS900 (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 184 Item added to list for AI: Hp CS10 (oq)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 185 Item added to list for AI: Hp CS10(qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 186 Item added to list for AI: hp cs710
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 187 Item added to list for AI: Lenova klaviatura (simsiz)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 188 Item added to list for AI: Rapoo 9050M (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 189 Item added to list for AI: Rapoo X125S (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 190 Item added to list for AI: Rapoo E9500M (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 191 Item added to list for AI: Rapoo xk100
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 192 Item added to list for AI: rapoo 900m black
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 193 Item added to list for AI: rapoo 900m white
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 194 Item added to list for AI: rapoo e2710
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 195 Item added to list for AI: Metoo C20 combo (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 196 Item added to list for AI: Skyline 895
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 197 Item added to list for AI: Logitech K120
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 198 Item added to list for AI: Logitech K230
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 199 Item added to list for AI: Logitech MK 240 NANO
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 200 Item added to list for AI: logitech k400
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 201 Item added to list for AI: TF-200
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 202 Item added to list for AI: DW 300
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 203 Item added to list for AI: Hp s1000 plus (qora)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 204 Item added to list for AI: Hp s1000 plus (oq)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 205 Item added to list for AI: Hp 9500
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 206 Item added to list for AI: Hp FM510a
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 207 Item added to list for AI: Hp S1500
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 208 Item added to list for AI: Hp mishka simsiz
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 209 Item added to list for AI: Logitech M170
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 210 Item added to list for AI: Logitech M185
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 211 Item added to list for AI: Logitech M190
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 212 Item added to list for AI: Logitech M275
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 213 Item added to list for AI: Logetech M330
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 214 Item added to list for AI: Logitech  CORDLES
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 215 Item added to list for AI: Logitech G102 black
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 216 Item added to list for AI: Logitech G102 white
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 217 Item added to list for AI: RAZER
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 218 Item added to list for AI: Logitech M350S
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 219 Item added to list for AI: Logitech M196
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 220 Item added to list for AI: metoo
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 221 Item added to list for AI: Cobra
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 222 Item added to list for AI: Air desktop-2
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 223 Item added to list for AI: Avt DW222
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 224 Item added to list for AI: Avtech NW207
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 225 Item added to list for AI: Avtech G11-590FX
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 226 Item added to list for AI: Avtech Zero Delay
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 227 Item added to list for AI: HYPERX Cloud III Signatura Comfort
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 228 Item added to list for AI: Hp H231R naushnik
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 229 Item added to list for AI: Logitech Zone Vibe 100
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 230 Item added to list for AI: Logitech H540
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 231 Item added to list for AI: Logitech H390
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 232 Item added to list for AI: Logitech H340
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 233 Item added to list for AI: Archer C24
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 234 Item added to list for AI: Archer C54
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 235 Item added to list for AI: Archer C50
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 236 Item added to list for AI: Archer C6
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 237 Item added to list for AI: Archer C64
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 238 Item added to list for AI: Archer C6U
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 239 Item added to list for AI: Archer C60
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 240 Item added to list for AI: Archer C80
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 241 Item added to list for AI: Archer AX72
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 242 Item added to list for AI: Archer AX73
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 243 Item added to list for AI: Archer AX12
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 244 Item added to list for AI: Archer AX23
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 245 Item added to list for AI: TL-WA1201
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 246 Item added to list for AI: TL-MR6400
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 247 Item added to list for AI: TL-WR840N
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 248 Item added to list for AI: TL-SG1016D 16-port
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 249 Item added to list for AI: TL-WA855RE
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 250 Item added to list for AI: TL-WA850RE
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 251 Item added to list for AI: TL-SG1008D
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 252 Item added to list for AI: TL_WA901ND
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 253 Item added to list for AI: TL_WR845N
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 254 Item added to list for AI: LS1008
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 255 Item added to list for AI: Deco AC1900 S7(2 pack)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 256 Item added to list for AI: Deco AC1900 S7(3 pack)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 257 Item added to list for AI: 27 Asus ProArt PA279CV
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 258 Item added to list for AI: Hp M24F
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 259 Item added to list for AI: hp E24m G4 FHD Conferencing USB-C (40Z32AA)
-2025-12-26 17:43:51 INFO  [task-2] u.q.s.GoogleSheetDataUpdates -  ➕ 260 Item added to list for AI: Lenovo Y27q-30   LEGION
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 1
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 2
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 3
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 4
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 5
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 6
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 7
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 8
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 9
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 10
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 11
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 12
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 13
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 14
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 15
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 16
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 17
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 18
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 19
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 20
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 21
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 22
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 23
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 24
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 25
-2025-12-26 17:43:52 INFO  [task-2] u.q.s.GoogleSheetDataUpdates - Batch processed: 26
-2025-12-26 17:49:37 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-26 17:49:37 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-26 17:49:37 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-26 17:49:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-26 17:49:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-26 21:09:50 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-26 21:09:50 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 21.0.8 with PID 10342 (/home/abdulbosit/IdeaProjects/notuz/Qarzdorlar-AI/target/classes started by abdulbosit in /home/abdulbosit/IdeaProjects/notuz/Qarzdorlar-AI)
-2025-12-26 21:09:50 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-26 21:09:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-26 21:09:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 5 JPA repository interfaces.
-2025-12-26 21:09:53 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-26 21:09:53 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-26 21:09:53 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-26 21:09:53 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-26 21:09:53 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-26 21:09:53 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2242 ms
-2025-12-26 21:09:53 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-26 21:09:53 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-26 21:09:53 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-26 21:09:53 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-26 21:09:53 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-26 21:09:54 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-26 21:09:54 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@468646ea
-2025-12-26 21:09:54 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-26 21:09:54 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-28 11:24:13 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukrdxh7tq2xs66r485cc8dkxt77" of relation "brand" does not exist, skipping
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjgbii7eaw72fc9llajcdeyjb" of relation "client" does not exist, skipping
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uksl8ny8en581rfgjfq3d0tv0ab" of relation "client" does not exist, skipping
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk1ixfyfepst9sjbo9op1v65fg0" of relation "client" does not exist, skipping
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukagsvbr4mhfj49c96foedgq8wk" of relation "telegram_user" does not exist, skipping
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uke5h89rk3ijvdmaiig4srogdc6" of relation "user_profiles" does not exist, skipping
+2025-12-28 11:24:13 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-28 11:24:15 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-28 11:24:17 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-28 11:24:17 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-28 11:24:17 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 12.341 seconds (process running for 15.356)
+2025-12-28 12:00:00 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
+2025-12-28 12:00:00 ERROR [task-2] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
+java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
+	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2025-12-28 12:20:24 INFO  [http-nio-8080-exec-6] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1762 ms
+2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-28 12:20:36 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-28 12:20:51 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-28 12:20:51 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 2516 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-28 12:20:51 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-28 12:20:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-28 12:20:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 5 JPA repository interfaces.
+2025-12-28 12:20:53 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 12:20:53 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 12:20:53 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 12:20:53 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-28 12:20:53 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-28 12:20:53 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1597 ms
+2025-12-28 12:20:53 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-28 12:20:53 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-28 12:20:53 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-28 12:20:53 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-28 12:20:53 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6db04a6
+2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-28 12:20:54 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
-	Database version: 17.6
+	Database version: 18.1
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-26 21:09:56 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-26 21:09:56 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-26 21:09:58 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
-2025-12-26 21:09:58 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
-2025-12-26 21:09:58 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
-2025-12-26 21:09:59 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-12-26 21:09:59 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-12-26 21:09:59 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 9.627 seconds (process running for 11.336)
-2025-12-26 21:10:34 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-26 21:10:34 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-12-26 21:10:34 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-12-26 21:10:38 INFO  [http-nio-8080-exec-7] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 3303 ms
-2025-12-26 21:48:36 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-26 21:48:36 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-26 21:48:36 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-26 21:48:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-26 21:48:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-28 12:20:55 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-28 12:20:55 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-28 12:20:56 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-28 12:20:57 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-28 12:20:57 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-28 12:20:57 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.372 seconds (process running for 8.044)
+2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-28 12:21:04 INFO  [http-nio-8080-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1564 ms
+2025-12-28 13:00:00 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
+2025-12-28 13:00:00 ERROR [task-2] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
+java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
+	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-28 14:00:00 INFO  [task-4] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
+2025-12-28 14:00:00 ERROR [task-4] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
+java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
+	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-28 15:00:00 INFO  [task-6] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
+2025-12-28 15:00:00 ERROR [task-6] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
+java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
+	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-28 16:00:00 INFO  [task-8] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
+2025-12-28 16:00:00 ERROR [task-8] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
+java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
+	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
+	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-28 16:23:01 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

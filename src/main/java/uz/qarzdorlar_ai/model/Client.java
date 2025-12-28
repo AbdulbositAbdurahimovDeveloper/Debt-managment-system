@@ -23,7 +23,7 @@ import java.math.BigDecimal;
 @SQLRestriction("deleted = false")
 public class Client extends AbsLongEntity {
 
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String fullName;
 
     @Column(unique = true, nullable = false)
@@ -39,6 +39,8 @@ public class Client extends AbsLongEntity {
 
     @Column(precision = 19, scale = 4)
     private BigDecimal initialBalance; // Initial debt/credit from Google Sheets
+
+    private BigDecimal currentBalance; //
 
     private String address;
     private String comment;

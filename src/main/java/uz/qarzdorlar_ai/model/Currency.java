@@ -1,5 +1,6 @@
 package uz.qarzdorlar_ai.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,14 @@ import uz.qarzdorlar_ai.model.embedded.AbsLongEntity;
 @SQLDelete(sql = "UPDATE currency SET deleted = true WHERE id = ?")
 @SQLRestriction("deleted = false")
 public class Currency extends AbsLongEntity {
+
+    @Column(nullable = false)
     private String name;  // So'm, Dollar
+
+    @Column(nullable = false)
     private String code;  // UZS, USD
+
     private String symbol; // сум, $
+
     private boolean isBase; // Tizim asosi (USD uchun true)
 }
