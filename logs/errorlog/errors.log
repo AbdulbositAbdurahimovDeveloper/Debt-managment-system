@@ -93,3 +93,18 @@ Action:
 
 Consider defining a bean of type 'uz.qarzdorlar_ai.service.CurrencyService' in your configuration.
 
+2025-12-28 17:36:46 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in uz.qarzdorlar_ai.service.CurrencyServiceImpl required a bean of type 'uz.qarzdorlar_ai.mapper.CurrencyMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'uz.qarzdorlar_ai.mapper.CurrencyMapper' in your configuration.
+

@@ -1,10 +1,10 @@
 package uz.qarzdorlar_ai.mapper;
 
-import org.jvnet.hk2.annotations.Service;
+import org.springframework.stereotype.Component;
 import uz.qarzdorlar_ai.model.Currency;
 import uz.qarzdorlar_ai.model.CurrencyDTO;
 
-@Service
+@Component
 public class CurrencyMapperImpl implements CurrencyMapper {
 
     @Override
