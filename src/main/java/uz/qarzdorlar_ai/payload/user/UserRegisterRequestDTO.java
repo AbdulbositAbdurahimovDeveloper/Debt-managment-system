@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class UserRegisterRequestDTO {
 
     @NotBlank(message = "Username must not be blank")
-    @Size(min = 3, max = 50, message = "Username must be between {min} and {max} characters")
+    @Size(min = 4, max = 50, message = "Username must be between {min} and {max} characters")
     private String username;
 
     @NotBlank(message = "Password must not be blank")
