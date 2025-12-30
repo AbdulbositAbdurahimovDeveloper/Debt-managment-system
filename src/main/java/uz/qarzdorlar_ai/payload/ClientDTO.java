@@ -1,5 +1,6 @@
 package uz.qarzdorlar_ai.payload;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ClientDTO implements Serializable {
 
     private Long id;
@@ -26,7 +28,6 @@ public class ClientDTO implements Serializable {
     private String phoneNumber;
     private Long balanceCurrencyId;
     private Long telegramUserChatId;
-    private BigDecimal initialBalance;
     private BigDecimal currentBalance;
     private boolean deleted = false;
     private Timestamp createdAt;

@@ -31,11 +31,11 @@ public class TransactionItem extends AbsLongEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
-    private Double quantity;
+    private Integer quantity;
 
     @Column(precision = 19, scale = 4)
-    private BigDecimal unitPriceUsd; // Product price in USD at the time of sale
+    private BigDecimal unitPrice; // Product price in USD at the time of sale
 
     @Column(precision = 19, scale = 4)
-    private BigDecimal totalPriceUsd; // quantity * unitPriceUsd
+    private BigDecimal totalPrice; // quantity * unitPriceUsd
 }

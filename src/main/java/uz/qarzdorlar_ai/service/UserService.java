@@ -2,7 +2,7 @@ package uz.qarzdorlar_ai.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import uz.qarzdorlar_ai.model.User;
-import uz.qarzdorlar_ai.payload.UserDTO;
+import uz.qarzdorlar_ai.payload.user.UserDTO;
 
 public interface UserService extends UserDetailsService {
 

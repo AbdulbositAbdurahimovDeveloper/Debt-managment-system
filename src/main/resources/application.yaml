@@ -4,3 +4,5 @@ spring:
 
   profiles:
     active: dev
+api:
+  version: 1.0.0

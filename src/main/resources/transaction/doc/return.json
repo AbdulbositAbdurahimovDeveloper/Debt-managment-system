@@ -1,0 +1,67 @@
+{
+  "project": "Qarzdorlar AI - Return Documentation",
+  "note": "RETURN amaliyoti SALE bilan bir xil tuzilishga ega, lekin natijada mijoz qarzi kamayadi.",
+  "logic": "Amount / txRate * clientRate = balanceAmount. Keyin: clientBalance + balanceAmount",
+  "scenarios": [
+    {
+      "case": "1. UZS Mijoz, UZS da tovar qaytardi",
+      "payload": {
+        "clientId": 7,
+        "type": "RETURN",
+        "currencyId": 1,
+        "exchangeRate": 12500.0,
+        "clientExchangeRate": 12500.0,
+        "createdAt": "2025-12-30T10:00:00.000Z",
+        "description": "Yaroqsiz mahsulot qaytarildi",
+        "items": [
+          {
+            "productId": 10,
+            "quantity": 1,
+            "unitPrice": 1250000.0
+          }
+        ]
+      },
+      "result": "Mijoz balansiga +1,250,000 UZS qo'shiladi (Qarzi kamayadi)."
+    },
+    {
+      "case": "2. UZS Mijoz, USD da tovar qaytardi",
+      "payload": {
+        "clientId": 7,
+        "type": "RETURN",
+        "currencyId": 2,
+        "exchangeRate": 1.0,
+        "clientExchangeRate": 12500.0,
+        "createdAt": null,
+        "description": "100 dollarlik tovar qaytarildi, so'm balansiga hisoblansin",
+        "items": [
+          {
+            "productId": 11,
+            "quantity": 1,
+            "unitPrice": 100.0
+          }
+        ]
+      },
+      "result": "100 * 12500 = +1,250,000 UZS balansga qo'shiladi."
+    },
+    {
+      "case": "3. USD Mijoz, AED (Dirham)da tovar qaytardi",
+      "payload": {
+        "clientId": 8,
+        "type": "RETURN",
+        "currencyId": 3,
+        "exchangeRate": 3.67,
+        "clientExchangeRate": 1.0,
+        "createdAt": null,
+        "description": "Dubaydan olingan tovar qaytarildi, dollar balansiga chegirilsin",
+        "items": [
+          {
+            "productId": 12,
+            "quantity": 1,
+            "unitPrice": 367.0
+          }
+        ]
+      },
+      "result": "367 / 3.67 = +100 USD mijoz balansiga qo'shiladi."
+    }
+  ]
+}

@@ -19,6 +19,10 @@ import java.util.List;
 @Setter
 @FieldNameConstants
 @Entity
+@Table(indexes = {
+        @Index(name = "idx_transection_clinets", columnList = "Client_id"),
+        @Index(name = "idx_transection_staff_users", columnList = "user_id")
+})
 @NoArgsConstructor
 @AllArgsConstructor
 @SQLDelete(sql = "UPDATE transaction SET deleted = true WHERE id = ?")

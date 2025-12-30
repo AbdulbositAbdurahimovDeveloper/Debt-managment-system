@@ -1,0 +1,62 @@
+{
+  "project": "Qarzdorlar AI - Payment Documentation",
+  "note": "PAYMENT holatida 'items' yuborilmaydi, 'originalAmount' majburiy.",
+  "scenarios": [
+    {
+      "case": "1. UZS Mijoz, UZS da to'lov (Hozirgi vaqt)",
+      "payload": {
+        "clientId": 7,
+        "type": "PAYMENT",
+        "currencyId": 1,
+        "exchangeRate": 12500.0,
+        "clientExchangeRate": 12500.0,
+        "originalAmount": 1000000.0,
+        "createdAt": null,
+        "description": "Bugun 1 mln so'm to'ladi"
+      },
+      "result": "Mijoz balansiga +1,000,000 UZS qo'shiladi"
+    },
+    {
+      "case": "2. UZS Mijoz, USD da to'lov (Eski sana - Migratsiya)",
+      "payload": {
+        "clientId": 7,
+        "type": "PAYMENT",
+        "currencyId": 2,
+        "exchangeRate": 1.0,
+        "clientExchangeRate": 12500.0,
+        "originalAmount": 100.0,
+        "createdAt": "2024-01-10T09:00:00.000+00:00",
+        "description": "2024-yil yanvarda bergan 100 dollari"
+      },
+      "result": "100 * 12500 = 1,250,000 UZS balansga qo'shiladi (Sana: 2024-01-10)"
+    },
+    {
+      "case": "3. USD Mijoz, UZS da to'lov (Eski sana - Migratsiya)",
+      "payload": {
+        "clientId": 8,
+        "type": "PAYMENT",
+        "currencyId": 1,
+        "exchangeRate": 12500.0,
+        "clientExchangeRate": 1.0,
+        "originalAmount": 1250000.0,
+        "createdAt": "2023-12-25T18:00:00.000+00:00",
+        "description": "Eski qarzini so'mda yopgan edi"
+      },
+      "result": "1,250,000 / 12500 = 100 USD balansga qo'shiladi (Sana: 2023-12-25)"
+    },
+    {
+      "case": "4. AED Mijoz, USD da to'lov (Hozirgi vaqt)",
+      "payload": {
+        "clientId": 9,
+        "type": "PAYMENT",
+        "currencyId": 2,
+        "exchangeRate": 1.0,
+        "clientExchangeRate": 3.67,
+        "originalAmount": 100.0,
+        "createdAt": null,
+        "description": "100 dollar berdi, dirham hisobidan chegirilsin"
+      },
+      "result": "100 * 3.67 = 367 AED balansga qo'shiladi"
+    }
+  ]
+}

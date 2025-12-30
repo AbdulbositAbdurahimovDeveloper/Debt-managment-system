@@ -4,22 +4,33 @@ server:
 spring:
   ai:
     openai:
-      # API kalit bo'lmasa, "fake-key" ishlatiladi (lekin OpenAI ishlamaydi)
-      api-key: ${OPENAI_API_KEY:your_openai_api_key_here}
+      api-key: ${OPENAI_API_KEY}
       chat:
         options:
           model: gpt-4o-mini
           temperature: 0.7
+
+  #  ai:
+  #    openai:
+  #      # Groq-dan olgan kalitingni qo'y
+  #      api-key: ${GROQ_API_KEY}
+  #      # OpenAI o'rniga Groq manzili
+  #      base-url: https://api.groq.com/openai
+  #      chat:
+  #        options:
+  #          # Groq-dagi eng kuchli model
+  #          model: llama-3.3-70b-versatile
+
 
   banner:
     location: classpath:banner.txt
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    # Baza nomi: debts_ai. Agar bu baza bo'lmasa, xato beradi!
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/debts_ai}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:1234} # PostgreSQL o'rnatganda qo'ygan parolingizni yozing
+    url: jdbc:postgresql://localhost:5432/debts_managment?charSet=UTF-8&clientEncoding=UTF-8
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
 
   jpa:
     hibernate:
@@ -27,7 +38,7 @@ spring:
     show-sql: false
     properties:
       hibernate:
-        format_sql: true
+      format_sql: true
 
 springdoc:
   swagger-ui:
@@ -35,26 +46,27 @@ springdoc:
 
 application:
   jwt:
-    # 256-bitli (32 ta belgidan ko'p) xavfsiz default kalit
-    secret: ${JWT_SECRET_KEY:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
-    access-token-expiration: ${ACCESS_TOKEN_EXPIRATION:3600000} # 1 soat
-    refresh-token-expiration: ${REFRESH_TOKEN_EXPIRATION:86400000} # 1 kun
+    secret: ${JWT_SECRET_KEY}
+    access-token-expiration: ${ACCESS_TOKEN_EXPIRATION}
+    refresh-token-expiration: ${REFRESH_TOKEN_EXPIRATION}
 
 google:
   sheets:
     application-name: NotUzBot
     credentials-path: /google-key.json
-    spreadsheet-id: ${SPREADSHEET_ID:1qrCUMqbiXM2yuYAOwK6jhX99JcXq3CvjGJlDZB16qKE}
+    spreadsheet-id: 1qrCUMqbiXM2yuYAOwK6jhX99JcXq3CvjGJlDZB16qKE
 
 telegram:
   bot:
-    token: ${TELEGRAM_BOT_TOKEN:your_bot_token}
-    username: ${TELEGRAM_BOT_USERNAME:your_bot_username}
-    webhook-path: ${TELEGRAM_BOT_PATH:/api/v1/telegram}
-    secret-token: ${TELEGRAM_BOT_SECRET_TOKEN:fake_secret_token}
+    token: ${TELEGRAM_BOT_TOKEN}
+    username: ${TELEGRAM_BOT_USERNAME}
+    webhook-path: ${TELEGRAM_BOT_PATH}
+    secret-token: ${TELEGRAM_BOT_SECRET_TOKENT}
   health:
-    token: ${TELEGRAM_HEALTH_TOKEN:your_health_token}
-    username: ${TELEGRAM_HEALTH_USERNAME:your_health_username}
-    webhook-path: ${TELEGRAM_HEALTH_PATH:/api/v1/health}
-    secret-token: ${TELEGRAM_HEALTH_SECRET_TOKEN:fake_health_token}
-    develop-chat-id: ${TELEGRAM_HEALTH_DEVELOP_CHAT_ID:0}
+    token: ${TELEGRAM_HEALTH_TOKEN}
+    username: ${TELEGRAM_HEALTH_USERNAME}
+    webhook-path: ${TELEGRAM_HEALTH_PATH}
+    secret-token: ${TELEGRAM_HEALTH_SECRET_TOKENT}
+    develop-chat-id: ${TELEGRAM_HEALTH_DEVELOP_CHAT_ID}
+
+

@@ -1,7 +1,7 @@
 package uz.qarzdorlar_ai.service.sheet;
 
-import uz.qarzdorlar_ai.payload.GoogleSheetData;
-import uz.qarzdorlar_ai.payload.GoogleSheetUsers;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetData;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetUsers;
 
 import java.util.List;
 

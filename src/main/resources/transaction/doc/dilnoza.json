@@ -1,0 +1,151 @@
+[
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 2,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.665,
+    "originalAmount": 14070.00,
+    "feeAmount": 70.00,
+    "description": "eski qarzdorlik yozildi",
+    "createdAt": "2025-11-07T09:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 666.67,
+    "feeAmount": 0,
+    "description": "8mln berilgan",
+    "createdAt": "2025-11-10T10:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "receiverClientId": 2,
+    "type": "TRANSFER",
+    "currencyId": 2,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 1.0,
+    "receiverExchangeRate": 1.0,
+    "originalAmount": 58640.00,
+    "description": "oybek akam oldilar (AED)",
+    "createdAt": "2025-11-11T11:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.667,
+    "originalAmount": 13668.00,
+    "feeAmount": 68.00,
+    "description": "22 noyabr payment",
+    "createdAt": "2025-11-22T12:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "receiverClientId": 3,
+    "type": "TRANSFER",
+    "currencyId": 2,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 1.0,
+    "receiverExchangeRate": 1.0,
+    "originalAmount": 45871.00,
+    "description": "AED transfer",
+    "createdAt": "2025-11-22T13:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "receiverClientId": 4,
+    "type": "TRANSFER",
+    "currencyId": 2,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 1.0,
+    "receiverExchangeRate": 1.0,
+    "originalAmount": 4000.20,
+    "description": "AED transfer 2",
+    "createdAt": "2025-11-22T14:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 1672.24,
+    "description": "20mln berilgan",
+    "createdAt": "2025-12-07T09:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 2267.00,
+    "description": "pul qaytarib berdilar (Return)",
+    "createdAt": "2025-12-07T10:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 500.00,
+    "description": "pul qaytarib berdilar",
+    "createdAt": "2025-12-11T11:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 1253.75,
+    "description": "payme orqali tolov",
+    "createdAt": "2025-12-14T12:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 1320.00,
+    "description": "pul qaytarib berdilar",
+    "createdAt": "2025-12-16T15:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 416.67,
+    "description": "5 mln kartaga",
+    "createdAt": "2025-12-20T16:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.66,
+    "originalAmount": 500.00,
+    "description": "23 dekabr qaytarilgan",
+    "createdAt": "2025-12-23T10:00:00.000Z"
+  },
+  {
+    "clientId": 1,
+    "type": "PAYMENT",
+    "currencyId": 1,
+    "exchangeRate": 1.0,
+    "clientExchangeRate": 3.67,
+    "originalAmount": 835.83,
+    "description": "10 mln berildi",
+    "createdAt": "2025-12-28T11:00:00.000Z"
+  }
+]

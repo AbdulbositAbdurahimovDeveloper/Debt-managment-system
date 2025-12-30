@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import uz.qarzdorlar_ai.model.User;
-import uz.qarzdorlar_ai.payload.UserDTO;
+import uz.qarzdorlar_ai.payload.user.UserDTO;
 import uz.qarzdorlar_ai.payload.response.ResponseDTO;
 import uz.qarzdorlar_ai.service.UserService;
 

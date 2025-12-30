@@ -2,7 +2,7 @@ package uz.qarzdorlar_ai.mapper;
 
 import org.springframework.stereotype.Component;
 import uz.qarzdorlar_ai.model.Currency;
-import uz.qarzdorlar_ai.model.CurrencyDTO;
+import uz.qarzdorlar_ai.payload.CurrencyDTO;
 
 @Component
 public class CurrencyMapperImpl implements CurrencyMapper {

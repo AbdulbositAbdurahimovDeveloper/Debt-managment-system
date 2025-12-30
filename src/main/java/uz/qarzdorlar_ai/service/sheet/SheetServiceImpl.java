@@ -15,8 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import uz.qarzdorlar_ai.Utils;
-import uz.qarzdorlar_ai.payload.GoogleSheetData;
-import uz.qarzdorlar_ai.payload.GoogleSheetUsers;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetData;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetUsers;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,31 +51,31 @@ public class SheetServiceImpl implements SheetService {
 
     @PostConstruct
     public void init() {
-//        try {
-//            log.info("Initializing Google Sheets API connection...");
-//
-//            InputStream in = getClass().getResourceAsStream(credentialsPath);
-//            if (in == null) {
-//                log.error("Credentials file not found at path: {}", credentialsPath);
-//                throw new RuntimeException("Google credentials file is missing.");
-//            }
-//
-//            GoogleCredentials credentials = GoogleCredentials.fromStream(in)
-//                    .createScoped(Collections.singleton(SheetsScopes.SPREADSHEETS));
-//
-//            this.sheetsService = new Sheets.Builder(
-//                    GoogleNetHttpTransport.newTrustedTransport(),
-//                    GsonFactory.getDefaultInstance(),
-//                    new HttpCredentialsAdapter(credentials))
-//                    .setApplicationName(applicationName)
-//                    .build();
-//
-//            log.info("Google Sheets API initialized successfully.");
-//
-//        } catch (IOException | GeneralSecurityException e) {
-//            log.error("Failed to initialize Google Sheets service: ", e);
-//            throw new RuntimeException("Critical failure during Google Sheets initialization", e);
-//        }
+        try {
+            log.info("Initializing Google Sheets API connection...");
+
+            InputStream in = getClass().getResourceAsStream(credentialsPath);
+            if (in == null) {
+                log.error("Credentials file not found at path: {}", credentialsPath);
+                throw new RuntimeException("Google credentials file is missing.");
+            }
+
+            GoogleCredentials credentials = GoogleCredentials.fromStream(in)
+                    .createScoped(Collections.singleton(SheetsScopes.SPREADSHEETS));
+
+            this.sheetsService = new Sheets.Builder(
+                    GoogleNetHttpTransport.newTrustedTransport(),
+                    GsonFactory.getDefaultInstance(),
+                    new HttpCredentialsAdapter(credentials))
+                    .setApplicationName(applicationName)
+                    .build();
+
+            log.info("Google Sheets API initialized successfully.");
+
+        } catch (IOException | GeneralSecurityException e) {
+            log.error("Failed to initialize Google Sheets service: ", e);
+            throw new RuntimeException("Critical failure during Google Sheets initialization", e);
+        }
     }
 
     @Override

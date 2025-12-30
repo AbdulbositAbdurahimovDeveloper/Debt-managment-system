@@ -23,12 +23,16 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "users")
+@Entity
+@Table(name = "users", indexes = {
+        @Index(name = "idx_users_username", columnList = "username")
+})
 @SQLDelete(sql = "UPDATE users SET deleted = true WHERE id = ?")
 @SQLRestriction(value = "deleted=false")
 @FieldNameConstants
 public class User extends AbsLongEntity implements UserDetails {
 
+    @Column(nullable = false,unique = true)
     private String username;
 
     private String password;
@@ -40,7 +44,7 @@ public class User extends AbsLongEntity implements UserDetails {
     @JsonManagedReference
     private TelegramUser telegramUser;
 
-    @OneToOne(mappedBy = "user", orphanRemoval = true,cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", orphanRemoval = true, cascade = CascadeType.ALL)
     @JsonManagedReference
     private UserProfile userProfile;
 

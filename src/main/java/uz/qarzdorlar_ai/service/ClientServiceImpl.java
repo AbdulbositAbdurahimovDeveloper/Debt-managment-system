@@ -38,13 +38,18 @@ public class ClientServiceImpl implements ClientService {
         if (clientRepository.existsByFullName(fullName)) {
             throw new DataConflictException("Full name all ready exist with full name : " + fullName);
         }
+        String phoneNumber = clientCreateDTO.getPhoneNumber();
+        if (clientRepository.existsByPhoneNumber(phoneNumber)) {
+            throw new DataConflictException("Phone number all ready exist with phone number : " + phoneNumber);
+        }
 
         Client client = new Client();
         client.setFullName(clientCreateDTO.getFullName());
-        client.setPhoneNumber(clientCreateDTO.getPhoneNumber());
+        client.setPhoneNumber(phoneNumber);
         client.setType(clientCreateDTO.getType());
         client.setBalanceCurrency(currency);
         client.setInitialBalance(clientCreateDTO.getInitialBalance());
+        client.setCurrentBalance(clientCreateDTO.getInitialBalance());
         client.setAddress(clientCreateDTO.getAddress());
         client.setComment(clientCreateDTO.getComment());
 

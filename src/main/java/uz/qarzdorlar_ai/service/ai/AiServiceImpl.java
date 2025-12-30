@@ -4,17 +4,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import uz.qarzdorlar_ai.Utils;
-import uz.qarzdorlar_ai.payload.GoogleSheetData;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetData;
 import uz.qarzdorlar_ai.payload.ProductParseDTO;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j

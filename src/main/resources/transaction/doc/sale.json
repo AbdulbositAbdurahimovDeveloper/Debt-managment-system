@@ -1,0 +1,86 @@
+{
+  "project": "Qarzdorlar AI - Sale Documentation",
+  "note": "createdAt maydoni bo'lsa - o'sha sana bilan saqlanadi, bo'lmasa - hozirgi vaqt bilan.",
+  "scenarios": [
+    {
+      "case": "1. UZS Mijoz, UZS da savdo (Hozirgi vaqt)",
+      "payload": {
+        "clientId": 7,
+        "type": "SALE",
+        "currencyId": 1,
+        "exchangeRate": 12500.0,
+        "clientExchangeRate": 12500.0,
+        "createdAt": null,
+        "description": "Bugungi so'mdagi savdo",
+        "items": [
+          {
+            "productId": 10,
+            "quantity": 1,
+            "unitPrice": 1250000.0
+          }
+        ]
+      },
+      "result": "1,250,000 UZS qarz (Hozirgi sana bilan)"
+    },
+    {
+      "case": "2. UZS Mijoz, USD da savdo (Eski sana - Migratsiya)",
+      "payload": {
+        "clientId": 7,
+        "type": "SALE",
+        "currencyId": 2,
+        "exchangeRate": 1.0,
+        "clientExchangeRate": 12500.0,
+        "createdAt": "2024-10-15T10:30:00.000+00:00",
+        "description": "2024-yildagi 100 dollarlik savdo",
+        "items": [
+          {
+            "productId": 11,
+            "quantity": 1,
+            "unitPrice": 100.0
+          }
+        ]
+      },
+      "result": "1,250,000 UZS qarz (2024-yil 15-oktabr sanasi bilan)"
+    },
+    {
+      "case": "3. USD Mijoz, UZS da savdo (Eski sana - Migratsiya)",
+      "payload": {
+        "clientId": 8,
+        "type": "SALE",
+        "currencyId": 1,
+        "exchangeRate": 12500.0,
+        "clientExchangeRate": 1.0,
+        "createdAt": "2023-05-20T14:00:00.000+00:00",
+        "description": "2023-yildagi so'mda qilingan savdo, mijoz dollarda",
+        "items": [
+          {
+            "productId": 12,
+            "quantity": 1,
+            "unitPrice": 1250000.0
+          }
+        ]
+      },
+      "result": "100 USD qarz (2023-yil 20-may sanasi bilan)"
+    },
+    {
+      "case": "4. AED Mijoz, AED da savdo (Hozirgi vaqt)",
+      "payload": {
+        "clientId": 9,
+        "type": "SALE",
+        "currencyId": 3,
+        "exchangeRate": 3.67,
+        "clientExchangeRate": 3.67,
+        "createdAt": null,
+        "description": "Dirhamda savdo, mijoz ham dirhamda",
+        "items": [
+          {
+            "productId": 13,
+            "quantity": 1,
+            "unitPrice": 367.0
+          }
+        ]
+      },
+      "result": "367 AED qarz"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import uz.qarzdorlar_ai.exception.EntityNotFoundException;
 import uz.qarzdorlar_ai.model.User;
-import uz.qarzdorlar_ai.payload.UserDTO;
+import uz.qarzdorlar_ai.payload.user.UserDTO;
 import uz.qarzdorlar_ai.repository.UserRepository;
 
 @Slf4j

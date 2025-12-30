@@ -1,4 +1,4 @@
-package uz.qarzdorlar_ai.payload;
+package uz.qarzdorlar_ai.payload.sheet;
 
 import lombok.Data;
 

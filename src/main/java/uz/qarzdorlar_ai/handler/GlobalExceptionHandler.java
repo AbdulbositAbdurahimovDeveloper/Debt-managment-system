@@ -226,6 +226,17 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ResponseDTO.error(error), HttpStatus.PAYLOAD_TOO_LARGE);
     }
 
+    /**
+     * Handles business logic errors (e.g., negative amounts, missing receiver for transfer).
+     */
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ResponseDTO<Object>> handleIllegalArgumentException(IllegalArgumentException ex) {
+        log.warn("Validation failed: {}", ex.getMessage());
+        ErrorDTO error = new ErrorDTO(HttpStatus.BAD_REQUEST.value(), ex.getMessage()); // 400 qaytarish kerak
+        return new ResponseEntity<>(ResponseDTO.error(error), HttpStatus.BAD_REQUEST);
+    }
+
+
     // === CATCH-ALL SAFETY NET HANDLER ===
 
     /**

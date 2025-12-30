@@ -9,9 +9,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import uz.qarzdorlar_ai.healthInfoBot.HealthBot;
 import uz.qarzdorlar_ai.mapper.SendMsg;
-import uz.qarzdorlar_ai.payload.GoogleSheetData;
 import uz.qarzdorlar_ai.payload.ProductInsertEvent;
 import uz.qarzdorlar_ai.payload.ProductParseDTO;
+import uz.qarzdorlar_ai.payload.sheet.GoogleSheetData;
 import uz.qarzdorlar_ai.repository.ProductRepository;
 import uz.qarzdorlar_ai.service.ai.AiService;
 import uz.qarzdorlar_ai.service.sheet.SheetService;
@@ -34,8 +34,8 @@ public class GoogleSheetDataUpdates {
     private final SendMsg sendMsg;
 
     @Async
-        @Scheduled(cron = "0 0 * * * *") // every hour
-//    @Scheduled(initialDelay = 0, fixedRate = 60 * 60 * 1000)
+//        @Scheduled(cron = "0 0 * * * *") // every hour
+    @Scheduled(initialDelay = 0, fixedRate = 60 * 60 * 1000)
     public void updateOrInsertProductDatabase() {
         List<GoogleSheetData> googleSheetData = sheetService.importGoogleSheetData();
         log.info(" 💾 Sheets data size {} ", googleSheetData.size());
@@ -46,10 +46,14 @@ public class GoogleSheetDataUpdates {
 
         int itemCount = 1;
         for (GoogleSheetData sheetData : googleSheetData) {
-            String item = sheetData.getItem();
+            String item = sheetData.getItem().trim();
 
             // 1. Agar bu run davomida ro'yxatga qo'shilgan bo'lsa, o'tib ket
             if (alreadyAddedInThisRun.contains(item)) {
+                continue;
+            }
+
+            if (productRepository.existsByRawData(item)) {
                 continue;
             }
 
@@ -74,7 +78,6 @@ public class GoogleSheetDataUpdates {
         List<List<GoogleSheetData>> partitions = partition(toProcess, 10);
         int s = 1;
         for (List<GoogleSheetData> batch : partitions) {
-//            todo
 //            List<ProductParseDTO> productParseDTOS = aiService.productParseAI(batch);
             log.info("Batch processed: {}", s++);
 

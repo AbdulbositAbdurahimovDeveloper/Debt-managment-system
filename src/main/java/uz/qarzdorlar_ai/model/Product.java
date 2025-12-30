@@ -65,6 +65,6 @@ public class Product extends AbsLongEntity {
     @Column(columnDefinition = "TEXT")
     private String description; // Agar qo'shimcha info bo'lsa (masalan: "Ekranida dog'i bor")
 
-    @Column(name = "raw_data",nullable = false, columnDefinition = "TEXT")
+    @Column(name = "raw_data",nullable = false, columnDefinition = "TEXT",unique = true)
     private String rawData; // Audit data from Google Sheets
 }

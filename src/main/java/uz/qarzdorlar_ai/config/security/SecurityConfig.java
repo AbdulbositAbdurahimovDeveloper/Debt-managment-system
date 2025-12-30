@@ -30,6 +30,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/error",
                                 "/registry-telegram-bot.html",
                                 "/api/register/bot",
                                 "/telegram-bot",
@@ -42,7 +43,8 @@ public class SecurityConfig {
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
-                .httpBasic(AbstractHttpConfigurer::disable) //.httpBasic(Customizer.withDefaults())
+//                .httpBasic(AbstractHttpConfigurer::disable)
+                .httpBasic(Customizer.withDefaults())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

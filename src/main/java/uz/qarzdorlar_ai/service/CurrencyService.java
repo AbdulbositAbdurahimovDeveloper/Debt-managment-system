@@ -1,10 +1,11 @@
 package uz.qarzdorlar_ai.service;
 
-import uz.qarzdorlar_ai.model.CurrencyCreateDTO;
-import uz.qarzdorlar_ai.model.CurrencyDTO;
+import uz.qarzdorlar_ai.payload.CurrencyCreateDTO;
+import uz.qarzdorlar_ai.payload.CurrencyDTO;
 import uz.qarzdorlar_ai.payload.PageDTO;
 
 public interface CurrencyService {
+
     CurrencyDTO createCurrency(CurrencyCreateDTO currencyCreateDTO);
 
     CurrencyDTO getByIdCurrency(Long id);

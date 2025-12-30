@@ -24,7 +24,7 @@ public class Currency extends AbsLongEntity {
     @Column(nullable = false)
     private String name;  // So'm, Dollar
 
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String code;  // UZS, USD
 
     private String symbol; // сум, $

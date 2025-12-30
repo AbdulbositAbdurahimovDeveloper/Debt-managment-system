@@ -1,0 +1,190 @@
+{
+  "project_name": "Qarzdorlar AI - Multi-Currency Logic Documentation",
+  "version": "1.0",
+  "author_note": "Senior Backend Logic - Universal Currency Converter",
+  "glossary": {
+    "exchangeRate": "1 USD necha Transaction Currency (sotuv valyutasi) ekanligi. (Masalan: 12500)",
+    "clientExchangeRate": "1 USD necha Client Currency (mijoz balansi valyutasi) ekanligi.",
+    "unitPrice": "Sotuv valyutasidagi (Transaction Currency) 1 dona mahsulot narxi.",
+    "originalAmount": "Kassaga real kelib tushgan pul miqdori (Transaction Currency'da).",
+    "balanceAmount": "Backend tomonidan hisoblanadigan, mijozning balansiga (qarziga) ta'sir qiluvchi yakuniy summa (Mijoz valyutasida)."
+  },
+  "business_logic": {
+    "formula": "(Amount / exchangeRate) * clientExchangeRate = balanceAmount",
+    "sale_balance_impact": "clientBalance = clientBalance - balanceAmount (Qarzi ko'payadi)",
+    "payment_balance_impact": "clientBalance = clientBalance + balanceAmount (Qarzi kamayadi)",
+    "rate_priority": "1. DTO ichida kelgan rate -> 2. Bazadagi eng oxirgi rate -> 3. Agar USD bo'lsa 1.0"
+  },
+  "scenarios": {
+    "SALE_TRANSACTIONS": [
+      {
+        "client_type": "1-Mijoz: Balansi SO'MDA (UZS, ID: 1)",
+        "cases": [
+          {
+            "title": "A. So'mda narsa sotib olsa (UZS -> UZS)",
+            "payload": {
+              "clientId": 7,
+              "type": "SALE",
+              "currencyId": 1,
+              "exchangeRate": 12500.0,
+              "clientExchangeRate": 12500.0,
+              "description": "So'mda savdo, mijoz so'mda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 1250000.0 }]
+            },
+            "result": "1,250,000 UZS qarz"
+          },
+          {
+            "title": "B. Dollarda narsa sotib olsa (USD -> UZS)",
+            "payload": {
+              "clientId": 7,
+              "type": "SALE",
+              "currencyId": 2,
+              "exchangeRate": 1.0,
+              "clientExchangeRate": 12500.0,
+              "description": "Dollarda savdo, mijoz so'mda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 100.0 }]
+            },
+            "result": "100 * 12500 = 1,250,000 UZS qarz"
+          },
+          {
+            "title": "C. Dirhamda narsa sotib olsa (AED -> UZS)",
+            "payload": {
+              "clientId": 7,
+              "type": "SALE",
+              "currencyId": 3,
+              "exchangeRate": 3.67,
+              "clientExchangeRate": 12500.0,
+              "description": "Dirhamda savdo, mijoz so'mda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 367.0 }]
+            },
+            "result": "(367 / 3.67) * 12500 = 1,250,000 UZS qarz"
+          }
+        ]
+      },
+      {
+        "client_type": "2-Mijoz: Balansi DOLLARDA (USD, ID: 2)",
+        "cases": [
+          {
+            "title": "A. So'mda narsa sotib olsa (UZS -> USD)",
+            "payload": {
+              "clientId": 8,
+              "type": "SALE",
+              "currencyId": 1,
+              "exchangeRate": 12500.0,
+              "clientExchangeRate": 1.0,
+              "description": "So'mda savdo, mijoz dollarda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 1250000.0 }]
+            },
+            "result": "1,250,000 / 12500 = 100 USD qarz"
+          },
+          {
+            "title": "C. Dirhamda narsa sotib olsa (AED -> USD)",
+            "payload": {
+              "clientId": 8,
+              "type": "SALE",
+              "currencyId": 3,
+              "exchangeRate": 3.67,
+              "clientExchangeRate": 1.0,
+              "description": "Dirhamda savdo, mijoz dollarda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 367.0 }]
+            },
+            "result": "367 / 3.67 = 100 USD qarz"
+          }
+        ]
+      },
+      {
+        "client_type": "3-Mijoz: Balansi DIRHAMDA (AED, ID: 3)",
+        "cases": [
+          {
+            "title": "A. So'mda narsa sotib olsa (UZS -> AED)",
+            "payload": {
+              "clientId": 9,
+              "type": "SALE",
+              "currencyId": 1,
+              "exchangeRate": 12500.0,
+              "clientExchangeRate": 3.67,
+              "description": "So'mda savdo, mijoz dirhamda",
+              "items": [{ "productId": 10, "quantity": 1, "unitPrice": 1250000.0 }]
+            },
+            "result": "(1,250,000 / 12500) * 3.67 = 367 AED qarz"
+          }
+        ]
+      }
+    ],
+    "PAYMENT_TRANSACTIONS": [
+      {
+        "client_type": "1-Mijoz: Balansi SO'MDA (UZS, ID: 1)",
+        "cases": [
+          {
+            "title": "A. So'mda to'lov qilsa (UZS -> UZS)",
+            "payload": {
+              "clientId": 7,
+              "type": "PAYMENT",
+              "currencyId": 1,
+              "exchangeRate": 12500.0,
+              "clientExchangeRate": 12500.0,
+              "originalAmount": 1250000.0,
+              "description": "So'mda kelgan to'lov, so'm balansga"
+            },
+            "result": "1,250,000 UZS balansga qo'shiladi"
+          },
+          {
+            "title": "B. Dollarda to'lov qilsa (USD -> UZS)",
+            "payload": {
+              "clientId": 7,
+              "type": "PAYMENT",
+              "currencyId": 2,
+              "exchangeRate": 1.0,
+              "clientExchangeRate": 12500.0,
+              "originalAmount": 100.0,
+              "description": "Dollar berdi, so'm balansga o'tsin"
+            },
+            "result": "100 * 12500 = 1,250,000 UZS balansga qo'shiladi"
+          }
+        ]
+      },
+      {
+        "client_type": "2-Mijoz: Balansi DOLLARDA (USD, ID: 2)",
+        "cases": [
+          {
+            "title": "A. So'mda to'lov qilsa (UZS -> USD)",
+            "payload": {
+              "clientId": 8,
+              "type": "PAYMENT",
+              "currencyId": 1,
+              "exchangeRate": 12500.0,
+              "clientExchangeRate": 1.0,
+              "originalAmount": 1250000.0,
+              "description": "So'm olib keldi, dollar balansiga"
+            },
+            "result": "1,250,000 / 12500 = 100 USD balansga qo'shiladi"
+          }
+        ]
+      },
+      {
+        "client_type": "3-Mijoz: Balansi DIRHAMDA (AED, ID: 3)",
+        "cases": [
+          {
+            "title": "B. Dollarda to'lov qilsa (USD -> AED)",
+            "payload": {
+              "clientId": 9,
+              "type": "PAYMENT",
+              "currencyId": 2,
+              "exchangeRate": 1.0,
+              "clientExchangeRate": 3.67,
+              "originalAmount": 100.0,
+              "description": "Dollar olib keldi, dirham balansiga"
+            },
+            "result": "100 * 3.67 = 367 AED balansga qo'shiladi"
+          }
+        ]
+      }
+    ]
+  },
+  "important_notes": [
+    "1. SALE holatida 'items' ro'yxati majburiy.",
+    "2. PAYMENT holatida 'originalAmount' majburiy.",
+    "3. 'createdAt' maydoni ixtiyoriy (migration uchun).",
+    "4. Hamma kurslar 1 USD nisbatida berilishi shart."
+  ]
+}

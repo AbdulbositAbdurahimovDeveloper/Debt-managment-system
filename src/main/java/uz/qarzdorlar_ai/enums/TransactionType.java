@@ -5,6 +5,7 @@ public enum TransactionType {
     PURCHASE,
     SALE,    // Sotuv
     PAYMENT, // To'lov
+    RETURN_PAYMENT,
     RETURN,  // Vozvrat
     TRANSFER // Mijozdan-mijozga o'tkazma (P2P)
 }
