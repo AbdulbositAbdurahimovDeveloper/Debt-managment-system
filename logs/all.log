@@ -1,23 +1,23 @@
-2025-12-28 11:24:06 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-28 11:24:06 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 14096 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
-2025-12-28 11:24:06 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-28 11:24:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-28 11:24:08 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 298 ms. Found 5 JPA repository interfaces.
-2025-12-28 11:24:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-28 11:24:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-28 11:24:09 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-28 11:24:09 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-28 11:24:09 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-28 11:24:09 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3090 ms
-2025-12-28 11:24:09 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-28 11:24:09 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-28 11:24:09 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-28 11:24:09 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-28 11:24:10 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c3b0cc8
-2025-12-28 11:24:10 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-28 11:24:11 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-31 15:50:31 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 15:50:31 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 16900 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 15:50:31 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 15:50:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:50:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 243 ms. Found 9 JPA repository interfaces.
+2025-12-31 15:50:33 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 15:50:33 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:50:33 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:50:33 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 15:50:33 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:50:33 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2277 ms
+2025-12-31 15:50:33 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:50:34 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:50:34 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 15:50:34 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:50:34 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:50:34 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:50:34 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1002b06d
+2025-12-31 15:50:34 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:50:35 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -25,70 +25,52 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-28 11:24:13 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukrdxh7tq2xs66r485cc8dkxt77" of relation "brand" does not exist, skipping
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjgbii7eaw72fc9llajcdeyjb" of relation "client" does not exist, skipping
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uksl8ny8en581rfgjfq3d0tv0ab" of relation "client" does not exist, skipping
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk1ixfyfepst9sjbo9op1v65fg0" of relation "client" does not exist, skipping
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukagsvbr4mhfj49c96foedgq8wk" of relation "telegram_user" does not exist, skipping
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2025-12-28 11:24:13 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uke5h89rk3ijvdmaiig4srogdc6" of relation "user_profiles" does not exist, skipping
-2025-12-28 11:24:13 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 11:24:15 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
-2025-12-28 11:24:17 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-12-28 11:24:17 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-12-28 11:24:17 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 12.341 seconds (process running for 15.356)
-2025-12-28 12:00:00 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-28 12:00:00 ERROR [task-2] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
-java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
-	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-12-28 12:20:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
-2025-12-28 12:20:24 INFO  [http-nio-8080-exec-6] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1762 ms
-2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-28 12:20:36 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-28 12:20:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-28 12:20:51 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-28 12:20:51 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 2516 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
-2025-12-28 12:20:51 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-28 12:20:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-28 12:20:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 5 JPA repository interfaces.
-2025-12-28 12:20:53 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-28 12:20:53 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-28 12:20:53 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-28 12:20:53 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-28 12:20:53 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-28 12:20:53 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1597 ms
-2025-12-28 12:20:53 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-28 12:20:53 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-28 12:20:53 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-28 12:20:53 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-28 12:20:53 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6db04a6
-2025-12-28 12:20:53 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-28 12:20:54 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-31 15:50:36 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:50:36 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:50:37 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 15:50:38 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 15:50:38 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 15:50:38 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 15:50:39 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:50:39 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 15:50:39 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 8.951 seconds (process running for 18.777)
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 15:50:39 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 15:55:08 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 15:55:08 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 15:55:08 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 15:55:10 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 15:55:10 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 15:55:10 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:55:10 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:55:10 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:55:13 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 15:55:13 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 6788 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 15:55:13 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 15:55:14 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:55:14 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 9 JPA repository interfaces.
+2025-12-31 15:55:15 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 15:55:15 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:55:15 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:55:15 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 15:55:15 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:55:15 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1648 ms
+2025-12-31 15:55:15 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:55:15 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:55:15 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 15:55:15 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:55:15 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:55:15 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:55:15 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6636448b
+2025-12-31 15:55:15 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:55:15 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -96,109 +78,53 @@ java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-28 12:20:55 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-28 12:20:55 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 12:20:56 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
-2025-12-28 12:20:57 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-12-28 12:20:57 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-12-28 12:20:57 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.372 seconds (process running for 8.044)
-2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-12-28 12:21:02 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-12-28 12:21:04 INFO  [http-nio-8080-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1564 ms
-2025-12-28 13:00:00 INFO  [task-2] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-28 13:00:00 ERROR [task-2] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
-java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
-	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2025-12-28 14:00:00 INFO  [task-4] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-28 14:00:00 ERROR [task-4] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
-java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
-	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2025-12-28 15:00:00 INFO  [task-6] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-28 15:00:00 ERROR [task-6] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
-java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
-	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2025-12-28 16:00:00 INFO  [task-8] u.q.service.sheet.SheetServiceImpl - Fetching data from sheet range: data!A:B
-2025-12-28 16:00:00 ERROR [task-8] o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase()
-java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4.Sheets.spreadsheets()" because "this.sheetsService" is null
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.readRange(SheetServiceImpl.java:107)
-	at uz.qarzdorlar_ai.service.sheet.SheetServiceImpl.importGoogleSheetData(SheetServiceImpl.java:151)
-	at uz.qarzdorlar_ai.scheduling.GoogleSheetDataUpdates.updateOrInsertProductDatabase(GoogleSheetDataUpdates.java:40)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:328)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-28 16:23:01 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-28 16:23:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-28 17:35:43 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-28 17:35:43 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 5904 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
-2025-12-28 17:35:43 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-28 17:35:44 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-28 17:35:45 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 219 ms. Found 7 JPA repository interfaces.
-2025-12-28 17:35:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-28 17:35:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-28 17:35:45 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-28 17:35:45 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-28 17:35:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-28 17:35:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1912 ms
-2025-12-28 17:35:45 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-28 17:35:46 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-28 17:35:46 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-28 17:35:46 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-28 17:35:46 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-28 17:35:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-28 17:35:46 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51566ce0
-2025-12-28 17:35:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-28 17:35:46 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-31 15:55:17 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:55:17 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:55:17 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 15:55:18 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 15:55:18 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 15:55:19 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 15:55:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:55:19 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 15:55:19 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 7.019 seconds (process running for 8.076)
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 15:55:19 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 15:55:19 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 15:55:19 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 15:55:19 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 15:55:21 WARN  [http-nio-8080-exec-3] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to 'favicon.ico'.
+2025-12-31 15:55:57 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 15:55:57 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 15:55:57 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:55:57 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:55:57 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:56:02 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 15:56:02 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 4248 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 15:56:02 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 15:56:03 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:56:03 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 9 JPA repository interfaces.
+2025-12-31 15:56:03 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 15:56:03 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:56:03 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:56:03 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 15:56:03 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:56:03 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1602 ms
+2025-12-31 15:56:04 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:56:04 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:56:04 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 15:56:04 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:56:04 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:56:04 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:56:04 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57fc6759
+2025-12-31 15:56:04 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:56:04 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -206,51 +132,53 @@ java.lang.NullPointerException: Cannot invoke "com.google.api.services.sheets.v4
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-28 17:35:48 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-28 17:35:48 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 17:35:49 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyController' defined in file [C:\Users\user\IdeaProjects\Debt-managment-system\target\classes\uz\qarzdorlar_ai\controller\CurrencyController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'uz.qarzdorlar_ai.service.CurrencyService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-12-28 17:35:49 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 17:35:49 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-28 17:35:49 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-28 17:35:49 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-12-28 17:35:49 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-12-28 17:35:49 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in uz.qarzdorlar_ai.controller.CurrencyController required a bean of type 'uz.qarzdorlar_ai.service.CurrencyService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'uz.qarzdorlar_ai.service.CurrencyService' in your configuration.
-
-2025-12-28 17:36:41 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
-2025-12-28 17:36:41 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 396 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
-2025-12-28 17:36:41 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
-2025-12-28 17:36:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-12-28 17:36:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 160 ms. Found 7 JPA repository interfaces.
-2025-12-28 17:36:43 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-28 17:36:43 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-28 17:36:43 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-28 17:36:43 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
-2025-12-28 17:36:43 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-28 17:36:43 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1590 ms
-2025-12-28 17:36:43 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-12-28 17:36:43 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-12-28 17:36:43 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
-2025-12-28 17:36:43 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-12-28 17:36:44 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-12-28 17:36:44 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-12-28 17:36:44 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@182dcd2b
-2025-12-28 17:36:44 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-12-28 17:36:44 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-12-31 15:56:05 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:56:05 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:56:06 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 15:56:07 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 15:56:07 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 15:56:07 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 15:56:08 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:56:08 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 15:56:08 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.616 seconds (process running for 7.526)
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 15:56:08 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 15:56:10 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 15:56:10 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 15:56:10 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 15:56:23 WARN  [http-nio-8080-exec-3] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to 'transaction-create.html'.
+2025-12-31 15:57:34 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 15:57:34 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 15:57:34 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:57:34 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:57:34 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:57:38 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 15:57:38 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 8484 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 15:57:38 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 15:57:39 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:57:39 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 9 JPA repository interfaces.
+2025-12-31 15:57:40 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 15:57:40 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:57:40 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:57:40 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 15:57:40 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:57:40 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1584 ms
+2025-12-31 15:57:40 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:57:40 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:57:40 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 15:57:40 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:57:41 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:57:41 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:57:41 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bfafce1
+2025-12-31 15:57:41 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:57:41 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 18.1
@@ -258,28 +186,867 @@ Consider defining a bean of type 'uz.qarzdorlar_ai.service.CurrencyService' in y
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-12-28 17:36:45 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-12-28 17:36:45 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 17:36:46 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyController' defined in file [C:\Users\user\IdeaProjects\Debt-managment-system\target\classes\uz\qarzdorlar_ai\controller\CurrencyController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'currencyServiceImpl' defined in file [C:\Users\user\IdeaProjects\Debt-managment-system\target\classes\uz\qarzdorlar_ai\service\CurrencyServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'uz.qarzdorlar_ai.mapper.CurrencyMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-12-28 17:36:46 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-12-28 17:36:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-12-28 17:36:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-12-28 17:36:46 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-12-28 17:36:46 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-12-28 17:36:46 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in uz.qarzdorlar_ai.service.CurrencyServiceImpl required a bean of type 'uz.qarzdorlar_ai.mapper.CurrencyMapper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'uz.qarzdorlar_ai.mapper.CurrencyMapper' in your configuration.
-
+2025-12-31 15:57:42 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:57:42 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:57:43 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 15:57:44 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 15:57:44 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 15:57:44 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 15:57:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:57:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 15:57:45 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.997 seconds (process running for 7.886)
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 15:57:45 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 15:57:45 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 15:57:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 15:57:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 15:58:19 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 15:58:19 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 15:58:19 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:58:19 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 15:58:19 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 15:58:23 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 15:58:23 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 10348 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 15:58:23 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 15:58:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 15:58:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 9 JPA repository interfaces.
+2025-12-31 15:58:25 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 15:58:25 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:58:25 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 15:58:25 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 15:58:25 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 15:58:25 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1626 ms
+2025-12-31 15:58:25 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 15:58:25 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 15:58:25 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 15:58:25 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 15:58:25 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 15:58:25 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 15:58:26 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44a98a23
+2025-12-31 15:58:26 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 15:58:26 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 15:58:27 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 15:58:27 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 15:58:27 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 15:58:28 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 15:58:28 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 15:58:28 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 15:58:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 15:58:29 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 15:58:29 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.633 seconds (process running for 7.583)
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 15:58:29 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 15:58:30 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 15:58:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 15:58:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 15:58:52 INFO  [http-nio-8080-exec-10] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 2026 ms
+2025-12-31 15:59:51 INFO  [http-nio-8080-exec-6] u.q.service.AuthServiceImpl - User 'develop' successfully authenticated and tokens generated.
+2025-12-31 16:00:02 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:00:02 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:00:02 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:00:02 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:00:02 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:00:05 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:00:06 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 3588 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:00:06 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:00:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:00:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 168 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:00:07 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:00:07 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:00:07 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:00:07 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:00:07 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:00:07 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1631 ms
+2025-12-31 16:00:07 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:00:07 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:00:07 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:00:07 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:00:08 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:00:08 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:00:08 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bfafce1
+2025-12-31 16:00:08 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:00:08 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:00:09 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:00:09 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:00:10 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:00:11 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:00:11 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:00:11 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:00:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:00:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:00:11 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.575 seconds (process running for 7.422)
+2025-12-31 16:00:11 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:00:12 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:03:12 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:03:12 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:03:12 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:03:14 INFO  [http-nio-8080-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1720 ms
+2025-12-31 16:06:32 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:06:32 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:06:32 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:06:32 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:06:32 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:06:35 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:06:35 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 18168 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:06:35 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:06:36 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:06:37 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:06:37 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:06:37 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:06:37 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:06:37 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:06:37 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:06:37 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1566 ms
+2025-12-31 16:06:37 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:06:37 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:06:37 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:06:37 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:06:38 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:06:38 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:06:38 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44a98a23
+2025-12-31 16:06:38 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:06:38 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:06:39 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:06:39 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:06:39 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:06:41 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:06:41 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:06:41 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:06:42 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:06:42 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:06:42 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.809 seconds (process running for 7.703)
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:06:42 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:06:59 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:06:59 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:06:59 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:08:42 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:08:42 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:08:42 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:08:42 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:08:42 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:08:46 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:08:46 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 14288 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:08:46 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:08:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:08:48 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:08:48 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:08:48 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:08:48 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:08:48 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:08:48 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:08:48 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1572 ms
+2025-12-31 16:08:48 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:08:48 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:08:48 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:08:48 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:08:49 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:08:49 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:08:49 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@272c5abd
+2025-12-31 16:08:49 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:08:49 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:08:50 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:08:50 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:08:50 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:08:51 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:08:52 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:08:52 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:08:52 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:08:52 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:08:52 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.6 seconds (process running for 7.442)
+2025-12-31 16:08:52 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:08:53 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:09:12 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:09:12 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:09:12 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:09:12 WARN  [http-nio-8080-exec-1] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to '.well-known/appspecific/com.chrome.devtools.json'.
+2025-12-31 16:10:26 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:10:26 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:10:26 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:10:26 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:10:26 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:10:31 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:10:31 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 7784 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:10:31 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:10:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:10:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:10:32 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:10:32 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:10:32 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:10:32 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:10:32 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:10:32 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1625 ms
+2025-12-31 16:10:32 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:10:33 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:10:33 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:10:33 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:10:33 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:10:33 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:10:33 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@411933
+2025-12-31 16:10:33 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:10:33 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:10:34 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:10:34 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:10:35 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:10:36 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:10:36 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:10:36 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:10:37 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:10:37 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:10:37 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.798 seconds (process running for 7.753)
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:10:37 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:12:07 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:12:07 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:12:07 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:12:07 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:12:07 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:12:10 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:12:10 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 1320 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:12:10 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:12:11 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:12:11 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:12:12 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:12:12 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:12:12 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:12:12 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:12:12 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:12:12 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1566 ms
+2025-12-31 16:12:12 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:12:12 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:12:12 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:12:12 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:12:13 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:12:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:12:13 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32fd5bc
+2025-12-31 16:12:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:12:13 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:12:14 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:12:14 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:12:14 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:12:15 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:12:16 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:12:16 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:12:16 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:12:16 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:12:16 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.596 seconds (process running for 7.504)
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:12:16 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:12:33 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:12:33 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:12:33 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:12:34 WARN  [http-nio-8080-exec-1] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to '.well-known/appspecific/com.chrome.devtools.json'.
+2025-12-31 16:12:57 INFO  [http-nio-8080-exec-2] u.q.service.AuthServiceImpl - User 'develop' successfully authenticated and tokens generated.
+2025-12-31 16:14:41 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:14:41 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:14:41 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:14:41 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:14:41 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:14:45 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:14:45 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 19832 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:14:45 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:14:45 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:14:46 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:14:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:14:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:14:46 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:14:46 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:14:46 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:14:46 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1646 ms
+2025-12-31 16:14:46 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:14:47 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:14:47 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:14:47 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:14:47 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:14:47 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:14:47 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@339cde4b
+2025-12-31 16:14:47 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:14:47 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:14:48 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:14:48 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:14:49 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:14:50 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:14:50 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:14:50 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:14:51 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:14:51 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:14:51 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 7.069 seconds (process running for 7.955)
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:14:51 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:14:54 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:14:54 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:14:54 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:14:54 WARN  [http-nio-8080-exec-3] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to '.well-known/appspecific/com.chrome.devtools.json'.
+2025-12-31 16:17:59 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:17:59 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:17:59 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:17:59 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:17:59 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:18:03 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:18:03 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 17680 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:18:03 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:18:04 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:18:04 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:18:05 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:18:05 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:18:05 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:18:05 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:18:05 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:18:05 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1568 ms
+2025-12-31 16:18:05 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:18:05 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:18:05 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:18:05 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:18:05 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:18:05 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:18:06 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bfdaed7
+2025-12-31 16:18:06 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:18:06 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:18:07 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:18:07 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:18:07 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:18:08 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:18:08 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:18:09 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:18:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:18:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:18:09 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.581 seconds (process running for 7.447)
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:18:09 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:20:38 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:20:38 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:20:38 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:20:38 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:20:38 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:20:41 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:20:41 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 9484 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:20:41 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:20:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:20:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:20:43 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:20:43 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:20:43 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:20:43 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:20:43 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:20:43 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1545 ms
+2025-12-31 16:20:43 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:20:43 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:20:43 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:20:43 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:20:44 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:20:44 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:20:44 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19540247
+2025-12-31 16:20:44 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:20:44 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:20:45 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:20:45 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:20:45 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:20:46 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:20:47 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:20:47 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:20:47 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:20:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:20:47 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.707 seconds (process running for 7.669)
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:20:47 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:20:51 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:20:51 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:20:51 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:20:51 WARN  [http-nio-8080-exec-2] u.q.handler.GlobalExceptionHandler - Resource not found for GET request to '.well-known/appspecific/com.chrome.devtools.json'.
+2025-12-31 16:22:57 WARN  [http-nio-8080-exec-4] u.q.handler.GlobalExceptionHandler - Validation failed: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+2025-12-31 16:23:16 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:23:16 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:23:16 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:23:16 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:23:16 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:23:21 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:23:21 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 26476 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:23:21 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:23:22 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:23:22 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:23:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:23:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:23:22 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:23:22 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:23:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:23:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1533 ms
+2025-12-31 16:23:23 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:23:23 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:23:23 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:23:23 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:23:23 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:23:23 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:23:23 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e18e693
+2025-12-31 16:23:23 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:23:23 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:23:24 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:23:24 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:23:25 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:23:26 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:23:26 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:23:26 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:23:27 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:23:27 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:23:27 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 6.508 seconds (process running for 7.415)
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:23:27 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:23:34 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:23:34 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:23:34 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:24:53 INFO  [http-nio-8080-exec-10] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1643 ms
+2025-12-31 16:37:12 WARN  [http-nio-8080-exec-10] u.q.handler.GlobalExceptionHandler - Validation failed for request: [FieldErrorDTO(field=rawData, message=must not be blank), FieldErrorDTO(field=rawData, message=must not be null), FieldErrorDTO(field=name, message=must not be blank), FieldErrorDTO(field=name, message=must not be null)]
+2025-12-31 16:37:46 ERROR [http-nio-8080-exec-2] u.q.handler.GlobalExceptionHandler - An unexpected internal server error occurred
+java.lang.NullPointerException: Cannot invoke "uz.qarzdorlar_ai.model.User.getUsername()" because "staffUser" is null
+	at uz.qarzdorlar_ai.service.transactions.TransactionServiceImpl.createTransaction(TransactionServiceImpl.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at uz.qarzdorlar_ai.service.transactions.TransactionServiceImpl$$SpringCGLIB$$0.createTransaction(<generated>)
+	at uz.qarzdorlar_ai.controller.TransactionController.createTransaction(TransactionController.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at uz.qarzdorlar_ai.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-31 16:38:38 ERROR [http-nio-8080-exec-7] u.q.handler.GlobalExceptionHandler - An unexpected internal server error occurred
+java.lang.NullPointerException: Cannot invoke "uz.qarzdorlar_ai.model.User.getUsername()" because "staffUser" is null
+	at uz.qarzdorlar_ai.service.transactions.TransactionServiceImpl.deleteTransaction(TransactionServiceImpl.java:1234)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at uz.qarzdorlar_ai.service.transactions.TransactionServiceImpl$$SpringCGLIB$$0.deleteTransaction(<generated>)
+	at uz.qarzdorlar_ai.controller.TransactionController.deleteTransaction(TransactionController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at uz.qarzdorlar_ai.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-12-31 16:38:56 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31 16:38:56 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-31 16:38:56 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:38:56 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-31 16:38:56 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-31 16:39:08 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-12-31 16:39:08 INFO  [main] u.q.QarzdorlarAiApplication - Starting QarzdorlarAiApplication using Java 25.0.1 with PID 15556 (C:\Users\user\IdeaProjects\Debt-managment-system\target\classes started by user in C:\Users\user\IdeaProjects\Debt-managment-system)
+2025-12-31 16:39:08 INFO  [main] u.q.QarzdorlarAiApplication - The following 1 profile is active: "dev"
+2025-12-31 16:39:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-31 16:39:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 9 JPA repository interfaces.
+2025-12-31 16:39:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-31 16:39:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:39:10 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 16:39:10 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2025-12-31 16:39:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 16:39:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1702 ms
+2025-12-31 16:39:10 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-31 16:39:10 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-31 16:39:10 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2025-12-31 16:39:10 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-31 16:39:11 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-31 16:39:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-31 16:39:11 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28b68067
+2025-12-31 16:39:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-31 16:39:11 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-31 16:39:12 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-31 16:39:12 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-31 16:39:13 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-31 16:39:14 INFO  [main] u.q.service.sheet.SheetServiceImpl - Initializing Google Sheets API connection...
+2025-12-31 16:39:14 INFO  [main] u.q.service.sheet.SheetServiceImpl - Google Sheets API initialized successfully.
+2025-12-31 16:39:14 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2025-12-31 16:39:15 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-31 16:39:15 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-31 16:39:15 INFO  [main] u.q.QarzdorlarAiApplication - Started QarzdorlarAiApplication in 7.16 seconds (process running for 8.724)
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - Starting system user initialization...
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'develop' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'admin' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'staff_plus' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'user' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'client' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - User 'anonymous' already exists. Skipping.
+2025-12-31 16:39:15 INFO  [main] uz.qarzdorlar_ai.config.DataLoader - System user initialization finished.
+2025-12-31 16:39:16 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 16:39:16 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-31 16:39:16 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-31 16:39:30 WARN  [http-nio-8080-exec-3] u.q.handler.GlobalExceptionHandler - Bad request: Exchange rate for USD must be 1.0, but received: 3.6700
+2025-12-31 16:39:44 WARN  [http-nio-8080-exec-5] u.q.handler.GlobalExceptionHandler - Bad request: Exchange rate for USD must be 1.0, but received: 3.6700
+2025-12-31 17:00:05 WARN  [http-nio-8080-exec-10] u.q.handler.GlobalExceptionHandler - Bad request: Exchange rate for USD must be 1.0, but received: 12000
+2025-12-31 17:00:11 WARN  [http-nio-8080-exec-1] u.q.handler.GlobalExceptionHandler - Bad request: Exchange rate for UZS seems incorrect. Expected range: 1000-50000, but received: 1. Please verify the rate to prevent data corruption.
+2025-12-31 17:04:46 WARN  [http-nio-8080-exec-2] u.q.handler.GlobalExceptionHandler - Entity not found: Transaction not found with id: 9
+2025-12-31 17:04:54 WARN  [http-nio-8080-exec-4] u.q.handler.GlobalExceptionHandler - Entity not found: Transaction not found with id: 11
+2025-12-31 17:11:17 WARN  [http-nio-8080-exec-7] u.q.handler.GlobalExceptionHandler - Bad request: Exchange rate for UZS seems incorrect. Expected range: 1000-50000, but received: 1. Please verify the rate to prevent data corruption.

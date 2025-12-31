@@ -4,20 +4,20 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import uz.qarzdorlar_ai.exception.EntityNotFoundException;
 import uz.qarzdorlar_ai.mapper.ProductMapper;
 import uz.qarzdorlar_ai.model.Brand;
 import uz.qarzdorlar_ai.model.Category;
 import uz.qarzdorlar_ai.model.Product;
 import uz.qarzdorlar_ai.model.embedded.AbsDateEntity;
-import uz.qarzdorlar_ai.payload.PageDTO;
-import uz.qarzdorlar_ai.payload.ProductCreateDTO;
-import uz.qarzdorlar_ai.payload.ProductDTO;
-import uz.qarzdorlar_ai.payload.ProductUpdateDTO;
+import uz.qarzdorlar_ai.payload.*;
 import uz.qarzdorlar_ai.repository.BrandRepository;
 import uz.qarzdorlar_ai.repository.CategoryRepository;
 import uz.qarzdorlar_ai.repository.ProductRepository;
+import uz.qarzdorlar_ai.specification.ProductSpecification;
 
 import java.util.List;
 
@@ -31,6 +31,7 @@ public class ProductServiceImpl implements ProductService {
     private final CategoryRepository categoryRepository;
 
     @Override
+    @Transactional
     public ProductDTO createProduct(ProductCreateDTO productCreateDTO) {
 
         Long brandId = productCreateDTO.getBrandId();
@@ -54,6 +55,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ProductDTO getById(Long id) {
 
         Product product = productRepository.findById(id)
@@ -64,6 +66,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public PageDTO<ProductDTO> getAllProducts(Integer page, Integer size) {
 
         Sort sort = Sort.by(AbsDateEntity.Fields.createdAt);
@@ -80,6 +83,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public ProductDTO updateProduct(Long id, ProductUpdateDTO productUpdateDTO) {
 
         Product product = productRepository.findById(id)
@@ -110,6 +114,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public String deleteProduct(Long id) {
 
         Product product = productRepository.findById(id)
@@ -118,5 +123,26 @@ public class ProductServiceImpl implements ProductService {
         productRepository.delete(product);
 
         return "Product deleted successfully. Deleted product with id : " + product.getId();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public PageDTO<ProductDTO> getSearchProducts(ProductFilterDTO productFilterDTO, Integer page, Integer size) {
+        // 1. Sortirovkani (masalan, yaratilgan vaqti bo'yicha) sozlash
+        Sort sort = Sort.by(Sort.Direction.DESC, "createdAt");
+        PageRequest pageRequest = PageRequest.of(page, size, sort);
+
+        // 2. Specification orqali qidiruvni amalga oshirish
+        Specification<Product> spec = ProductSpecification.build(productFilterDTO);
+        Page<Product> productsPage = productRepository.findAll(spec, pageRequest);
+
+        // 3. DTOga o'girish
+        List<ProductDTO> productDTOList = productMapper.toDTO(productsPage.getContent());
+
+        // 4. Siz so'ragan PageDTO formatida qaytarish
+        return new PageDTO<>(
+                productDTOList,
+                productsPage
+        );
     }
 }

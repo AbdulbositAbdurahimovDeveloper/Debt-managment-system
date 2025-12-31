@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction System - Working Version</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; padding: 20px; }
+        .card { border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .hidden { display: none !important; }
+        #jsonResponse { background: #212529; color: #0dfd05; padding: 15px; border-radius: 8px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sozlamalar -->
+    <div class="card bg-dark text-white">
+        <div class="card-body row">
+            <div class="col-md-4">
+                <label>Server URL</label>
+                <input type="text" id="baseUrl" class="form-control" value="http://localhost:8080">
+            </div>
+            <div class="col-md-4">
+                <label>API Path</label>
+                <input type="text" id="apiPath" class="form-control" value="/api/v1/transaction">
+            </div>
+            <div class="col-md-4">
+                <label>JWT Token</label>
+                <input type="text" id="jwtToken" class="form-control" placeholder="eyJhbGc...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Asosiy Forma -->
+    <form id="transactionForm">
+        <div class="card">
+            <div class="card-header bg-primary text-white fw-bold">Yangi Tranzaksiya Yaratish</div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Mijoz ID</label>
+                        <input type="number" name="clientId" class="form-control" value="1" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Turi</label>
+                        <select name="type" id="txnType" class="form-select border-primary fw-bold" onchange="updateUI()">
+                            <option value="SALE">SALE</option>
+                            <option value="PAYMENT">PAYMENT</option>
+                            <option value="RETURN">RETURN</option>
+                            <option value="RETURN_PAYMENT">RETURN_PAYMENT</option>
+                            <option value="PURCHASE">PURCHASE</option>
+                            <option value="TRANSFER">TRANSFER</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Valyuta</label>
+                        <select name="currencyId" class="form-select">
+                            <option value="1">UZS (SUM)</option>
+                            <option value="2" selected>USD (Dollar)</option>
+                            <option value="3">AED (Dirham)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Kurs (Exchange Rate)</label>
+                        <input type="number" step="0.0001" name="exchangeRate" class="form-control" value="1.0">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Mijoz Kursi</label>
+                        <input type="number" step="0.0001" name="clientExchangeRate" class="form-control" value="1.0">
+                    </div>
+                    <div class="col-md-4 hidden" id="divReceiverRate">
+                        <label class="form-label text-danger">Receiver Rate</label>
+                        <input type="number" step="0.0001" name="receiverExchangeRate" class="form-control border-danger" value="1.0">
+                    </div>
+
+                    <div class="col-md-6 hidden" id="divAmount">
+                        <label class="form-label text-success fw-bold">Summa (originalAmount)</label>
+                        <input type="number" step="0.01" name="originalAmount" class="form-control border-success">
+                    </div>
+                    <div class="col-md-6 hidden" id="divReceiverClient">
+                        <label class="form-label text-danger fw-bold">Qabul qiluvchi ID</label>
+                        <input type="number" name="receiverClientId" class="form-control border-danger">
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Komissiya (feeAmount)</label>
+                        <input type="number" step="0.01" name="feeAmount" class="form-control" value="0">
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Izoh</label>
+                        <textarea name="description" class="form-control" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <!-- Items -->
+                <div id="itemsBox" class="mt-4 p-3 bg-light border rounded">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="fw-bold">MAHSULOTLAR (ITEMS)</h6>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="addItemRow()">+ Qo'shish</button>
+                    </div>
+                    <div id="itemsList"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-4 py-3 fw-bold">BACKENDGA JONATISH (POST)</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Javob -->
+    <div id="resDiv" class="hidden">
+        <h6>Backend Javobi: <span id="resBadge" class="badge"></span></h6>
+        <pre id="jsonResponse"></pre>
+    </div>
+</div>
+
+<script>
+    // 1. Dinamik maydonlar
+    function updateUI() {
+        const type = document.getElementById('txnType').value;
+
+        // Elementlarni boshqarish
+        document.getElementById('itemsBox').classList.toggle('hidden', !['SALE', 'RETURN', 'PURCHASE'].includes(type));
+        document.getElementById('divAmount').classList.toggle('hidden', !['PAYMENT', 'RETURN_PAYMENT', 'TRANSFER'].includes(type));
+        document.getElementById('divReceiverClient').classList.toggle('hidden', type !== 'TRANSFER');
+        document.getElementById('divReceiverRate').classList.toggle('hidden', type !== 'TRANSFER');
+    }
+
+    // 2. Mahsulot qatori qo'shish
+    function addItemRow() {
+        const row = document.createElement('div');
+        row.className = 'row g-2 mb-2 item-row';
+        row.innerHTML = `
+            <div class="col-4"><input type="number" placeholder="Product ID" class="form-control form-control-sm p-id" required></div>
+            <div class="col-3"><input type="number" placeholder="Soni" class="form-control form-control-sm p-qty" required></div>
+            <div class="col-4"><input type="number" step="0.01" placeholder="Narxi" class="form-control form-control-sm p-price" required></div>
+            <div class="col-1"><button type="button" class="btn btn-sm btn-danger w-100" onclick="this.parentElement.parentElement.remove()">X</button></div>
+        `;
+        document.getElementById('itemsList').appendChild(row);
+    }
+
+    // 3. ASOSIY FUNKSIYA: ZAPROS JONATISH
+    document.getElementById('transactionForm').addEventListener('submit', async function(e) {
+        e.preventDefault(); // Sahifa yangilanmasligi uchun
+        console.log("Tugma bosildi, zapros tayyorlanmoqda...");
+
+        const jsonPre = document.getElementById('jsonResponse');
+        const resDiv = document.getElementById('resDiv');
+        const badge = document.getElementById('resBadge');
+
+        resDiv.classList.remove('hidden');
+        jsonPre.innerText = "Yuborilmoqda...";
+
+        // Ma'lumotlarni yig'ish
+        const formData = new FormData(this);
+        const type = formData.get('type');
+
+        const payload = {
+            clientId: parseInt(formData.get('clientId')),
+            type: type,
+            currencyId: parseInt(formData.get('currencyId')),
+            exchangeRate: parseFloat(formData.get('exchangeRate')),
+            clientExchangeRate: parseFloat(formData.get('clientExchangeRate')),
+            description: formData.get('description'),
+            feeAmount: parseFloat(formData.get('feeAmount') || 0)
+        };
+
+        if (['PAYMENT', 'RETURN_PAYMENT', 'TRANSFER'].includes(type)) {
+            payload.originalAmount = parseFloat(formData.get('originalAmount'));
+        }
+        if (type === 'TRANSFER') {
+            payload.receiverClientId = parseInt(formData.get('receiverClientId'));
+            payload.receiverExchangeRate = parseFloat(formData.get('receiverExchangeRate'));
+        }
+        if (['SALE', 'RETURN', 'PURCHASE'].includes(type)) {
+            payload.items = Array.from(document.querySelectorAll('.item-row')).map(row => ({
+                productId: parseInt(row.querySelector('.p-id').value),
+                quantity: parseFloat(row.querySelector('.p-qty').value),
+                unitPrice: parseFloat(row.querySelector('.p-price').value)
+            }));
+        }
+
+        // Backend URL va Token
+        const url = document.getElementById('baseUrl').value.trim() + document.getElementById('apiPath').value.trim();
+        const token = document.getElementById('jwtToken').value.trim();
+
+        try {
+            console.log("Payload yuborilyapti:", payload);
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            console.log("Backenddan javob:", result);
+
+            jsonPre.innerText = JSON.stringify(result, null, 2);
+            badge.innerText = result.success ? "MUVAFFAQIYAT" : "XATOLIK";
+            badge.className = result.success ? "badge bg-success" : "badge bg-danger";
+
+        } catch (error) {
+            console.error("Zapros xatosi:", error);
+            jsonPre.innerText = "Xato yuz berdi: " + error.message + "\nCheck CORS or Backend status.";
+            badge.innerText = "NETWORK ERROR";
+            badge.className = "badge bg-warning text-dark";
+        }
+    });
+
+    // Boshlang'ich holat
+    updateUI();
+    addItemRow();
+</script>
+
+</body>
+</html>

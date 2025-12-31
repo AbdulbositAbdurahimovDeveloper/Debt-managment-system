@@ -31,6 +31,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/error",
+                                "/transaction-create.html",
                                 "/registry-telegram-bot.html",
                                 "/api/register/bot",
                                 "/telegram-bot",

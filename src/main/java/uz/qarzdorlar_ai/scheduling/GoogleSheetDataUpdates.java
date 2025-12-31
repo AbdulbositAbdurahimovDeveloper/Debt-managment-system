@@ -35,7 +35,7 @@ public class GoogleSheetDataUpdates {
 
     @Async
 //        @Scheduled(cron = "0 0 * * * *") // every hour
-    @Scheduled(initialDelay = 0, fixedRate = 60 * 60 * 1000)
+//    @Scheduled(initialDelay = 0, fixedRate = 60 * 60 * 1000)
     public void updateOrInsertProductDatabase() {
         List<GoogleSheetData> googleSheetData = sheetService.importGoogleSheetData();
         log.info(" 💾 Sheets data size {} ", googleSheetData.size());

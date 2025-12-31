@@ -1,6 +1,7 @@
 package uz.qarzdorlar_ai.payload;
 
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ public class TransactionItemCreateDTO implements Serializable {
     @NotNull
     private Integer quantity;
 
+    @PositiveOrZero
     private BigDecimal unitPrice;
 
 }

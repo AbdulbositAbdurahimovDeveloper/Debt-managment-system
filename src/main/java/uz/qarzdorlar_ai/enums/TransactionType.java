@@ -2,7 +2,7 @@ package uz.qarzdorlar_ai.enums;
 
 public enum TransactionType {
 
-    PURCHASE,
+    PURCHASE, // sotib olish
     SALE,    // Sotuv
     PAYMENT, // To'lov
     RETURN_PAYMENT,

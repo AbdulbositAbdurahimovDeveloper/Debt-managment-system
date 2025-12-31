@@ -1,10 +1,7 @@
 package uz.qarzdorlar_ai.service;
 
 import jakarta.validation.Valid;
-import uz.qarzdorlar_ai.payload.PageDTO;
-import uz.qarzdorlar_ai.payload.ProductCreateDTO;
-import uz.qarzdorlar_ai.payload.ProductDTO;
-import uz.qarzdorlar_ai.payload.ProductUpdateDTO;
+import uz.qarzdorlar_ai.payload.*;
 
 import java.util.List;
 
@@ -19,4 +16,6 @@ public interface ProductService {
     ProductDTO updateProduct(Long id, ProductUpdateDTO productUpdateDTO);
 
     String deleteProduct(Long id);
+
+    PageDTO<ProductDTO> getSearchProducts(ProductFilterDTO productFilterDTO, Integer page, Integer size);
 }

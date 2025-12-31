@@ -9,9 +9,11 @@ import uz.qarzdorlar_ai.model.User;
 import uz.qarzdorlar_ai.payload.PageDTO;
 import uz.qarzdorlar_ai.payload.TransactionCreateDTO;
 import uz.qarzdorlar_ai.payload.TransactionDTO;
+import uz.qarzdorlar_ai.payload.TransactionUpdateDTO;
 import uz.qarzdorlar_ai.payload.response.ResponseDTO;
 import uz.qarzdorlar_ai.service.transactions.embedded.TransactionService;
 
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/v1/transaction")
 @RequiredArgsConstructor
@@ -48,5 +50,24 @@ public class TransactionController {
 
     }
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ResponseDTO<TransactionDTO>> updateTransaction(@PathVariable Long id,
+                                                                         @Valid @RequestBody TransactionUpdateDTO dto,
+                                                                         @AuthenticationPrincipal User staffUser) {
+
+        TransactionDTO transactionDTO = transactionService.updateTransaction(id, dto, staffUser);
+
+        return ResponseEntity.ok(ResponseDTO.success(transactionDTO));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ResponseDTO<String>> deleteTransaction(@PathVariable Long id,
+                                                                 @AuthenticationPrincipal User staffUser) {
+
+        transactionService.deleteTransaction(id, staffUser);
+
+        return ResponseEntity.ok(ResponseDTO.success("Transaction deleted successfully"));
+    }
 
 }

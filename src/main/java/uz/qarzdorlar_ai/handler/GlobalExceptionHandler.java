@@ -11,6 +11,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -39,6 +40,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles {@link ExpiredJwtException}, which is thrown when a JWT has passed its expiration time.
+     *
      * @return A {@link ResponseEntity} with a 401 Unauthorized status.
      */
     @ExceptionHandler(ExpiredJwtException.class)
@@ -51,6 +53,7 @@ public class GlobalExceptionHandler {
     /**
      * Handles {@link SignatureException}, indicating that the JWT's signature does not match.
      * This suggests the token may have been tampered with.
+     *
      * @return A {@link ResponseEntity} with a 401 Unauthorized status.
      */
     @ExceptionHandler(SignatureException.class)
@@ -62,6 +65,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles {@link MalformedJwtException}, thrown for incorrectly structured JWTs.
+     *
      * @return A {@link ResponseEntity} with a 401 Unauthorized status.
      */
     @ExceptionHandler(MalformedJwtException.class)
@@ -73,6 +77,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles generic {@link JwtException} for any other JWT-related issues not caught by more specific handlers.
+     *
      * @param e The caught JwtException.
      * @return A {@link ResponseEntity} with a 401 Unauthorized status.
      */
@@ -87,6 +92,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles {@link BadCredentialsException}, thrown for incorrect login attempts.
+     *
      * @return A {@link ResponseEntity} with a 401 Unauthorized status.
      */
     @ExceptionHandler({UsernameNotFoundException.class, BadCredentialsException.class})
@@ -99,6 +105,7 @@ public class GlobalExceptionHandler {
     /**
      * Handles {@link AccessDeniedException}, which occurs when an authenticated user
      * attempts to access a resource they do not have permission for.
+     *
      * @param ex The caught AccessDeniedException.
      * @return A {@link ResponseEntity} with a 403 Forbidden status.
      */
@@ -120,6 +127,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles {@link MethodArgumentNotValidException}, which is thrown when DTO validation fails.
+     *
      * @param ex The exception thrown when validation fails.
      * @return A {@link ResponseEntity} with a 400 Bad Request status and detailed field errors.
      */
@@ -136,6 +144,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles cases where the request body is missing or malformed.
+     *
      * @param ex The caught HttpMessageNotReadableException.
      * @return A {@link ResponseEntity} with a 400 Bad Request status.
      */
@@ -148,6 +157,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles cases where a requested endpoint (URL) does not exist.
+     *
      * @param ex The caught NoResourceFoundException.
      * @return A {@link ResponseEntity} with a 404 Not Found status.
      */
@@ -163,6 +173,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles cases where an entity is not found in the database.
+     *
      * @param ex Your custom {@link EntityNotFoundException}.
      * @return A {@link ResponseEntity} with a 404 Not Found status.
      */
@@ -176,6 +187,7 @@ public class GlobalExceptionHandler {
     /**
      * Handles generic bad request errors initiated by business logic.
      * This is useful for cases where input is syntactically valid but semantically incorrect.
+     *
      * @param ex Your custom {@link BadRequestException}.
      * @return A {@link ResponseEntity} with a 400 Bad Request status.
      */
@@ -189,6 +201,7 @@ public class GlobalExceptionHandler {
     /**
      * Handles rate limiting or throttling errors.
      * This is triggered when a user or IP address makes too many requests in a given timeframe.
+     *
      * @param ex Your custom {@link TooManyRequestsException}.
      * @return A {@link ResponseEntity} with a 429 Too Many Requests status.
      */
@@ -200,9 +213,9 @@ public class GlobalExceptionHandler {
     }
 
 
-
     /**
      * Handles data conflict errors, like a duplicate username or email.
+     *
      * @param ex Your custom {@link DataConflictException}.
      * @return A {@link ResponseEntity} with a 409 Conflict status.
      */
@@ -217,6 +230,7 @@ public class GlobalExceptionHandler {
 
     /**
      * Handles exceptions thrown when an uploaded file exceeds the maximum configured size.
+     *
      * @return A {@link ResponseEntity} with a 413 Payload Too Large status.
      */
     @ExceptionHandler(MaxUploadSizeExceededException.class)
@@ -236,6 +250,31 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ResponseDTO.error(error), HttpStatus.BAD_REQUEST);
     }
 
+    /**
+     * Handles unsupported HTTP method errors (405).
+     */
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<ResponseDTO<Object>> handleMethodNotSupported(
+            HttpRequestMethodNotSupportedException ex) {
+
+        log.warn("HTTP method not supported: {}", ex.getMethod());
+
+        String message = String.format(
+                "HTTP method '%s' is not supported. Allowed methods: %s",
+                ex.getMethod(),
+                ex.getSupportedHttpMethods()
+        );
+
+        ErrorDTO error = new ErrorDTO(
+                HttpStatus.METHOD_NOT_ALLOWED.value(), // 405
+                message
+        );
+
+        return ResponseEntity
+                .status(HttpStatus.METHOD_NOT_ALLOWED)
+                .body(ResponseDTO.error(error));
+    }
+
 
     // === CATCH-ALL SAFETY NET HANDLER ===
 
@@ -243,6 +282,7 @@ public class GlobalExceptionHandler {
      * A catch-all handler for any other unhandled exceptions. This is a critical safety net.
      * It logs the full error stack trace for debugging and returns a generic, safe
      * error message to the client, hiding internal implementation details.
+     *
      * @param ex The generic exception.
      * @return A {@link ResponseEntity} with a 500 Internal Server Error status.
      */

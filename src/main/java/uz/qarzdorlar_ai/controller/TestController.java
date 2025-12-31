@@ -11,4 +11,10 @@ public class TestController {
     public String index(){
         return "registry-telegram-bot";
     }
+
+    @GetMapping("/api/open/tr")
+    public String tr(){
+        return "transaction-create";
+    }
+
 }
