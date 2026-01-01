@@ -13,17 +13,19 @@ import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import uz.qarzdorlar_ai.payload.sheet.WorkJournalDTO;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 @Slf4j
 @Component
-public class WorkSheetServiceImpl implements WorkSheetService{
+public class WorkSheetServiceImpl implements WorkSheetService {
 
     private Sheets sheetsService;
 
@@ -131,6 +133,147 @@ public class WorkSheetServiceImpl implements WorkSheetService{
             log.error("Error updating cell {}: ", cellAddress, e);
             throw new RuntimeException("Cell update failed in Google Sheets", e);
         }
+    }
+
+    @Override
+    public List<WorkJournalDTO> importGoogleSheetData() {
+        String sheetName = "Jurnal";
+        // B5:Q128 oralig'ini o'qiymiz
+        String range = sheetName + "!B5:Q128";
+
+        List<List<Object>> values = readRange(range);
+        List<WorkJournalDTO> dtos = new ArrayList<>();
+
+        if (values == null || values.isEmpty()) {
+            return dtos;
+        }
+
+        // Agar 5-qator (index 0) header bo'lsa, i=1 dan boshlaymiz (ma'lumot 6-qatordan boshlanadi)
+        // Agar 5-qatordan ma'lumot boshlansa, i=0 dan boshlang.
+        for (int i = 1; i < values.size(); i++) {
+            List<Object> row = values.get(i);
+
+            // Qator butunlay bo'sh bo'lsa tashlab ketamiz
+            if (row == null || row.isEmpty()) {
+                continue;
+            }
+
+            WorkJournalDTO dto = new WorkJournalDTO();
+
+            // getNullSafeValue metodi bo'sh ("") qiymat kelsa null qo'yib ketadi
+            dto.setDate(getNullSafeValue(row, 1));      // C
+            dto.setType(getNullSafeValue(row, 2));      // D
+            dto.setCourier(getNullSafeValue(row, 3));   // E
+            dto.setSupplier(getNullSafeValue(row, 4));  // F
+            dto.setItem(getNullSafeValue(row, 5));      // G
+            dto.setCount(getNullSafeValue(row, 6));     // H
+            dto.setPrice(getNullSafeValue(row, 7));     // I
+            dto.setDebtAed(getNullSafeValue(row, 8));   // J
+            dto.setPaidAed(getNullSafeValue(row, 9));   // K
+            dto.setCashUsd(getNullSafeValue(row, 10));  // L
+            dto.setRate(getNullSafeValue(row, 11));     // M
+            dto.setFee(getNullSafeValue(row, 12));      // N
+            dto.setUsedUsd(getNullSafeValue(row, 13));  // O
+            dto.setComment(getNullSafeValue(row, 14));  // P
+            dto.setProductId(getNullSafeValue(row, 15));// Q
+
+            dtos.add(dto);
+        }
+
+        return dtos;
+    }
+    @Override
+    public List<WorkJournalDTO> findByTypeAndSupplier(String targetType, String targetSupplier) {
+        String sheetName = "Jurnal";
+        // B5 dan Q128 gacha o'qiymiz
+        String range = sheetName + "!B5:Q128";
+
+        List<List<Object>> values = readRange(range);
+        List<WorkJournalDTO> dtos = new ArrayList<>();
+
+        if (values == null || values.isEmpty()) {
+            return dtos;
+        }
+
+        for (List<Object> row : values) {
+            if (row == null || row.isEmpty()) continue;
+
+            // D ustuni (index 2) - Type
+            String rowType = getNullSafeValue(row, 2);
+            // F ustuni (index 4) - Supplier
+            String rowSupplier = getNullSafeValue(row, 3);
+
+            // Filtrlash sharti: Katta-kichik harfga qaramasdan solishtiramiz
+//            boolean matchesType = (targetType == null) || (rowType != null && rowType.equalsIgnoreCase(targetType));
+            boolean matchesType = true;
+            boolean matchesSupplier = (targetSupplier == null) || (rowSupplier != null && rowSupplier.equalsIgnoreCase(targetSupplier));
+
+            if (matchesType && matchesSupplier) {
+                // Agar mos kelsa, DTO obyektini yaratamiz
+                dtos.add(mapToDto(row));
+            }
+        }
+
+        return dtos;
+    }
+
+    /**
+     * Qatorni DTO ga o'girish metodini alohida yozish kodni toza saqlaydi
+     */
+    private WorkJournalDTO mapToDto(List<Object> row) {
+        WorkJournalDTO dto = new WorkJournalDTO();
+
+        // Indexlar B5 oralig'iga nisbatan (B=0, C=1, D=2...)
+        dto.setDate(getNullSafeValue(row, 1));      // C
+        dto.setType(getNullSafeValue(row, 2));      // D
+        dto.setCourier(getNullSafeValue(row, 3));   // E
+        dto.setSupplier(getNullSafeValue(row, 4));  // F
+        dto.setItem(getNullSafeValue(row, 5));      // G
+        dto.setCount(getNullSafeValue(row, 6));     // H
+        dto.setPrice(getNullSafeValue(row, 7));     // I
+        dto.setDebtAed(getNullSafeValue(row, 8));   // J
+        dto.setPaidAed(getNullSafeValue(row, 9));   // K
+        dto.setCashUsd(getNullSafeValue(row, 10));  // L
+        dto.setRate(getNullSafeValue(row, 11));     // M
+        dto.setFee(getNullSafeValue(row, 12));      // N
+        dto.setUsedUsd(getNullSafeValue(row, 13));  // O
+        dto.setComment(getNullSafeValue(row, 14));  // P
+
+        // Product ID (Q ustuni - index 15)
+        String productIdStr = getNullSafeValue(row, 15);
+        if (productIdStr != null) {
+            try {
+                dto.setProductId(productIdStr);
+            } catch (NumberFormatException e) {
+                log.warn("Product ID formati noto'g'ri: {}", productIdStr);
+            }
+        }
+
+        return dto;
+    }
+
+    /**
+     * Google Sheet'dan kelgan qiymatni tekshiradi.
+     * Agar index mavjud bo'lmasa yoki qiymat bo'sh ("") bo'lsa, null qaytaradi.
+     */
+    private String getNullSafeValue(List<Object> row, int index) {
+        if (row == null || index >= row.size() || row.get(index) == null) {
+            return null;
+        }
+
+        String value = String.valueOf(row.get(index)).trim();
+
+        // Agar string bo'sh bo'lsa null qaytaramiz
+        return value.isEmpty() ? null : value;
+    }
+
+
+    // Yordamchi metod: Indexdan ma'lumotni xavfsiz olish uchun
+    private String getCellValue(List<Object> row, int index) {
+        if (index >= row.size() || row.get(index) == null) {
+            return "";
+        }
+        return String.valueOf(row.get(index)).trim();
     }
 
 }

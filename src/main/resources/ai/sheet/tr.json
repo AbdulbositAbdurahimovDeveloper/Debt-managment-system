@@ -1,0 +1,1639 @@
+[
+  [
+    {
+      "clientId": 7,
+      "type": "PURCHASE",
+      "amount": 239350.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "eski qarzlar",
+      "items": [
+        {
+          "productId": 260,
+          "quantity": 1,
+          "unitPrice": 239350.00
+        }
+      ],
+      "createdAt": "2025-10-28T00:00:00.000Z"
+    },
+    {
+      "clientId": 7,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 36650.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Mohid Mirza uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-10-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 17900.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP ProBook 450G10 | i5-1335U | 8GB | 512GB SSD",
+      "items": [
+        {
+          "productId": 40,
+          "quantity": 10,
+          "unitPrice": 1790.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 18560.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP Victus 15-fa2082wm | i5-13420H |16GB|512GB SSD",
+      "items": [
+        {
+          "productId": 46,
+          "quantity": 8,
+          "unitPrice": 2320.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 70000.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP 24-CR0032NY | i5-1335U | 8GB | 512GB SSD",
+      "items": [
+        {
+          "productId": 16,
+          "quantity": 40,
+          "unitPrice": 1750.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 14800.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP 15-fd0007ny | i5-1334U | 16GB | 512GB SSD",
+      "items": [
+        {
+          "productId": 52,
+          "quantity": 10,
+          "unitPrice": 1480.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 18800.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Lenovo IdeaCentre AIO27IRH9|i5-13420H|8GB|512GB",
+      "items": [
+        {
+          "productId": 26,
+          "quantity": 10,
+          "unitPrice": 1880.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE",
+      "amount": 45190.00,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "eski qarzlar",
+      "items": [
+        {
+          "productId": 260,
+          "quantity": 1,
+          "unitPrice": 45190.00
+        }
+      ],
+      "createdAt": "2025-11-02T00:00:00.000Z"
+    },
+    {
+      "clientId": 3,
+      "type": "PAYMENT",
+      "amount": 10080.00,
+      "transactionCurrency": "USD",
+      "marketRate": 3.665,
+      "feeAmount": 80.00,
+      "description": "Saxiy Ahmad (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-11-05T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 19500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Surface Pro11 | X Elite | 16GB | 512GB SSD | Black",
+      "items": [
+        {
+          "productId": 76,
+          "quantity": 5,
+          "unitPrice": 3900.0
+        }
+      ],
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 12400.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+      "items": [
+        {
+          "productId": 77,
+          "quantity": 4,
+          "unitPrice": 3100.0
+        }
+      ],
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 13250.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Surface Pro12 | X Plus | 16GB |256GB SSD|Platinum",
+      "items": [
+        {
+          "productId": 69,
+          "quantity": 5,
+          "unitPrice": 2650.0
+        }
+      ],
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 36650.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Transworld uchun to'lov (Kuryer: Saxiy Ahmad)",
+      "items": null,
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 4734.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Transworld uchun to'lov (Kuryer: Preview)",
+      "items": null,
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 3300.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.665,
+      "feeAmount": 0.0,
+      "description": "Dilnoza opa (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 14070.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.665,
+      "feeAmount": 70.0,
+      "description": "Dilnoza opa (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-07T00:00:00.000Z"
+    },
+    {
+      "clientId": null,
+      "type": "PAYMENT",
+      "amount": 32000.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 159.2,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "clientId": 9,
+      "type": "PURCHASE",
+      "amount": 24000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Hp speaktor14 Ultra7/16/1TB",
+      "items": [
+        {
+          "productId": 30,
+          "quantity": 5,
+          "unitPrice": 4800.0
+        }
+      ],
+      "createdAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 666.67,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "8 mln sum olingan (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-10-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 9,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 24000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Micro zone uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 24000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Microsoft Surface pro11 X Elite 32/1Tb",
+      "items": [
+        {
+          "productId": 70,
+          "quantity": 4,
+          "unitPrice": 6000.0
+        }
+      ],
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 3720.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Transworld uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 29320.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Kuryer: Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 30000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 58640.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-11-11T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 30000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": null,
+      "type": "RETURN_PAYMENT",
+      "amount": 117440.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 50740.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 40000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Jawel uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": 7,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 37000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Mohid Mirza uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": 7,
+      "type": "PURCHASE",
+      "amount": 26600.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "LENOVO LOQ I7-14700HX 16GB/512GB/RTX 4060 8GB",
+      "items": [
+        {
+          "productId": 69,
+          "quantity": 7,
+          "unitPrice": 3800.0
+        }
+      ],
+      "createdAt": "2025-11-12T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 24000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Ali Riza uchun to'lov (Kuryer: Oybek aka)",
+      "items": null,
+      "createdAt": "2025-11-14T00:00:00.000Z"
+    },
+    {
+      "clientId": 4,
+      "type": "PAYMENT",
+      "amount": 20100.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.665,
+      "feeAmount": 100.0,
+      "description": "Abduqodir (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-14T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": 4,
+      "type": "RETURN_PAYMENT",
+      "amount": 73300.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Abduqodir)",
+      "items": null,
+      "createdAt": "2025-11-14T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 21450.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Hp victus i5/8/512/6gb",
+      "items": [
+        {
+          "productId": 45,
+          "quantity": 11,
+          "unitPrice": 1950.0
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 44000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Hp victus i5/16/512/6gb",
+      "items": [
+        {
+          "productId": 46,
+          "quantity": 20,
+          "unitPrice": 2200.0
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 9700.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Hp probook U5/8/512",
+      "items": [
+        {
+          "productId": 39,
+          "quantity": 5,
+          "unitPrice": 1940.0
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 11450.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Hp probook U7/8/512",
+      "items": [
+        {
+          "productId": 38,
+          "quantity": 5,
+          "unitPrice": 2290.0
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 69500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Preview uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 17000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "Preview uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "skidka (Kuryer: Preview)",
+      "items": null,
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 13668.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.667,
+      "feeAmount": 68.0,
+      "description": "Dilnoza opa (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-19T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 37500.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 186.57,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-19T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 110100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Preview uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 45871.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.667,
+      "feeAmount": null,
+      "description": "Preview uchun to'lov (Kuryer: Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE",
+      "amount": 143200.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP OmniStudio X32 | Ultra7-155H | 32GB | 1TB SSD",
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 20,
+          "unitPrice": 7160.0
+        }
+      ],
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": 6,
+      "type": "PURCHASE",
+      "amount": 93000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP EliteOne 870 G9 | i7-14700T |16GB|1TB SSD|TOUCH",
+      "items": [
+        {
+          "productId": 3,
+          "quantity": 20,
+          "unitPrice": 4650.0
+        }
+      ],
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE",
+      "amount": 74100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP 27-cr0067ny | i7-1355U | 16GB | 512GB SSD",
+      "items": [
+        {
+          "productId": 10,
+          "quantity": 30,
+          "unitPrice": 2470.0
+        }
+      ],
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE",
+      "amount": 54080.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.665,
+      "feeAmount": null,
+      "description": "HP 27-CR0008ci | i5-1335U | 16GB | 512GB SSD",
+      "items": [
+        {
+          "productId": 11,
+          "quantity": 26,
+          "unitPrice": 2080.0
+        }
+      ],
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 4000.2,
+      "transactionCurrency": "AED",
+      "marketRate": 3.667,
+      "feeAmount": null,
+      "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-11-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 4,
+      "type": "PAYMENT",
+      "amount": 10050.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.666,
+      "feeAmount": 50.0,
+      "description": "Abduqodir (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-11-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 36660.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.666,
+      "feeAmount": null,
+      "description": "Transworld uchun to'lov (Kuryer: Abduqodir)",
+      "items": null,
+      "createdAt": "2025-11-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 14.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.666,
+      "feeAmount": null,
+      "description": "skidka",
+      "items": [
+        {
+          "productId": 262,
+          "quantity": 1,
+          "unitPrice": 14.0
+        }
+      ],
+      "createdAt": "2025-11-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 32100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.666,
+      "feeAmount": null,
+      "description": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+      "items": [
+        {
+          "productId": 77,
+          "quantity": 10,
+          "unitPrice": 3210.0
+        }
+      ],
+      "createdAt": "2025-11-26T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 4500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.666,
+      "feeAmount": null,
+      "description": "keyboard capilot black and platinum",
+      "items": [
+        {
+          "productId": 103,
+          "quantity": 10,
+          "unitPrice": 450.0
+        }
+      ],
+      "createdAt": "2025-11-26T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 13440.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Lenovo thinkpad e16|Ultra5|DDR5 16GB|512GB",
+      "items": [
+        {
+          "productId": 66,
+          "quantity": 6,
+          "unitPrice": 2240.0
+        }
+      ],
+      "createdAt": "2025-11-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 30000.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 149.25,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-03T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 106000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Hp omnibook14 FH0033 U9 32GB 2TB 2in 1 14inch",
+      "items": [
+        {
+          "productId": 31,
+          "quantity": 20,
+          "unitPrice": 5300.0
+        }
+      ],
+      "createdAt": "2025-12-04T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 8960.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Laptop Lenovo TP E16 GEN2 U5/16/512gb rs",
+      "items": [
+        {
+          "productId": 66,
+          "quantity": 4,
+          "unitPrice": 2240.0
+        }
+      ],
+      "createdAt": "2025-12-05T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 23000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Laptop Hp PB 460 G11 U7/8gb/512gb/dos/16.0\" FHD",
+      "items": [
+        {
+          "productId": 38,
+          "quantity": 10,
+          "unitPrice": 2300.0
+        }
+      ],
+      "createdAt": "2025-12-05T00:00:00.000Z"
+    },
+    {
+      "clientId": 7,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 85050.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Mohid Mirza uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-06T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 14300.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 71.14,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-06T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 2341.14,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 11.65,
+      "description": "28mln berildi (Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-06T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": null,
+      "type": "PAYMENT",
+      "amount": 85094.13,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Oybek aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 1672.24,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "20 mln berilgan (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-12-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 2267.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "pul qaytarildi (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-12-07T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 3611.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 17.97,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-09T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 73400.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Jawel uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-09T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 500.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "Dilnoza opa (CASH-OUT negative)",
+      "items": null,
+      "createdAt": "2025-12-11T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 20000.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-13T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 1024.79,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "12,4 mln berildi (Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-13T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 10000.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-14T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 1253.75,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "Dilnoza opa (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-14T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 4110.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 1074.38,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "13 mln (Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 3450.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 330.58,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "4 mln (Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-15T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 1320.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "pul qaytti (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-12-16T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "RETURN_PAYMENT",
+      "amount": 40146.11,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "conflik yoqotildi (Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-19T00:00:00.000Z"
+    },
+    {
+      "clientId": null,
+      "type": "PAYMENT",
+      "amount": 40140.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Oybek aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-19T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 100000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Jawel uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-19T00:00:00.000Z"
+    },
+    {
+      "clientId": 7,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 50000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Mohid Mirza uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-19T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 416.67,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "5 mln kartaga (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-12-20T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 7040.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 35.02,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-21T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 20800.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 103.48,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-22T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 500.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.66,
+      "feeAmount": 0.0,
+      "description": "Dilnoza opa (CASH-OUT negative)",
+      "items": null,
+      "createdAt": "2025-12-23T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": 12,
+      "type": "RETURN_PAYMENT",
+      "amount": 110100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-24T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 1400.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 6.97,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-24T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 3900.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 19.4,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-24T00:00:00.000Z"
+    },
+    {
+      "clientId": 13,
+      "type": "PURCHASE",
+      "amount": 17170.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Mouse Souris Arc",
+      "items": [
+        {
+          "productId": 91,
+          "quantity": 85,
+          "unitPrice": 202.0
+        }
+      ],
+      "createdAt": "2025-12-24T00:00:00.000Z"
+    },
+    {
+      "clientId": 13,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 17500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Arkada uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-24T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 11415.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 56.79,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 9500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Surface pro11/U5/16gb/256gb",
+      "items": [
+        {
+          "productId": 263,
+          "quantity": 2,
+          "unitPrice": 4750.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 12500.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Surface pro12 X Plus 16gb/256gb",
+      "items": [
+        {
+          "productId": 69,
+          "quantity": 5,
+          "unitPrice": 2500.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 800.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Surface 45W USB-C Wall Charger",
+      "items": [
+        {
+          "productId": 264,
+          "quantity": 5,
+          "unitPrice": 160.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 5000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Laptop X Plus 16gb/256gb",
+      "items": [
+        {
+          "productId": 77,
+          "quantity": 2,
+          "unitPrice": 2500.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 600.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Surface Pro7 Cover - Black",
+      "items": [
+        {
+          "productId": 104,
+          "quantity": 10,
+          "unitPrice": 60.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 300.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Surface Pro7 Cover - Silver",
+      "items": [
+        {
+          "productId": 104,
+          "quantity": 5,
+          "unitPrice": 60.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 28700.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Ali Riza uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 4800.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Lenovo IdeaCentre AIO27IRH9|i5-13420H|8GB|512GB",
+      "items": [
+        {
+          "productId": 26,
+          "quantity": 2,
+          "unitPrice": 2400.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE",
+      "amount": 13000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "HP OmniStudio X32 | Ultra7-155H | 32GB | 1TB SSD",
+      "items": [
+        {
+          "productId": 33,
+          "quantity": 5,
+          "unitPrice": 2600.0
+        }
+      ],
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 4000.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    }
+  ],
+  [
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 2100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Oybek aka orqali)",
+      "items": null,
+      "createdAt": "2025-12-25T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 4600.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Asus Rog",
+      "items": [
+        {
+          "productId": 265,
+          "quantity": 1,
+          "unitPrice": 4600.0
+        }
+      ],
+      "createdAt": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE",
+      "amount": 4100.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "lenova24",
+      "items": [
+        {
+          "productId": 262,
+          "quantity": 2,
+          "unitPrice": 2050.0
+        }
+      ],
+      "createdAt": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 14910.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 74.18,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 829.88,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 4.13,
+      "description": "Komil aka (CASH-OUT 0.50%)",
+      "items": null,
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 31650.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+      "items": [
+        {
+          "productId": 77,
+          "quantity": 10,
+          "unitPrice": 3165.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 950.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft Mouse Souris Arc",
+      "items": [
+        {
+          "productId": 91,
+          "quantity": 5,
+          "unitPrice": 190.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 8880.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft keyboard + pen platinum",
+      "items": [
+        {
+          "productId": 99,
+          "quantity": 12,
+          "unitPrice": 740.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 3150.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft keyboard black",
+      "items": [
+        {
+          "productId": 102,
+          "quantity": 7,
+          "unitPrice": 450.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE",
+      "amount": 2960.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Microsoft keyboard + pen black",
+      "items": [
+        {
+          "productId": 98,
+          "quantity": 4,
+          "unitPrice": 740.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE",
+      "amount": 3300.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Surface Slim Pen 2 Black -TRA",
+      "items": [
+        {
+          "productId": 86,
+          "quantity": 10,
+          "unitPrice": 330.0
+        }
+      ],
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "PAYMENT",
+      "amount": 835.83,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "10 mln berilgan (Dilnoza opa)",
+      "items": null,
+      "createdAt": "2025-12-28T00:00:00.000Z"
+    },
+    {
+      "clientId": 2,
+      "type": "RETURN_PAYMENT",
+      "amount": 836.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Dilnoza opa (CASH-OUT negative)",
+      "items": null,
+      "createdAt": "2025-12-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 5,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 11700.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Khojandi uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 10,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 3300.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Ali Riza uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 11,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 4129.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Preview uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 6,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 90971.0,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Jawel uchun to'lov (Kuryer: Komil aka)",
+      "items": null,
+      "createdAt": "2025-12-29T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 13211.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-30T00:00:00.000Z"
+    },
+    {
+      "clientId": 12,
+      "type": "PAYMENT",
+      "amount": 8100.0,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Komil aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-30T00:00:00.000Z"
+    },
+    {
+      "clientId": null,
+      "type": "PAYMENT",
+      "amount": 14982.62,
+      "transactionCurrency": "USD",
+      "marketRate": 3.67,
+      "feeAmount": 0.0,
+      "description": "Oybek aka (CASH-OUT)",
+      "items": null,
+      "createdAt": "2025-12-31T00:00:00.000Z"
+    },
+    {
+      "clientId": 8,
+      "type": "PURCHASE_PAYMENT",
+      "amount": 15597.5,
+      "transactionCurrency": "AED",
+      "marketRate": 3.67,
+      "feeAmount": null,
+      "description": "Transworld uchun to'lov",
+      "items": null,
+      "createdAt": "2025-12-27T00:00:00.000Z"
+    }
+  ]
+]

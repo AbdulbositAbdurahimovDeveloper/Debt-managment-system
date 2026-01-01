@@ -1,0 +1,468 @@
+###
+//Dilnoza opa id:2
+POST http://localhost:8080/api/sheet/import
+#POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+[
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 8000.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.665,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT)",
+    "items": null,
+    "createdAt": "2025-10-22T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 3300.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.665,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT)",
+    "items": null,
+    "createdAt": "2025-11-07T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 14070.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.665,
+    "feeAmount": 70.0,
+    "description": "Dilnoza opa (CASH-OUT 0.50%)",
+    "items": null,
+    "createdAt": "2025-11-07T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 8000000,
+    "transactionCurrency": "UZS",
+    "marketRate": 12000,
+    "feeAmount": 0.0,
+    "description": "8 mln sum olingan (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-10-10T00:00:00.000Z"
+  },
+  {
+    "clientId": 0,
+    "type": "PURCHASE_PAYMENT",
+    "amount": 29320.0,
+    "transactionCurrency": "AED",
+    "marketRate": 3.665,
+    "feeAmount": null,
+    "description": "Khojandi uchun to'lov (Kuryer: Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-11-10T00:00:00.000Z"
+  },
+  {
+    "clientId": 4,
+    "receiverClientId": 1,
+    "type": "TRANSFER",
+    "transactionCurrency": "USD",
+    "amount": 29320.00,
+    "marketRate": 3.665,
+    "clientRate": 1.0,
+    "receiverRate": null,
+    "description": null,
+    "items": [],
+    "createdAt": "2025-11-14T10:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 58640.0,
+    "transactionCurrency": "AED",
+    "marketRate": 3.665,
+    "feeAmount": null,
+    "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-11-11T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 13668.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.667,
+    "feeAmount": 68.0,
+    "description": "Dilnoza opa (CASH-OUT 0.50%)",
+    "items": null,
+    "createdAt": "2025-11-19T00:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "type": "PURCHASE_PAYMENT",
+    "amount": 45871.0,
+    "transactionCurrency": "AED",
+    "marketRate": 3.667,
+    "feeAmount": null,
+    "description": "Preview uchun to'lov (Kuryer: Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-11-22T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 4000.2,
+    "transactionCurrency": "AED",
+    "marketRate": 3.667,
+    "feeAmount": null,
+    "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-11-22T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 1672.24,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "20 mln berilgan (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 2267.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "pul qaytarildi (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-12-07T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 500.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT negative)",
+    "items": null,
+    "createdAt": "2025-12-11T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 1253.75,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT)",
+    "items": null,
+    "createdAt": "2025-12-14T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 1320.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "pul qaytti (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-12-16T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 416.67,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "5 mln kartaga (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-12-20T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 500.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.66,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT negative)",
+    "items": null,
+    "createdAt": "2025-12-23T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "PAYMENT",
+    "amount": 835.83,
+    "transactionCurrency": "USD",
+    "marketRate": 3.67,
+    "feeAmount": 0.0,
+    "description": "10 mln berilgan (Dilnoza opa)",
+    "items": null,
+    "createdAt": "2025-12-28T00:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "type": "RETURN_PAYMENT",
+    "amount": 836.0,
+    "transactionCurrency": "USD",
+    "marketRate": 3.67,
+    "feeAmount": 0.0,
+    "description": "Dilnoza opa (CASH-OUT negative)",
+    "items": null,
+    "createdAt": "2025-12-29T00:00:00.000Z"
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Saxiy ahmad id:3
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+//Komil aka id:13
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+//Abduqodir id:4
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Khojandi id:5
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+//Jawel id: 6
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+//Mohid Mirza id: 7
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+//Transworld id:8
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Micro zone id: 9
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Ali Riza id: 10
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Preview id: 11
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//POST http://localhost:8080/api/sheet/import
+// Arcada id: 12
+POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+

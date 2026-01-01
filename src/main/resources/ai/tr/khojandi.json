@@ -1,0 +1,16 @@
+[
+  {"clientId": 5, "type": "PURCHASE", "amount": 17900.0, "transactionCurrency": "AED", "description": "HP ProBook 450G10 | i5-1335U...", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 18560.0, "transactionCurrency": "AED", "description": "HP Victus 15-fa2082wm...", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 70000.0, "transactionCurrency": "AED", "description": "HP 24-CR0032NY | i5-1335U...", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 14800.0, "transactionCurrency": "AED", "description": "HP 15-fd0007ny | i5-1334U...", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 18800.0, "transactionCurrency": "AED", "description": "Lenovo IdeaCentre AIO27IRH9...", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 29320.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Kuryer: Dilnoza opa)", "createdAt": "2025-11-10T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 30000.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Kuryer: Oybek aka)", "createdAt": "2025-11-10T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 30000.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Kuryer: Oybek aka)", "createdAt": "2025-11-12T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 50740.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Kuryer: Komil aka)", "createdAt": "2025-11-12T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 4800.0, "transactionCurrency": "AED", "description": "Lenovo IdeaCentre AIO27IRH9...", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE", "amount": 13000.0, "transactionCurrency": "AED", "description": "HP OmniStudio X32 | Ultra7-155H...", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 4000.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Oybek aka)", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 2100.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Oybek aka)", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 5, "type": "PURCHASE_PAYMENT", "amount": 11700.0, "transactionCurrency": "AED", "description": "Khojandi uchun to'lov (Kuryer: Komil aka)", "createdAt": "2025-12-29T00:00:00.000Z"}
+]

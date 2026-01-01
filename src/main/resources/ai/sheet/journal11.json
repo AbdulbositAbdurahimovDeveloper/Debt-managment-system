@@ -1,0 +1,1193 @@
+[
+  {
+    "date": "2025, 28 октября",
+    "type": "BUY",
+    "supplier": "Mohid Mirza",
+    "item": "eski qarzlar",
+    "count": "1",
+    "price": "239 350,00 AED",
+    "debtAed": "239 350,00 AED",
+    "rate": "3,665",
+    "productId": "260"
+  },
+  {
+    "date": "2025, 29 октября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Mohid Mirza",
+    "paidAed": "36 650,00 AED",
+    "rate": "3,665",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "HP ProBook 450G10 | i5-1335U | 8GB | 512GB SSD",
+    "count": "10",
+    "price": "1 790,00 AED",
+    "debtAed": "17 900,00 AED",
+    "rate": "3,665",
+    "productId": "40"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "HP Victus 15-fa2082wm | i5-13420H |16GB|512GB SSD",
+    "count": "8",
+    "price": "2 320,00 AED",
+    "debtAed": "18 560,00 AED",
+    "rate": "3,665",
+    "productId": "46"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "HP 24-CR0032NY | i5-1335U | 8GB | 512GB SSD",
+    "count": "40",
+    "price": "1 750,00 AED",
+    "debtAed": "70 000,00 AED",
+    "rate": "3,665",
+    "productId": "16"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "HP 15-fd0007ny | i5-1334U | 16GB | 512GB SSD",
+    "count": "10",
+    "price": "1 480,00 AED",
+    "debtAed": "14 800,00 AED",
+    "rate": "3,665",
+    "productId": "52"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "Lenovo IdeaCentre AIO27IRH9|i5-13420H|8GB|512GB",
+    "count": "10",
+    "price": "1 880,00 AED",
+    "debtAed": "18 800,00 AED",
+    "rate": "3,665",
+    "productId": "26"
+  },
+  {
+    "date": "2025, 02 ноября",
+    "type": "BUY",
+    "supplier": "Jawel",
+    "item": "eski qarzlar",
+    "count": "1",
+    "price": "45 190,00 AED",
+    "debtAed": "45 190,00 AED",
+    "rate": "3,665",
+    "productId": "260"
+  },
+  {
+    "date": "2025, 05 ноября",
+    "type": "CASH-OUT",
+    "courier": "Saxiy Ahmad",
+    "cashUsd": "10 080,00 USD",
+    "rate": "3,665",
+    "fee": "0,80%",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Surface Pro11 | X Elite | 16GB | 512GB SSD | Black",
+    "count": "5",
+    "price": "3 900,00 AED",
+    "debtAed": "19 500,00 AED",
+    "rate": "3,665",
+    "productId": "76"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+    "count": "4",
+    "price": "3 100,00 AED",
+    "debtAed": "12 400,00 AED",
+    "rate": "3,665",
+    "productId": "77"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Surface Pro12 | X Plus | 16GB |256GB SSD|Platinum",
+    "count": "5",
+    "price": "2 650,00 AED",
+    "debtAed": "13 250,00 AED",
+    "rate": "3,665",
+    "productId": "69"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "PAY",
+    "courier": "Saxiy Ahmad",
+    "supplier": "Transworld",
+    "paidAed": "36 650,00 AED",
+    "rate": "3,665",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "PAY",
+    "courier": "Preview",
+    "supplier": "Transworld",
+    "paidAed": "4 734,00 AED",
+    "rate": "3,665",
+    "usedUsd": "1 291,68 USD"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "3 300,00 USD",
+    "rate": "3,665",
+    "fee": "0,00%",
+    "usedUsd": "3 300,00 USD"
+  },
+  {
+    "date": "2025, 07 ноября",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "14 070,00 USD",
+    "rate": "3,665",
+    "fee": "0,50%",
+    "usedUsd": "14 000,00 USD"
+  },
+  {
+    "date": "2025, 08 ноября",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "32 000,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "31 840,80 USD"
+  },
+  {
+    "date": "2025, 08 ноября",
+    "type": "BUY",
+    "supplier": "Micro zone",
+    "item": "Hp speaktor14 Ultra7/16/1TB",
+    "count": "5",
+    "price": "4 800,00 AED",
+    "debtAed": "24 000,00 AED",
+    "rate": "3,665",
+    "productId": "30"
+  },
+  {
+    "date": "2025, 10 октября",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "666,67 USD",
+    "rate": "3,66",
+    "usedUsd": "666,67 USD",
+    "comment": "8 mln sum olingan"
+  },
+  {
+    "date": "2025, 10 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Micro zone",
+    "paidAed": "24 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "6 548,43 USD"
+  },
+  {
+    "date": "2025, 10 ноября",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Microsoft Surface pro11 X Elite 32/1Tb",
+    "count": "4",
+    "price": "6 000,00 AED",
+    "debtAed": "24 000,00 AED",
+    "rate": "3,665",
+    "productId": "70"
+  },
+  {
+    "date": "2025, 10 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Transworld",
+    "paidAed": "3 720,00 AED",
+    "rate": "3,665",
+    "usedUsd": "1 015,01 USD"
+  },
+  {
+    "date": "2025, 10 ноября",
+    "type": "PAY",
+    "courier": "Dilnoza opa",
+    "supplier": "Khojandi",
+    "paidAed": "29 320,00 AED",
+    "rate": "3,665",
+    "usedUsd": "8 000,00 USD"
+  },
+  {
+    "date": "2025, 10 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Khojandi",
+    "paidAed": "30 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "8 185,54 USD"
+  },
+  {
+    "date": "2025, 11 ноября",
+    "type": "PAY",
+    "courier": "Dilnoza opa",
+    "supplier": "Oybek aka",
+    "paidAed": "58 640,00 AED",
+    "rate": "3,665",
+    "usedUsd": "16 000,00 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Khojandi",
+    "paidAed": "30 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "8 185,54 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Oybek aka",
+    "paidAed": "117 440,00 AED",
+    "rate": "3,67",
+    "usedUsd": "32 000,00 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Khojandi",
+    "paidAed": "50 740,00 AED",
+    "rate": "3,67",
+    "usedUsd": "13 825,61 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Jawel",
+    "paidAed": "40 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "10 914,05 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Mohid Mirza",
+    "paidAed": "37 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "10 095,50 USD"
+  },
+  {
+    "date": "2025, 12 ноября",
+    "type": "BUY",
+    "supplier": "Mohid Mirza",
+    "item": "LENOVO LOQ I7-14700HX 16GB/512GB/RTX 4060 8GB",
+    "count": "7",
+    "price": "3 800,00 AED",
+    "debtAed": "26 600,00 AED",
+    "rate": "3,665",
+    "productId": "69"
+  },
+  {
+    "date": "2025, 14 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Ali Riza",
+    "paidAed": "24 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "6 548,43 USD"
+  },
+  {
+    "date": "2025, 14 ноября",
+    "type": "CASH-OUT",
+    "courier": "Abduqodir",
+    "cashUsd": "20 100,00 USD",
+    "rate": "3,665",
+    "fee": "0,50%",
+    "usedUsd": "20 000,00 USD"
+  },
+  {
+    "date": "2025, 14 ноября",
+    "type": "PAY",
+    "courier": "Abduqodir",
+    "supplier": "Oybek aka",
+    "paidAed": "73 300,00 AED",
+    "rate": "3,665",
+    "usedUsd": "20 000,00 USD"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Hp victus i5/8/512/6gb",
+    "count": "11",
+    "price": "1 950,00 AED",
+    "debtAed": "21 450,00 AED",
+    "rate": "3,665",
+    "productId": "45"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Hp victus i5/16/512/6gb",
+    "count": "20",
+    "price": "2 200,00 AED",
+    "debtAed": "44 000,00 AED",
+    "rate": "3,665",
+    "productId": "46"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Hp probook U5/8/512",
+    "count": "5",
+    "price": "1 940,00 AED",
+    "debtAed": "9 700,00 AED",
+    "rate": "3,665",
+    "productId": "39"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Hp probook U7/8/512",
+    "count": "5",
+    "price": "2 290,00 AED",
+    "debtAed": "11 450,00 AED",
+    "rate": "3,665",
+    "productId": "38"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Preview",
+    "paidAed": "69 500,00 AED",
+    "rate": "3,665",
+    "usedUsd": "18 963,17 USD"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Preview",
+    "paidAed": "17 000,00 AED",
+    "rate": "3,665",
+    "usedUsd": "4 638,47 USD"
+  },
+  {
+    "date": "2025, 15 ноября",
+    "type": "PAY",
+    "courier": "Preview",
+    "supplier": "Preview",
+    "item": "skidka",
+    "paidAed": "100,00 AED",
+    "rate": "3,665",
+    "usedUsd": "27,29 USD",
+    "productId": "262"
+  },
+  {
+    "date": "2025, 19 ноября",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "13 668,00 USD",
+    "rate": "3,667",
+    "fee": "0,50%",
+    "usedUsd": "13 600,00 USD"
+  },
+  {
+    "date": "2025, 19 ноября",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "37 500,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "37 313,43 USD"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Preview",
+    "paidAed": "110 100,00 AED",
+    "rate": "3,67",
+    "usedUsd": "30 000,00 USD"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "PAY",
+    "courier": "Dilnoza opa",
+    "supplier": "Preview",
+    "paidAed": "45 871,00 AED",
+    "rate": "3,667",
+    "usedUsd": "12 509,14 USD"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "BUY",
+    "supplier": "Jawel",
+    "item": "HP OmniStudio X32 | Ultra7-155H | 32GB | 1TB SSD",
+    "count": "20",
+    "price": "7 160,00 AED",
+    "debtAed": "143 200,00 AED",
+    "rate": "3,665",
+    "productId": "1"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "BUY",
+    "supplier": "Jawel",
+    "item": "HP EliteOne 870 G9 | i7-14700T |16GB|1TB SSD|TOUCH",
+    "count": "20",
+    "price": "4 650,00 AED",
+    "debtAed": "93 000,00 AED",
+    "rate": "3,665",
+    "productId": "3"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "BUY",
+    "supplier": "Jawel",
+    "item": "HP 27-cr0067ny | i7-1355U | 16GB | 512GB SSD",
+    "count": "30",
+    "price": "2 470,00 AED",
+    "debtAed": "74 100,00 AED",
+    "rate": "3,665",
+    "productId": "10"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "BUY",
+    "supplier": "Jawel",
+    "item": "HP 27-CR0008ci | i5-1335U | 16GB | 512GB SSD",
+    "count": "26",
+    "price": "2 080,00 AED",
+    "debtAed": "54 080,00 AED",
+    "rate": "3,665",
+    "productId": "11"
+  },
+  {
+    "date": "2025, 22 ноября",
+    "type": "PAY",
+    "courier": "Dilnoza opa",
+    "supplier": "Oybek aka",
+    "paidAed": "4 000,20 AED",
+    "rate": "3,667",
+    "usedUsd": "1 090,86 USD"
+  },
+  {
+    "date": "2025, 25 ноября",
+    "type": "CASH-OUT",
+    "courier": "Abduqodir",
+    "cashUsd": "10 050,00 USD",
+    "rate": "3,666",
+    "fee": "0,50%",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 25 ноября",
+    "type": "PAY",
+    "courier": "Abduqodir",
+    "supplier": "Transworld",
+    "paidAed": "36 660,00 AED",
+    "rate": "3,666",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 25 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "skidka",
+    "count": "1",
+    "price": "14,00 AED",
+    "debtAed": "14,00 AED",
+    "rate": "3,666",
+    "comment": "skidka",
+    "productId": "262"
+  },
+  {
+    "date": "2025, 26 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+    "count": "10",
+    "price": "3 210,00 AED",
+    "debtAed": "32 100,00 AED",
+    "rate": "3,666",
+    "productId": "77"
+  },
+  {
+    "date": "2025, 26 ноября",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "keyboard capilot black and platinum",
+    "count": "10",
+    "price": "450,00 AED",
+    "debtAed": "4 500,00 AED",
+    "rate": "3,666",
+    "productId": "103"
+  },
+  {
+    "date": "2025, 27 ноября",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Lenovo thinkpad e16|Ultra5|DDR5 16GB|512GB",
+    "count": "6",
+    "price": "2 240,00 AED",
+    "debtAed": "13 440,00 AED",
+    "rate": "3,67",
+    "productId": "66"
+  },
+  {
+    "date": "2025, 03 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "30 000,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "29 850,75 USD"
+  },
+  {
+    "date": "2025, 04 декабря",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Hp omnibook14 FH0033 U9 32GB 2TB 2in 1 14inch",
+    "count": "20",
+    "price": "5 300,00 AED",
+    "debtAed": "106 000,00 AED",
+    "rate": "3,67",
+    "productId": "31"
+  },
+  {
+    "date": "2025, 05 декабря",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Laptop Lenovo TP E16 GEN2 U5/16/512gb rs",
+    "count": "4",
+    "price": "2 240,00 AED",
+    "debtAed": "8 960,00 AED",
+    "rate": "3,67",
+    "productId": "66"
+  },
+  {
+    "date": "2025, 05 декабря",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Laptop Hp PB 460 G11 U7/8gb/512gb/dos/16.0\" FHD",
+    "count": "10",
+    "price": "2 300,00 AED",
+    "debtAed": "23 000,00 AED",
+    "rate": "3,67",
+    "productId": "38"
+  },
+  {
+    "date": "2025, 06 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Mohid Mirza",
+    "paidAed": "85 050,00 AED",
+    "rate": "3,67",
+    "usedUsd": "23 174,39 USD"
+  },
+  {
+    "date": "2025, 06 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "14 300,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "14 228,86 USD"
+  },
+  {
+    "date": "2025, 06 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "2 341,14 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "2 329,49 USD",
+    "comment": "28mln berildi"
+  },
+  {
+    "date": "2025, 07 декабря",
+    "type": "CASH-OUT",
+    "courier": "Oybek aka",
+    "cashUsd": "85 094,13 USD",
+    "rate": "3,67",
+    "fee": "0,00%",
+    "usedUsd": "85 094,13 USD"
+  },
+  {
+    "date": "2025, 07 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "1 672,24 USD",
+    "rate": "3,66",
+    "fee": "0,00%",
+    "usedUsd": "1 672,24 USD",
+    "comment": "20 mln berilgan"
+  },
+  {
+    "date": "2025, 07 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "- 2 267,00 USD",
+    "rate": "3,66",
+    "fee": "0,00%",
+    "usedUsd": "- 2 267,00 USD",
+    "comment": "pul qaytarildi"
+  },
+  {
+    "date": "2025, 09 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "3 611,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "3 593,03 USD"
+  },
+  {
+    "date": "2025, 09 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Jawel",
+    "paidAed": "73 400,00 AED",
+    "rate": "3,67",
+    "usedUsd": "20 000,00 USD"
+  },
+  {
+    "date": "2025, 11 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "- 500,00 USD",
+    "rate": "3,66",
+    "fee": "0",
+    "usedUsd": "- 500,00 USD"
+  },
+  {
+    "date": "2025, 13 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "20 000,00 USD",
+    "rate": "3,67",
+    "usedUsd": "20 000,00 USD"
+  },
+  {
+    "date": "2025, 13 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "1 024,79 USD",
+    "rate": "3,67",
+    "usedUsd": "1 024,79 USD",
+    "comment": "12,4 mln berildi"
+  },
+  {
+    "date": "2025, 14 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "10 000,00 USD",
+    "rate": "3,67",
+    "usedUsd": "10 000,00 USD"
+  },
+  {
+    "date": "2025, 14 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "1 253,75 USD",
+    "rate": "3,66",
+    "usedUsd": "1 253,75 USD"
+  },
+  {
+    "date": "2025, 15 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "4 110,00 USD",
+    "rate": "3,67",
+    "usedUsd": "4 110,00 USD"
+  },
+  {
+    "date": "2025, 15 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "1 074,38 USD",
+    "rate": "3,67",
+    "usedUsd": "1 074,38 USD",
+    "comment": "13 mln"
+  },
+  {
+    "date": "2025, 15 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "3 450,00 USD",
+    "rate": "3,67",
+    "usedUsd": "3 450,00 USD"
+  },
+  {
+    "date": "2025, 15 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "330,58 USD",
+    "rate": "3,67",
+    "usedUsd": "330,58 USD",
+    "comment": "4 mln"
+  },
+  {
+    "date": "2025, 16 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "- 1 320,00 USD",
+    "rate": "3,66",
+    "usedUsd": "- 1 320,00 USD",
+    "comment": "pul qaytti"
+  },
+  {
+    "date": "2025, 19 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "- 40 146,11 USD",
+    "rate": "3,67",
+    "usedUsd": "- 40 146,11 USD",
+    "comment": "conflik yoqotildi"
+  },
+  {
+    "date": "2025, 19 декабря",
+    "type": "CASH-OUT",
+    "courier": "Oybek aka",
+    "cashUsd": "40 140,00 USD",
+    "rate": "3,67",
+    "usedUsd": "40 140,00 USD"
+  },
+  {
+    "date": "2025, 19 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Jawel",
+    "paidAed": "100 000,00 AED",
+    "rate": "3,67",
+    "usedUsd": "27 247,96 USD"
+  },
+  {
+    "date": "2025, 19 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Mohid Mirza",
+    "paidAed": "50 000,00 AED",
+    "rate": "3,67",
+    "usedUsd": "13 623,98 USD"
+  },
+  {
+    "date": "2025, 20 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "416,67 USD",
+    "rate": "3,66",
+    "usedUsd": "416,67 USD",
+    "comment": "5 mln kartaga"
+  },
+  {
+    "date": "2025, 21 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "7 040,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "7 004,98 USD"
+  },
+  {
+    "date": "2025, 22 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "20 800,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "20 696,52 USD"
+  },
+  {
+    "date": "2025, 23 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "- 500,00 USD",
+    "rate": "3,66",
+    "usedUsd": "- 500,00 USD"
+  },
+  {
+    "date": "2025, 24 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Oybek aka",
+    "paidAed": "110 100,00 AED",
+    "rate": "3,67",
+    "usedUsd": "30 000,00 USD"
+  },
+  {
+    "date": "2025, 24 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "1 400,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "1 393,03 USD"
+  },
+  {
+    "date": "2025, 24 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "3 900,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "3 880,60 USD"
+  },
+  {
+    "date": "2025, 24 декабря",
+    "type": "BUY",
+    "supplier": "Arkada",
+    "item": "Microsoft Mouse Souris Arc",
+    "count": "85",
+    "price": "202,00 AED",
+    "debtAed": "17 170,00 AED",
+    "rate": "3,67",
+    "productId": "91"
+  },
+  {
+    "date": "2025, 24 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Arkada",
+    "paidAed": "17 500,00 AED",
+    "rate": "3,67",
+    "usedUsd": "4 768,39 USD"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "11 415,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "11 358,21 USD"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Microsoft Surface pro11/U5/16gb/256gb",
+    "count": "2",
+    "price": "4 750,00 AED",
+    "debtAed": "9 500,00 AED",
+    "rate": "3,67",
+    "productId": "263"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Microsoft Surface pro12 X Plus 16gb/256gb",
+    "count": "5",
+    "price": "2 500,00 AED",
+    "debtAed": "12 500,00 AED",
+    "rate": "3,67",
+    "productId": "69"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Microsoft Surface 45W USB-C Wall Charger",
+    "count": "5",
+    "price": "160,00 AED",
+    "debtAed": "800,00 AED",
+    "rate": "3,67",
+    "productId": "264"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Microsoft Laptop X Plus 16gb/256gb",
+    "count": "2",
+    "price": "2 500,00 AED",
+    "debtAed": "5 000,00 AED",
+    "rate": "3,67",
+    "productId": "77"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Surface Pro7 Cover - Black",
+    "count": "10",
+    "price": "60,00 AED",
+    "debtAed": "600,00 AED",
+    "rate": "3,67",
+    "productId": "104"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Surface Pro7 Cover - Silver",
+    "count": "5",
+    "price": "60,00 AED",
+    "debtAed": "300,00 AED",
+    "rate": "3,67",
+    "productId": "104"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Ali Riza",
+    "paidAed": "28 700,00 AED",
+    "rate": "3,67",
+    "usedUsd": "7 820,16 USD"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "Lenovo IdeaCentre AIO27IRH9|i5-13420H|8GB|512GB",
+    "count": "2",
+    "price": "2 400,00 AED",
+    "debtAed": "4 800,00 AED",
+    "rate": "3,67",
+    "productId": "26"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "BUY",
+    "supplier": "Khojandi",
+    "item": "HP OmniStudio X32 | Ultra7-155H | 32GB | 1TB SSD",
+    "count": "5",
+    "price": "2 600,00 AED",
+    "debtAed": "13 000,00 AED",
+    "rate": "3,67",
+    "productId": "33"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Khojandi",
+    "paidAed": "4 000,00 AED",
+    "rate": "3,67",
+    "usedUsd": "1 089,92 USD"
+  },
+  {
+    "date": "2025, 25 декабря",
+    "type": "PAY",
+    "courier": "Oybek aka",
+    "supplier": "Khojandi",
+    "paidAed": "2 100,00 AED",
+    "rate": "3,67",
+    "usedUsd": "572,21 USD"
+  },
+  {
+    "date": "2025, 26 декабря",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "Asus Rog",
+    "count": "1",
+    "price": "4 600,00 AED",
+    "debtAed": "4 600,00 AED",
+    "rate": "3,67",
+    "productId": "265"
+  },
+  {
+    "date": "2025, 26 декабря",
+    "type": "BUY",
+    "supplier": "Preview",
+    "item": "lenova24",
+    "count": "2",
+    "price": "2 050,00 AED",
+    "debtAed": "4 100,00 AED",
+    "rate": "3,67",
+    "productId": "262"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "14 910,00 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "14 835,82 USD"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "829,88 USD",
+    "rate": "3,67",
+    "fee": "0,50%",
+    "usedUsd": "825,75 USD"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Surface Pro11 | X Plus | 16GB | 512GB SSD | Black",
+    "count": "10",
+    "price": "3 165,00 AED",
+    "debtAed": "31 650,00 AED",
+    "rate": "3,67",
+    "productId": "77"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Microsoft Mouse Souris Arc",
+    "count": "5",
+    "price": "190,00 AED",
+    "debtAed": "950,00 AED",
+    "rate": "3,67",
+    "productId": "91"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Microsoft keyboard + pen platinum",
+    "count": "12",
+    "price": "740,00 AED",
+    "debtAed": "8 880,00 AED",
+    "rate": "3,67",
+    "productId": "99"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Microsoft keyboard black",
+    "count": "7",
+    "price": "450,00 AED",
+    "debtAed": "3 150,00 AED",
+    "rate": "3,67",
+    "productId": "102"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Transworld",
+    "item": "Microsoft keyboard + pen black",
+    "count": "4",
+    "price": "740,00 AED",
+    "debtAed": "2 960,00 AED",
+    "rate": "3,67",
+    "productId": "98"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "BUY",
+    "supplier": "Ali Riza",
+    "item": "Surface Slim Pen 2 Black -TRA",
+    "count": "10",
+    "price": "330,00 AED",
+    "debtAed": "3 300,00 AED",
+    "rate": "3,67",
+    "productId": "86"
+  },
+  {
+    "date": "2025, 28 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "835,83 USD",
+    "rate": "3,67",
+    "usedUsd": "835,83 USD",
+    "comment": "10 mln berilgan"
+  },
+  {
+    "date": "2025, 29 декабря",
+    "type": "CASH-OUT",
+    "courier": "Dilnoza opa",
+    "cashUsd": "- 836,00 USD",
+    "rate": "3,67",
+    "usedUsd": "- 836,00 USD"
+  },
+  {
+    "date": "2025, 29 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Khojandi",
+    "paidAed": "11 700,00 AED",
+    "rate": "3,67",
+    "usedUsd": "3 188,01 USD"
+  },
+  {
+    "date": "2025, 29 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Ali Riza",
+    "paidAed": "3 300,00 AED",
+    "rate": "3,67",
+    "usedUsd": "899,18 USD"
+  },
+  {
+    "date": "2025, 29 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Preview",
+    "paidAed": "4 129,00 AED",
+    "rate": "3,67",
+    "usedUsd": "1 125,07 USD"
+  },
+  {
+    "date": "2025, 29 декабря",
+    "type": "PAY",
+    "courier": "Komil aka",
+    "supplier": "Jawel",
+    "paidAed": "90 971,00 AED",
+    "rate": "3,67",
+    "usedUsd": "24 787,74 USD"
+  },
+  {
+    "date": "2025, 30 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "13 211,00 USD",
+    "rate": "3,67",
+    "usedUsd": "13 211,00 USD"
+  },
+  {
+    "date": "2025, 30 декабря",
+    "type": "CASH-OUT",
+    "courier": "Komil aka",
+    "cashUsd": "8 100,00 USD",
+    "rate": "3,67",
+    "usedUsd": "8 100,00 USD"
+  },
+  {
+    "date": "2025, 31 декабря",
+    "type": "CASH-OUT",
+    "courier": "Oybek aka",
+    "cashUsd": "14 982,62 USD",
+    "rate": "3,67",
+    "usedUsd": "14 982,62 USD"
+  },
+  {
+    "date": "2025, 27 декабря",
+    "type": "PAY",
+    "supplier": "Transworld",
+    "paidAed": "15 597,50 AED",
+    "rate": "3,67",
+    "usedUsd": "4 250,00 USD"
+  }
+]

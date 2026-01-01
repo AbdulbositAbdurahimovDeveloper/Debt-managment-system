@@ -1,0 +1,28 @@
+//Mohid Mirza id: 7
+POST http://localhost:8080/api/sheet/import
+#POST http://localhost:8080/api/v1/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
+
+[
+  {
+    "clientId": 6,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 45190.00,
+    "marketRate": 3.665,
+    "feeAmount": 0,
+    "clientRate": 3.665,
+    "receiverRate": null,
+    "description": "eski qarzlar",
+    "items": [
+      {
+        "productId": 260,
+        "quantity": 1,
+        "unitPrice": 239500.00
+      }
+    ],
+    "createdAt": "2025-10-22T10:00:00.000Z"
+  }
+]

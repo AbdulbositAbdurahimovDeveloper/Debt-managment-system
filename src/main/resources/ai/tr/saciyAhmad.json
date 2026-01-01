@@ -1,0 +1,4 @@
+[
+  {"clientId": 3, "type": "PAYMENT", "amount": 10080.0, "transactionCurrency": "USD", "feeAmount": 80.0, "description": "Saxiy Ahmad (CASH-OUT)", "createdAt": "2025-11-05T00:00:00.000Z"},
+  {"clientId": 8, "type": "PURCHASE_PAYMENT", "amount": 36650.0, "transactionCurrency": "AED", "description": "Transworld uchun to'lov (Kuryer: Saxiy Ahmad)", "createdAt": "2025-11-07T00:00:00.000Z"}
+]

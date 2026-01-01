@@ -1,0 +1,7 @@
+[
+  {"clientId": 10, "type": "PURCHASE", "amount": 24000.0, "description": "Microsoft Surface pro11...", "createdAt": "2025-11-10T00:00:00.000Z"},
+  {"clientId": 10, "type": "PURCHASE_PAYMENT", "amount": 24000.0, "description": "Ali Riza to'lov (Oybek aka)", "createdAt": "2025-11-14T00:00:00.000Z"},
+  {"clientId": 10, "type": "PURCHASE", "amount": 9500.0, "description": "Surface pro11/U5...", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 10, "type": "PURCHASE_PAYMENT", "amount": 28700.0, "description": "Ali Riza to'lov (Oybek aka)", "createdAt": "2025-12-25T00:00:00.000Z"},
+  {"clientId": 10, "type": "PURCHASE_PAYMENT", "amount": 3300.0, "description": "Ali Riza to'lov (Komil aka)", "createdAt": "2025-12-29T00:00:00.000Z"}
+]

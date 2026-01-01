@@ -14,12 +14,10 @@ import uz.qarzdorlar_ai.exception.EntityNotFoundException;
 import uz.qarzdorlar_ai.mapper.TransactionMapper;
 import uz.qarzdorlar_ai.model.Client;
 import uz.qarzdorlar_ai.model.Transaction;
+import uz.qarzdorlar_ai.model.TransactionItem;
 import uz.qarzdorlar_ai.model.User;
 import uz.qarzdorlar_ai.model.embedded.AbsDateEntity;
-import uz.qarzdorlar_ai.payload.PageDTO;
-import uz.qarzdorlar_ai.payload.TransactionCreateDTO;
-import uz.qarzdorlar_ai.payload.TransactionDTO;
-import uz.qarzdorlar_ai.payload.TransactionUpdateDTO;
+import uz.qarzdorlar_ai.payload.*;
 import uz.qarzdorlar_ai.repository.ClientRepository;
 import uz.qarzdorlar_ai.repository.ProductRepository;
 import uz.qarzdorlar_ai.repository.TransactionRepository;
@@ -29,6 +27,8 @@ import uz.qarzdorlar_ai.service.transactions.embedded.TransactionHelperService;
 import uz.qarzdorlar_ai.service.transactions.embedded.TransactionService;
 
 import java.util.EnumSet;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -77,7 +77,7 @@ public class TransactionServiceImpl implements TransactionService {
         transaction.setType(type);
         transaction.setTransactionCurrency(dto.getTransactionCurrency());
         transaction.setDescription(dto.getDescription());
-        
+
         // createdAt - agar DTO dan kelmasa, current date ishlatiladi (AbsDateEntity @PrePersist tufayli)
         // Agar DTO dan kelgan bo'lsa, o'sha sanani ishlatamiz (migratsiya uchun)
         if (dto.getCreatedAt() != null) {
@@ -99,43 +99,38 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @Transactional
     public TransactionDTO updateTransaction(Long id, TransactionUpdateDTO dto, User staffUser) {
-        // 1. Eski tranzaksiyani topish va validatsiya
+        // 1. Eski tranzaksiyani topish
         Transaction tx = transactionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Transaction topilmadi. ID: " + id));
 
-        // Xavfsizlik: Faqat ruxsat berilgan xodim tahrirlay oladi
+        // Xavfsizlik tekshiruvi
         if (!ALLOWED_ROLES.contains(staffUser.getRole())) {
-            throw new AccessDeniedException("Sizda tranzaksiyani tahrirlash huquqi yo'q!");
+            throw new AccessDeniedException("Sizda tahrirlash huquqi yo'q!");
         }
 
-        // 2. MUHIM: Eski balansni teskarisiga qaytarish (Oldingi holatni o'chirish)
-        // Bu metod bazadagi eski 'balanceEffect' va 'usdAmount' dan foydalanadi
+        // 2. MUHIM: Eski balansni orqaga qaytarish (Hali ma'lumotlar o'zgarmasdan turib)
         transactionHelperService.reverseClientBalance(tx);
 
-        // 3. Maydonlarni yangilash
-        // Muhim: Type o'zgarmasligi kerak (SALE dan PAYMENT ga o'tib bo'lmaydi)
-        tx.setAmount(dto.getAmount());
-        tx.setMarketRate(dto.getMarketRate());
-        tx.setClientRate(dto.getClientRate());
-        tx.setReceiverRate(dto.getReceiverRate());
-        tx.setFeeAmount(dto.getFeeAmount());
-        tx.setTransactionCurrency(dto.getTransactionCurrency());
-        tx.setDescription(dto.getDescription());
+        // 3. QISMAN YANGILASH (Null-safe Merge)
+        // Faqat DTO da null bo'lmagan maydonlarni yangilaymiz
+        if (dto.getAmount() != null) tx.setAmount(dto.getAmount());
+        if (dto.getMarketRate() != null) tx.setMarketRate(dto.getMarketRate());
+        if (dto.getClientRate() != null) tx.setClientRate(dto.getClientRate());
+        if (dto.getReceiverRate() != null) tx.setReceiverRate(dto.getReceiverRate());
+        if (dto.getFeeAmount() != null) tx.setFeeAmount(dto.getFeeAmount());
+        if (dto.getTransactionCurrency() != null) tx.setTransactionCurrency(dto.getTransactionCurrency());
+        if (dto.getDescription() != null) tx.setDescription(dto.getDescription());
 
-        // Kim tahrirlaganini saqlash foydali (Audit uchun)
-        // tx.setUpdatedBy(staffUser); // Agar entityda bu maydon bo'lsa
-
-        // 4. Mahsulotlarni (Items) yangilash
-        if (tx.getType() == TransactionType.SALE || tx.getType() == TransactionType.RETURN || tx.getType() == TransactionType.PURCHASE) {
-            if (dto.getItems() != null) {
-                tx.getItems().clear(); // OrphanRemoval=true bo'lgani uchun eski itemlar DB dan o'chadi
-                // Yangi itemlar calculateTransaction ichida tx.addItem() orqali qo'shiladi
-            }
+        // 4. Mahsulotlarni (Items) yangilash logikasi
+        // Agar DTO da items kelsa, ularni butunlay yangilaymiz
+        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
+            tx.getItems().clear(); // OrphanRemoval=true eski itemlarni o'chiradi
         }
 
-        // 5. QAYTA HISOBLASH (USD Pivot logikasi)
-        // toCreateDto - bu DTO larni bir-biriga moslashtiruvchi kichik yordamchi metod
-        TransactionCreateDTO calculationDto = mapToCreateDto(dto, tx.getType());
+        // 5. QAYTA HISOBLASH (Merged ma'lumotlar asosida)
+        // Muhim: calculationDto ni tx (entity) dagi yangilangan ma'lumotlardan yig'amiz
+        TransactionCreateDTO calculationDto = mapToCalculationDto(tx, dto.getItems());
+
         transactionCalculationService.calculateTransaction(calculationDto, tx, tx.getClient());
 
         // 6. Yangi hisoblangan balansni qo'llash
@@ -147,18 +142,38 @@ public class TransactionServiceImpl implements TransactionService {
         return transactionMapper.toDTO(updatedTx);
     }
 
-
-    private TransactionCreateDTO mapToCreateDto(TransactionUpdateDTO updateDto, TransactionType type) {
+    private TransactionCreateDTO mapToCalculationDto(Transaction tx, List<TransactionItemCreateDTO> newItems) {
         TransactionCreateDTO createDto = new TransactionCreateDTO();
-        createDto.setType(type);
-        createDto.setAmount(updateDto.getAmount());
-        createDto.setMarketRate(updateDto.getMarketRate());
-        createDto.setClientRate(updateDto.getClientRate());
-        createDto.setReceiverRate(updateDto.getReceiverRate());
-        createDto.setFeeAmount(updateDto.getFeeAmount());
-        createDto.setTransactionCurrency(updateDto.getTransactionCurrency());
-        createDto.setItems(updateDto.getItems()); // List<TransactionItemCreateDTO>
+        createDto.setType(tx.getType());
+
+        // Entity dagi (merged qilingan) ma'lumotlarni olamiz
+        createDto.setAmount(tx.getAmount());
+        createDto.setMarketRate(tx.getMarketRate());
+        createDto.setClientRate(tx.getClientRate());
+        createDto.setReceiverRate(tx.getReceiverRate());
+        createDto.setFeeAmount(tx.getFeeAmount());
+        createDto.setTransactionCurrency(tx.getTransactionCurrency());
+
+        // Agar yangi itemlar kelsa ularni, kelmasa mavjudlarini beramiz
+        if (newItems != null && !newItems.isEmpty()) {
+            createDto.setItems(newItems);
+        } else {
+            // Mavjud itemlarni DTO formatiga o'tkazish (agar kerak bo'lsa)
+            createDto.setItems(mapItemsToCreateDto(tx.getItems()));
+        }
+
         return createDto;
+    }
+
+    private List<TransactionItemCreateDTO> mapItemsToCreateDto(List<TransactionItem> items) {
+        if (items == null) return List.of();
+        return items.stream().map(item -> {
+            TransactionItemCreateDTO itemDto = new TransactionItemCreateDTO();
+            itemDto.setProductId(item.getProduct().getId());
+            itemDto.setQuantity(item.getQuantity());
+            itemDto.setUnitPrice(item.getUnitPrice()); // TC dagi narxi
+            return itemDto;
+        }).collect(Collectors.toList());
     }
 
 //    @Override
@@ -275,12 +290,11 @@ public class TransactionServiceImpl implements TransactionService {
 //        Transaction savedTransaction = transactionRepository.save(transaction);
 //
 //        // Yangi balansni qo'llash
-////        transactionHelperService.updateClientBalance(savedTransaction);
+
+    /// /        transactionHelperService.updateClientBalance(savedTransaction);
 //
 //        return transactionMapper.toDTO(null);
 //    }
-
-
     @Override
     @Transactional
     public void deleteTransaction(Long id, User staffUser) {

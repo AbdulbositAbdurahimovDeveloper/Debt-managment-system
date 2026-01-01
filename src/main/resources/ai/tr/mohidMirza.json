@@ -1,0 +1,8 @@
+[
+  {"clientId": 7, "type": "PURCHASE", "amount": 239350.0, "transactionCurrency": "AED", "description": "eski qarzlar", "createdAt": "2025-10-28T00:00:00.000Z"},
+  {"clientId": 7, "type": "PURCHASE_PAYMENT", "amount": 36650.0, "transactionCurrency": "AED", "description": "Mohid Mirza to'lov (Oybek aka)", "createdAt": "2025-10-29T00:00:00.000Z"},
+  {"clientId": 7, "type": "PURCHASE_PAYMENT", "amount": 37000.0, "transactionCurrency": "AED", "description": "Mohid Mirza to'lov (Oybek aka)", "createdAt": "2025-11-12T00:00:00.000Z"},
+  {"clientId": 7, "type": "PURCHASE", "amount": 26600.0, "transactionCurrency": "AED", "description": "LENOVO LOQ I7-14700HX...", "createdAt": "2025-11-12T00:00:00.000Z"},
+  {"clientId": 7, "type": "PURCHASE_PAYMENT", "amount": 85050.0, "transactionCurrency": "AED", "description": "Mohid Mirza uchun to'lov (Komil aka)", "createdAt": "2025-12-06T00:00:00.000Z"},
+  {"clientId": 7, "type": "PURCHASE_PAYMENT", "amount": 50000.0, "transactionCurrency": "AED", "description": "Mohid Mirza uchun to'lov (Oybek aka)", "createdAt": "2025-12-19T00:00:00.000Z"}
+]

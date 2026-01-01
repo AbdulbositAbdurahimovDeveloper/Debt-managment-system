@@ -1,0 +1,11 @@
+[
+  {"clientId": 6, "type": "PURCHASE", "amount": 45190.0, "transactionCurrency": "AED", "description": "eski qarzlar", "createdAt": "2025-11-02T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE_PAYMENT", "amount": 40000.0, "transactionCurrency": "AED", "description": "Jawel uchun to'lov (Oybek aka)", "createdAt": "2025-11-12T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE", "amount": 143200.0, "transactionCurrency": "AED", "description": "HP OmniStudio X32 | Ultra7-155H...", "createdAt": "2025-11-22T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE", "amount": 93000.0, "transactionCurrency": "AED", "description": "HP EliteOne 870 G9...", "createdAt": "2025-11-22T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE", "amount": 74100.0, "transactionCurrency": "AED", "description": "HP 27-cr0067ny | i7...", "createdAt": "2025-11-22T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE", "amount": 54080.0, "transactionCurrency": "AED", "description": "HP 27-CR0008ci | i5...", "createdAt": "2025-11-22T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE_PAYMENT", "amount": 73400.0, "transactionCurrency": "AED", "description": "Jawel uchun to'lov (Kuryer: Komil aka)", "createdAt": "2025-12-09T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE_PAYMENT", "amount": 100000.0, "transactionCurrency": "AED", "description": "Jawel uchun to'lov (Oybek aka)", "createdAt": "2025-12-19T00:00:00.000Z"},
+  {"clientId": 6, "type": "PURCHASE_PAYMENT", "amount": 90971.0, "transactionCurrency": "AED", "description": "Jawel uchun to'lov (Kuryer: Komil aka)", "createdAt": "2025-12-29T00:00:00.000Z"}
+]

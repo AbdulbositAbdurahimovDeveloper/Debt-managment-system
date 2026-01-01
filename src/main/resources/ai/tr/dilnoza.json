@@ -1,0 +1,13 @@
+[
+  {"clientId": 2, "type": "PAYMENT", "amount": 3300.0, "transactionCurrency": "USD", "description": "Dilnoza opa (CASH-OUT)", "createdAt": "2025-11-07T00:00:00.000Z"},
+  {"clientId": 2, "type": "PAYMENT", "amount": 14070.0, "transactionCurrency": "USD", "description": "Dilnoza opa (CASH-OUT 0.50%)", "createdAt": "2025-11-07T00:00:00.000Z"},
+  {"clientId": 2, "type": "PAYMENT", "amount": 666.67, "transactionCurrency": "USD", "description": "8 mln sum olingan (Dilnoza opa)", "createdAt": "2025-10-10T00:00:00.000Z"},
+  {"clientId": 2, "type": "RETURN_PAYMENT", "amount": 58640.0, "transactionCurrency": "AED", "description": "Mablag' qaytarildi (Supplier: Oybek aka)", "createdAt": "2025-11-11T00:00:00.000Z"},
+  {"clientId": 2, "type": "PAYMENT", "amount": 13668.0, "transactionCurrency": "USD", "description": "Dilnoza opa (CASH-OUT 0.50%)", "createdAt": "2025-11-19T00:00:00.000Z"},
+  {"clientId": 2, "type": "RETURN_PAYMENT", "amount": 4000.2, "transactionCurrency": "AED", "description": "Mablag' qaytarildi (Supplier: Oybek aka)", "createdAt": "2025-11-22T00:00:00.000Z"},
+  {"clientId": 2, "type": "PAYMENT", "amount": 1672.24, "transactionCurrency": "USD", "description": "20 mln berilgan (Dilnoza opa)", "createdAt": "2025-12-07T00:00:00.000Z"},
+  {"clientId": 2, "type": "RETURN_PAYMENT", "amount": 2267.0, "transactionCurrency": "USD", "description": "pul qaytarildi (Dilnoza opa)", "createdAt": "2025-12-07T00:00:00.000Z"},
+  {"clientId": 2, "type": "RETURN_PAYMENT", "amount": 500.0, "transactionCurrency": "USD", "description": "Dilnoza opa (CASH-OUT negative)", "createdAt": "2025-12-11T00:00:00.000Z"},
+  {"clientId": 2, "type": "PAYMENT", "amount": 835.83, "transactionCurrency": "USD", "description": "10 mln berilgan (Dilnoza opa)", "createdAt": "2025-12-28T00:00:00.000Z"},
+  {"clientId": 2, "type": "RETURN_PAYMENT", "amount": 836.0, "transactionCurrency": "USD", "description": "Dilnoza opa (CASH-OUT negative)", "createdAt": "2025-12-29T00:00:00.000Z"}
+]

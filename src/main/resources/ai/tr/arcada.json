@@ -1,0 +1,30 @@
+[
+  {
+    "clientId": 13,
+    "type": "PURCHASE",
+    "amount": 17170.00,
+    "transactionCurrency": "AED",
+    "marketRate": 3.67,
+    "feeAmount": null,
+    "description": "Microsoft Mouse Souris Arc",
+    "items": [
+      {
+        "productId": 91,
+        "quantity": 85,
+        "unitPrice": 202.00
+      }
+    ],
+    "createdAt": "2025-12-24T00:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "type": "PURCHASE_PAYMENT",
+    "amount": 17500.00,
+    "transactionCurrency": "AED",
+    "marketRate": 3.67,
+    "feeAmount": null,
+    "description": "Arkada uchun to'lov (Oybek aka orqali)",
+    "items": null,
+    "createdAt": "2025-12-24T00:00:00.000Z"
+  }
+]

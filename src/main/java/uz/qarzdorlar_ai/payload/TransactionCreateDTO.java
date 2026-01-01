@@ -1,5 +1,6 @@
 package uz.qarzdorlar_ai.payload;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
@@ -50,6 +51,7 @@ public class TransactionCreateDTO implements Serializable {
 
     private List<TransactionItemCreateDTO> items;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     private Timestamp createdAt;
 
 

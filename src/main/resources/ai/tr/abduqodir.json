@@ -1,0 +1,5 @@
+[
+  {"clientId": 4, "type": "PAYMENT", "amount": 20100.0, "transactionCurrency": "USD", "feeAmount": 100.0, "description": "Abduqodir (CASH-OUT 0.50%)", "createdAt": "2025-11-14T00:00:00.000Z"},
+  {"clientId": 4, "type": "RETURN_PAYMENT", "amount": 73300.0, "transactionCurrency": "AED", "description": "Mablag' qaytarildi (Supplier: Oybek aka)", "createdAt": "2025-11-14T00:00:00.000Z"},
+  {"clientId": 4, "type": "PAYMENT", "amount": 10050.0, "transactionCurrency": "USD", "description": "Abduqodir (CASH-OUT)", "createdAt": "2025-11-25T00:00:00.000Z"}
+]

@@ -28,7 +28,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 //@SQLDelete(sql = "UPDATE transaction SET deleted = true WHERE id = ?")
-@SQLDelete(sql = "UPDATE transactions SET deleted = true WHERE id = ? AND version = ?")
+@SQLDelete(sql = "UPDATE transaction SET deleted = true WHERE id = ? AND version = ?")
 @SQLRestriction("deleted = false")
 public class Transaction extends AbsLongEntity {
 

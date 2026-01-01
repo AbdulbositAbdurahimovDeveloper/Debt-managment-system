@@ -1,0 +1,30 @@
+[
+  {
+    "clientId": 9,
+    "type": "PURCHASE",
+    "amount": 24000.00,
+    "transactionCurrency": "AED",
+    "marketRate": 3.665,
+    "feeAmount": null,
+    "description": "Hp speaktor14 Ultra7/16/1TB",
+    "items": [
+      {
+        "productId": 30,
+        "quantity": 5,
+        "unitPrice": 4800.00
+      }
+    ],
+    "createdAt": "2025-11-08T00:00:00.000Z"
+  },
+  {
+    "clientId": 9,
+    "type": "PURCHASE_PAYMENT",
+    "amount": 24000.00,
+    "transactionCurrency": "AED",
+    "marketRate": 3.665,
+    "feeAmount": null,
+    "description": "Micro zone uchun to'lov (Kuryer: Oybek aka)",
+    "items": null,
+    "createdAt": "2025-11-10T00:00:00.000Z"
+  }
+]
