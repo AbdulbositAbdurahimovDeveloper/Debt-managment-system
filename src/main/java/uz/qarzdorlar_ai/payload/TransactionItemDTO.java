@@ -1,8 +1,8 @@
 package uz.qarzdorlar_ai.payload;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import uz.qarzdorlar_ai.model.TransactionItem;
 
 import java.io.Serializable;
@@ -12,17 +12,16 @@ import java.sql.Timestamp;
 /**
  * DTO for {@link TransactionItem}
  */
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 public class TransactionItemDTO implements Serializable {
     private Long id;
-    private Long transactionId;
     private Long productId;
+    private String productName; // Frontend uchun mahsulot nomi juda kerak
     private Integer quantity;
-    private BigDecimal unitPrice;
-    private BigDecimal totalPrice;
-    private boolean deleted = false;
+    private BigDecimal unitPrice; // USD da
+    private BigDecimal totalPrice; // USD da
     private Timestamp createdAt;
     private Timestamp updatedAt;
 }

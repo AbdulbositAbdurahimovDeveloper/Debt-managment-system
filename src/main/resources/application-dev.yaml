@@ -55,6 +55,7 @@ google:
     application-name: NotUzBot
     credentials-path: /google-key.json
     spreadsheet-id: 1qrCUMqbiXM2yuYAOwK6jhX99JcXq3CvjGJlDZB16qKE
+    spreadsheet-work-id: 12X6kr8CHwYaIpRATtGp47t5N4TlJg-y2xuCU9NiRbbE
 
 telegram:
   bot:

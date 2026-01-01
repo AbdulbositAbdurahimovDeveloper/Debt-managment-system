@@ -6,16 +6,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import uz.qarzdorlar_ai.enums.Role;
-import uz.qarzdorlar_ai.exception.DataConflictException;
 import uz.qarzdorlar_ai.model.User;
 import uz.qarzdorlar_ai.model.UserProfile;
-import uz.qarzdorlar_ai.payload.CurrencyCreateDTO;
-import uz.qarzdorlar_ai.payload.CurrencyDTO;
-import uz.qarzdorlar_ai.payload.ExchangeRateCreateDTO;
-import uz.qarzdorlar_ai.repository.CurrencyRepository;
 import uz.qarzdorlar_ai.repository.UserRepository;
-import uz.qarzdorlar_ai.service.CurrencyService;
-import uz.qarzdorlar_ai.service.ExchangeRateService;
 
 import java.math.BigDecimal;
 
@@ -26,9 +19,6 @@ public class DataLoader implements CommandLineRunner {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final CurrencyService currencyService;
-    private final ExchangeRateService exchangeRateService;
-    private final CurrencyRepository currencyRepository;
 
     @Override
     public void run(String... args) {
@@ -42,29 +32,7 @@ public class DataLoader implements CommandLineRunner {
         createIfNotExists("client", "Default", "Client", Role.CLIENT);
         createIfNotExists("anonymous", "Anonymous", "User", Role.ANONYMOUS);
 
-        createIfNotExistsCurrency("Uzbekistan Som", "UZS", "so'm", false, BigDecimal.valueOf(12100));
-        createIfNotExistsCurrency("US Dollar", "USD", "$", true, BigDecimal.valueOf(1));
-        createIfNotExistsCurrency("United Arab Emirates Dirham", "AED", "د.إ", false, BigDecimal.valueOf(3.67));
-
         log.info("System user initialization finished.");
-    }
-
-
-    private void createIfNotExistsCurrency(String name, String code, String symbol, boolean isBase, BigDecimal rate) {
-
-        if (!currencyRepository.existsByCode(code)) {
-            CurrencyDTO currency = currencyService.createCurrency(
-                    new CurrencyCreateDTO(
-                            name,
-                            code,
-                            symbol,
-                            isBase
-                    )
-            );
-
-            exchangeRateService.createExchangeRate(new ExchangeRateCreateDTO(currency.getId(), rate));
-        }
-
     }
 
 

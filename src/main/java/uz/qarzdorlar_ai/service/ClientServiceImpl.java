@@ -6,14 +6,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.PageRequest;
 import uz.qarzdorlar_ai.model.Client;
-import uz.qarzdorlar_ai.model.Currency;
 import uz.qarzdorlar_ai.payload.PageDTO;
 import uz.qarzdorlar_ai.payload.ClientDTO;
 import uz.qarzdorlar_ai.mapper.ClientMapper;
 import uz.qarzdorlar_ai.payload.ClientUpdateDTO;
 import uz.qarzdorlar_ai.payload.ClientCreateDTO;
 import uz.qarzdorlar_ai.repository.ClientRepository;
-import uz.qarzdorlar_ai.repository.CurrencyRepository;
 import uz.qarzdorlar_ai.exception.DataConflictException;
 import uz.qarzdorlar_ai.exception.EntityNotFoundException;
 
@@ -23,16 +21,9 @@ public class ClientServiceImpl implements ClientService {
 
     private final ClientMapper clientMapper;
     private final ClientRepository clientRepository;
-    private final CurrencyRepository currencyRepository;
 
     @Override
     public ClientDTO createClient(ClientCreateDTO clientCreateDTO) {
-
-        Long currencyId = clientCreateDTO.getCurrencyId();
-        Currency currency = currencyRepository.findById(currencyId)
-                .orElseThrow(() ->
-                        new EntityNotFoundException("Currency not found with id : " + currencyId)
-                );
 
         String fullName = clientCreateDTO.getFullName();
         if (clientRepository.existsByFullName(fullName)) {
@@ -47,7 +38,7 @@ public class ClientServiceImpl implements ClientService {
         client.setFullName(clientCreateDTO.getFullName());
         client.setPhoneNumber(phoneNumber);
         client.setType(clientCreateDTO.getType());
-        client.setBalanceCurrency(currency);
+        client.setCurrencyCode(clientCreateDTO.getCurrencyCode());
         client.setInitialBalance(clientCreateDTO.getInitialBalance());
         client.setCurrentBalance(clientCreateDTO.getInitialBalance());
         client.setAddress(clientCreateDTO.getAddress());

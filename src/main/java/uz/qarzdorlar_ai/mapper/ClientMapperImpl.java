@@ -22,11 +22,11 @@ public class ClientMapperImpl implements ClientMapper {
         clientDTO.setType(client.getType());
         clientDTO.setFullName(client.getFullName());
         clientDTO.setPhoneNumber(client.getPhoneNumber());
-        clientDTO.setBalanceCurrencyId(
-                client.getBalanceCurrency() != null
-                        ? client.getBalanceCurrency().getId()
-                        : null
-        );
+//        clientDTO.setBalanceCurrencyId(
+//                client.getBalanceCurrency() != null
+//                        ? client.getBalanceCurrency().getId()
+//                        : null
+//        );
         clientDTO.setTelegramUserChatId(
                 client.getTelegramUser() != null
                         ? client.getTelegramUser().getChatId()

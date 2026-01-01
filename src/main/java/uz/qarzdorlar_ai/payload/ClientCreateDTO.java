@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uz.qarzdorlar_ai.enums.ClientType;
+import uz.qarzdorlar_ai.enums.CurrencyCode;
 import uz.qarzdorlar_ai.model.Client;
 
 import java.io.Serializable;
@@ -25,7 +26,7 @@ public class ClientCreateDTO implements Serializable {
     @NotBlank(message = "Full name must not be empty")
     private String fullName;
 
-    @NotBlank(message = "Phone number must not be empty")
+//    @NotBlank(message = "Phone number must not be empty")
     @Pattern(
             regexp = "^\\+?[0-9]{7,15}$",
             message = "Phone number must contain only digits and may start with +"
@@ -36,15 +37,15 @@ public class ClientCreateDTO implements Serializable {
     private ClientType type;
 
     @NotNull(message = "Currency id required")
-    private Long currencyId;
+    private CurrencyCode currencyCode = CurrencyCode.USD;
 
     @PositiveOrZero(message = "Initial balance must be zero or a positive number")
     private BigDecimal initialBalance;
 
-    @NotBlank(message = "Address must not be empty")
+//    @NotBlank(message = "Address must not be empty")
     private String address;
 
-    @NotBlank(message = "Comment must not be empty")
+//    @NotBlank(message = "Comment must not be empty")
     private String comment;
 
 }

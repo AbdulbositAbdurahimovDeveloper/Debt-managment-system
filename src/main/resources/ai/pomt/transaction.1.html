@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction JSON Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+        code { font-family: 'Fira Code', monospace; font-size: 0.9rem; }
+        .json-container { background-color: #1e1e1e; border-radius: 8px; position: relative; }
+        .copy-btn { position: absolute; top: 10px; right: 10px; transition: all 0.2s; }
+        .copy-btn:active { transform: scale(0.9); }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 p-8">
+
+<div class="max-w-5xl mx-auto">
+    <header class="mb-12 text-center">
+        <h1 class="text-4xl font-extrabold text-indigo-700 mb-4">Transaction API Documentation</h1>
+        <p class="text-lg text-gray-600">Barcha tranzaksiyalar <b>USD (Oltin ko'prik)</b> mantiqi asosida ishlaydi.</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full border border-blue-200 italic">usdAmount = amount / marketRate</span>
+            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full border border-green-200 italic">balanceEffect = usdAmount * clientRate</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- SALE -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">SALE (Sotuv)</span>
+                    <span class="text-gray-400 text-xs italic">Mijoz qarzi oshadi (-)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Mijoz 12,800,000 so'mlik tovar oldi. Balansi AED da.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('sale-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="sale-json" class="text-green-400"><code class="language-json">{
+  "clientId": 1,
+  "type": "SALE",
+  "transactionCurrency": "UZS",
+  "amount": 12800000,
+  "marketRate": 12800,
+  "clientRate": 3.67,
+  "items": [
+    { "productId": 10, "quantity": 1, "unitPrice": 1000 }
+  ]
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">PAYMENT (To'lov)</span>
+                    <span class="text-gray-400 text-xs italic">Mijoz qarzi kamayadi (+)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Mijoz AED da qarzini to'ladi.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('payment-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="payment-json" class="text-green-400"><code class="language-json">{
+  "clientId": 1,
+  "type": "PAYMENT",
+  "transactionCurrency": "AED",
+  "amount": 3670,
+  "marketRate": 3.67,
+  "clientRate": 3.67,
+  "description": "Kassa orqali AED olindi"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- PURCHASE -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PURCHASE (Xarid)</span>
+                    <span class="text-gray-400 text-xs italic">Bizning qarzimiz oshadi (+)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Ta'minotchidan 5000$ lik tovar keldik.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('purchase-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="purchase-json" class="text-green-400"><code class="language-json">{
+  "clientId": 5,
+  "type": "PURCHASE",
+  "transactionCurrency": "USD",
+  "amount": 5000,
+  "marketRate": 1,
+  "clientRate": 1,
+  "items": [
+    { "productId": 12, "quantity": 5, "unitPrice": 1000 }
+  ]
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- PURCHASE_PAYMENT -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded">PURCHASE_PAYMENT</span>
+                    <span class="text-gray-400 text-xs italic">Bizning qarzimiz kamayadi (-)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Ta'minotchiga 25.6 mln so'm to'ladik.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('ppayment-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="ppayment-json" class="text-green-400"><code class="language-json">{
+  "clientId": 5,
+  "type": "PURCHASE_PAYMENT",
+  "transactionCurrency": "UZS",
+  "amount": 25600000,
+  "marketRate": 12800,
+  "clientRate": 1
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRANSFER -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 md:col-span-2">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded">TRANSFER (P2P O'tkazma)</span>
+                    <span class="text-gray-400 text-xs italic">Sender: (-) | Receiver: (+)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Kuryer (ID:2) olingan pulni Ta'minotchiga (ID:5) topshirdi.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('transfer-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="transfer-json" class="text-green-400"><code class="language-json">{
+  "clientId": 2,
+  "receiverClientId": 5,
+  "type": "TRANSFER",
+  "transactionCurrency": "UZS",
+  "amount": 12800000,
+  "marketRate": 12800,
+  "clientRate": 1,
+  "receiverRate": 1,
+  "description": "Kuryerdan Ta'minotchiga o'tkazildi"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- RETURN -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">RETURN (Vozvrat)</span>
+                    <span class="text-gray-400 text-xs italic">Mijoz qarzi kamayadi (+)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Mijoz 1000$ lik tovarni qaytardi.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('return-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="return-json" class="text-green-400"><code class="language-json">{
+  "clientId": 1,
+  "type": "RETURN",
+  "transactionCurrency": "USD",
+  "amount": 1000,
+  "marketRate": 1,
+  "clientRate": 3.67,
+  "items": [{ "productId": 10, "quantity": 1, "unitPrice": 1000 }]
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- RETURN_PAYMENT -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-gray-600 text-white text-xs font-bold px-2 py-1 rounded">RETURN_PAYMENT</span>
+                    <span class="text-gray-400 text-xs italic">Mijoz qarzi oshadi (-)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Mijozga pulini qaytardik.</p>
+                <div class="json-container p-4">
+                    <button onclick="copy('rpayment-json')" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <pre id="rpayment-json" class="text-green-400"><code class="language-json">{
+  "clientId": 1,
+  "type": "RETURN_PAYMENT",
+  "transactionCurrency": "USD",
+  "amount": 500,
+  "marketRate": 1,
+  "clientRate": 3.67
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function copy(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.currentTarget;
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check text-green-400"></i> Copied!';
+            setTimeout(() => btn.innerHTML = original, 2000);
+        });
+    }
+</script>
+</body>
+</html>

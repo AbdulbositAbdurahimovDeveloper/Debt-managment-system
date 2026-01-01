@@ -9,6 +9,7 @@ import lombok.experimental.FieldNameConstants;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
 import uz.qarzdorlar_ai.enums.ClientType;
+import uz.qarzdorlar_ai.enums.CurrencyCode;
 import uz.qarzdorlar_ai.model.embedded.AbsLongEntity;
 
 import java.math.BigDecimal;
@@ -33,9 +34,8 @@ public class Client extends AbsLongEntity {
     @Column(nullable = false)
     private ClientType type; // CLIENT, SUPPLIER, COURIER
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "balance_currency_id", nullable = false)
-    private Currency balanceCurrency; // Currency for client balance (Ex: UZS, AED, USD)
+    @Enumerated(EnumType.STRING)
+    private CurrencyCode currencyCode = CurrencyCode.USD;
 
     @Column(precision = 19, scale = 4)
     private BigDecimal initialBalance; // Initial debt/credit from Google Sheets

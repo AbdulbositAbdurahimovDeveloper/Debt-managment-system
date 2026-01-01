@@ -78,12 +78,12 @@ public class GoogleSheetDataUpdates {
         List<List<GoogleSheetData>> partitions = partition(toProcess, 10);
         int s = 1;
         for (List<GoogleSheetData> batch : partitions) {
-//            List<ProductParseDTO> productParseDTOS = aiService.productParseAI(batch);
+            List<ProductParseDTO> productParseDTOS = aiService.productParseAI(batch);
             log.info("Batch processed: {}", s++);
 
-//            if (!productParseDTOS.isEmpty()) {
-//                applicationEventPublisher.publishEvent(new ProductInsertEvent(productParseDTOS));
-//            }
+            if (!productParseDTOS.isEmpty()) {
+                applicationEventPublisher.publishEvent(new ProductInsertEvent(productParseDTOS));
+            }
         }
     }
 
