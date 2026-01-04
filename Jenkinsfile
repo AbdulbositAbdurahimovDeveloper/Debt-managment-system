@@ -30,46 +30,47 @@ pipeline {
 
         stage('3. Deploy Application') {
                     steps {
-                        echo "Infratuzilmani tayyorlash va maxfiy fayllarni sozlash..."
+                        echo "Google Key va loglar infratuzilmasi tayyorlanmoqda..."
 
                         withCredentials([
                             file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE_PATH'),
                             file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_TEMP')
                         ]) {
                             sh """
-                                # 1. Workspace ichida logs papkasini yaratish
+                                # 1. Logs papkasini yaratish va tozalash
                                 mkdir -p ${WORKSPACE}/logs
+                                rm -rf ${WORKSPACE}/logs/*
 
-                                # 2. Google JSON faylini workspace-ga nusxalash
-                                cp ${GOOGLE_KEY_TEMP} ${WORKSPACE}/google-key.json
+                                # 2. Google Key faylini aynan logs papkasi ichiga nusxalash
+                                # Chunki logs papkasi konteynerga muvaffaqiyatli mount bo'ladi
+                                cp ${GOOGLE_KEY_TEMP} ${WORKSPACE}/logs/google-key.json
 
-                                # 3. Ruxsatlarni to'liq ochish
-                                chmod 777 ${WORKSPACE}/google-key.json
+                                # 3. Ruxsatlarni maksimal ochish
                                 chmod -R 777 ${WORKSPACE}/logs
 
                                 # 4. Eski konteynerni o'chirish
                                 docker rm -f ${CONTAINER_NAME} || true
 
                                 # 5. Konteynerni ishga tushirish
+                                # DIQQAT: GOOGLE_SHEETS_CREDENTIALS_PATH orqali YAML'dagi yo'lni override qilamiz
                                 docker run -d \\
                                   --name "${CONTAINER_NAME}" \\
                                   -p ${APP_PORT}:8080 \\
                                   --network ${NETWORK_NAME} \\
                                   --restart unless-stopped \\
                                   --env-file "${ENV_FILE_PATH}" \\
-                                  -v "${WORKSPACE}/google-key.json:/google-key.json" \\
                                   -v "${WORKSPACE}/logs:/app/logs" \\
                                   -e SPRING_PROFILES_ACTIVE=prod \\
+                                  -e GOOGLE_SHEETS_CREDENTIALS_PATH=/app/logs/google-key.json \\
                                   "${LATEST_IMAGE}"
 
                                 # 6. Tekshirish
-                                echo "Konteyner holati:"
-                                docker ps -f name=${CONTAINER_NAME}
+                                sleep 5
+                                docker logs --tail 20 "${CONTAINER_NAME}"
                             """
                         }
                     }
                 }
-
 
         stage('4. Cleanup') {
             steps {
