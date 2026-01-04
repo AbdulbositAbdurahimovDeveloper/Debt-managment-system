@@ -1,11 +1,14 @@
 package uz.qarzdorlar_ai.mapper;
 
 import lombok.RequiredArgsConstructor;
+import org.jspecify.annotations.NonNull;
 import org.springframework.stereotype.Component;
 import uz.qarzdorlar_ai.model.Transaction;
+import uz.qarzdorlar_ai.model.TransactionItem;
 import uz.qarzdorlar_ai.payload.TransactionDTO;
 import uz.qarzdorlar_ai.payload.TransactionItemDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -14,74 +17,74 @@ public class TransactionMapperImpl implements TransactionMapper {
 
 
     @Override
-    public TransactionDTO toDTO(Transaction transaction) {
-        if (transaction == null) {
+    public TransactionDTO toDTO(Transaction tx) {
+        if (tx == null) {
             return null;
         }
 
         TransactionDTO dto = new TransactionDTO();
 
-        dto.setId(transaction.getId());
-        dto.setType(transaction.getType());
-        dto.setStatus(transaction.getStatus());
+        dto.setId(tx.getId());
+        dto.setCreatedAt(tx.getCreatedAt());
+        dto.setType(tx.getType());
+        dto.setStatus(tx.getStatus());
+        dto.setDescription(tx.getDescription());
 
-        // IDs (Null-safe)
-        if (transaction.getClient() != null) {
-            dto.setClientId(transaction.getClient().getId());
-        }
-        if (transaction.getReceiverClient() != null) {
-            dto.setReceiverClientId(transaction.getReceiverClient().getId());
-        }
-        if (transaction.getCreatedBy() != null) {
-            dto.setUserId(transaction.getCreatedBy().getId());
+        if (tx.getClient() != null) {
+            dto.setClientId(tx.getClient().getId());
+            dto.setClientFullName(tx.getClient().getFullName());
+            dto.setClientMainCurrency(tx.getClient().getCurrencyCode());
         }
 
-        // Valyuta va Kurslar
-        dto.setTransactionCurrency(transaction.getTransactionCurrency());
-        dto.setAmount(transaction.getAmount());
-        dto.setMarketRate(transaction.getMarketRate());
-
-        // USD Pivot
-        dto.setUsdAmount(transaction.getUsdAmount());
-        dto.setFeeAmount(transaction.getFeeAmount());
-
-        // Client Balansi Snapshot
-        dto.setClientCurrency(transaction.getClientCurrency());
-        dto.setClientRate(transaction.getClientRate());
-        dto.setBalanceEffect(transaction.getBalanceEffect());
-
-        // Transfer uchun
-        dto.setReceiverRate(transaction.getReceiverRate());
-
-        dto.setDescription(transaction.getDescription());
-
-        // Items mapping
-        if (transaction.getItems() != null) {
-            dto.setItems(transaction.getItems().stream()
-                    .map(item -> {
-                        TransactionItemDTO itemDto = new TransactionItemDTO();
-                        itemDto.setId(item.getId());
-                        itemDto.setQuantity(item.getQuantity());
-                        itemDto.setUnitPrice(item.getUnitPrice());
-                        itemDto.setTotalPrice(item.getTotalPrice());
-                        itemDto.setCreatedAt(item.getCreatedAt());
-                        itemDto.setUpdatedAt(item.getUpdatedAt());
-                        if (item.getProduct() != null) {
-                            itemDto.setProductId(item.getProduct().getId());
-                            itemDto.setProductName(item.getProduct().getName());
-                        }
-                        return itemDto;
-                    })
-                    .toList());
-        } else {
-            dto.setItems(List.of());
+        if (tx.getReceiverClient() != null) {
+            dto.setReceiverId(tx.getReceiverClient().getId());
+            dto.setReceiverFullName(tx.getReceiverClient().getFullName());
+            dto.setReceiverMainCurrency(tx.getClient().getCurrencyCode());
         }
 
-        dto.setDeleted(transaction.isDeleted());
-        dto.setCreatedAt(transaction.getCreatedAt());
-        dto.setUpdatedAt(transaction.getUpdatedAt());
+        dto.setTransactionCurrency(tx.getTransactionCurrency());
+        dto.setAmount(tx.getAmount());
+        dto.setRateToUsd(tx.getRateToUsd());
+
+        dto.setUsdAmount(tx.getUsdAmount());
+        dto.setBalanceEffect(tx.getBalanceEffect());
+        dto.setClientRateSnapshot(tx.getClientRateSnapshot());
+
+        dto.setReceiverBalanceEffect(dto.getReceiverBalanceEffect());
+        dto.setReceiverRateSnapshot(dto.getReceiverRateSnapshot());
+
+        dto.setFeeAmount(tx.getFeeAmount());
+        dto.setCreatedByName(
+                tx.getCreatedBy().getUserProfile().getFirstName() + " " +
+                        tx.getCreatedBy().getUserProfile().getFirstName()
+        );
+
+        List<TransactionItemDTO> itemDTOS = getTransactionItemDTOS(tx);
+
+        dto.setItems(itemDTOS);
 
         return dto;
+    }
+
+    private static List<TransactionItemDTO> getTransactionItemDTOS(Transaction tx) {
+
+        if (tx.getItems() == null) {
+            return new ArrayList<>();
+        }
+
+        List<TransactionItemDTO> itemDTOS = new ArrayList<>();
+        for (TransactionItem item : tx.getItems()) {
+
+            TransactionItemDTO txItemDTO = new TransactionItemDTO();
+            txItemDTO.setProductId(item.getProduct().getId());
+            txItemDTO.setProductName(item.getProduct().getName());
+            txItemDTO.setQuantity(item.getQuantity());
+            txItemDTO.setUnitPrice(item.getUnitPrice());
+            txItemDTO.setTotalPrice(item.getTotalPrice());
+
+            itemDTOS.add(txItemDTO);
+        }
+        return itemDTOS;
     }
 
 }

@@ -16,12 +16,9 @@ import java.sql.Timestamp;
 @Setter
 @NoArgsConstructor
 public class TransactionItemDTO implements Serializable {
-    private Long id;
     private Long productId;
     private String productName; // Frontend uchun mahsulot nomi juda kerak
     private Integer quantity;
     private BigDecimal unitPrice; // USD da
     private BigDecimal totalPrice; // USD da
-    private Timestamp createdAt;
-    private Timestamp updatedAt;
 }

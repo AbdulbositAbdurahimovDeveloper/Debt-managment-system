@@ -30,4 +30,13 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
     @Modifying
     @Query("UPDATE Client c SET c.currentBalance = c.currentBalance + :amount WHERE c.id = :id AND c.deleted = false")
     int updateBalanceAtomic(@Param("id") Long id, @Param("amount") BigDecimal amount);
+
+
+//    @Modifying
+//    @Query("UPDATE Client c SET c.currentBalance = COALESCE(c.currentBalance, 0) + :amount WHERE c.id = :clientId")
+//    void updateBalance(@Param("clientId") Long clientId, @Param("amount") BigDecimal amount);
+
+    @Modifying(clearAutomatically = true, flushAutomatically = true)
+    @Query("UPDATE Client c SET c.currentBalance = COALESCE(c.currentBalance, 0) + :amount WHERE c.id = :clientId")
+    void updateBalance(@Param("clientId") Long clientId, @Param("amount") BigDecimal amount);
 }

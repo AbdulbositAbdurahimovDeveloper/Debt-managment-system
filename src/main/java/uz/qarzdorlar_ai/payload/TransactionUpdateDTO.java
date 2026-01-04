@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uz.qarzdorlar_ai.enums.CurrencyCode;
+import uz.qarzdorlar_ai.enums.TransactionType;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -17,16 +18,16 @@ import java.util.List;
 @NoArgsConstructor
 public class TransactionUpdateDTO {
 
-    // Quyidagi maydonlar o'zgarishi mumkin
-    private BigDecimal amount;
-    private BigDecimal marketRate;
-    private BigDecimal clientRate;
-    private BigDecimal receiverRate;
-    private BigDecimal feeAmount;
-    private CurrencyCode transactionCurrency;
-    private String description;
-
-    // Mahsulotlar ro'yxati (SALE/RETURN/PURCHASE uchun)
-    private List<TransactionItemCreateDTO> items;
+    Long clientId;
+    Long receiverClientId;
+    TransactionType type;
+    CurrencyCode transactionCurrency;
+    BigDecimal amount;
+    BigDecimal rateToUsd;
+    BigDecimal clientRateToUsd;
+    BigDecimal receiverRateToUsd;
+    BigDecimal feeAmount;
+    String description;
+    List<TransactionItemCreateDTO> items;
 }
 

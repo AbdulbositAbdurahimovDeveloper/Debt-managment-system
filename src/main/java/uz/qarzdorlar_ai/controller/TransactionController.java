@@ -70,4 +70,14 @@ public class TransactionController {
         return ResponseEntity.ok(ResponseDTO.success("Transaction deleted successfully"));
     }
 
+    @GetMapping("/by-client/{clientId}")
+    public ResponseEntity<ResponseDTO<PageDTO<TransactionDTO>>> getAllTransactionByClientId(@PathVariable Long clientId,
+                                                                                            @RequestParam(defaultValue = "0") Integer page,
+                                                                                            @RequestParam(defaultValue = "10") Integer size) {
+
+        PageDTO<TransactionDTO> transactionDTO = transactionService.getAllTransactionByClientId(clientId, page, size);
+
+        return ResponseEntity.ok(ResponseDTO.success(transactionDTO));
+    }
+
 }

@@ -19,13 +19,13 @@ import uz.qarzdorlar_ai.model.User;
 import uz.qarzdorlar_ai.model.embedded.AbsDateEntity;
 import uz.qarzdorlar_ai.payload.*;
 import uz.qarzdorlar_ai.repository.ClientRepository;
-import uz.qarzdorlar_ai.repository.ProductRepository;
 import uz.qarzdorlar_ai.repository.TransactionRepository;
 import uz.qarzdorlar_ai.repository.UserRepository;
 import uz.qarzdorlar_ai.service.transactions.embedded.TransactionCalculationService;
 import uz.qarzdorlar_ai.service.transactions.embedded.TransactionHelperService;
 import uz.qarzdorlar_ai.service.transactions.embedded.TransactionService;
 
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,7 +37,6 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final TransactionMapper transactionMapper;
     private final ClientRepository clientRepository;
-    private final ProductRepository productRepository;
     private final TransactionRepository transactionRepository;
     private final UserRepository userRepository;
     private final TransactionCalculationService transactionCalculationService;
@@ -99,202 +98,89 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @Transactional
     public TransactionDTO updateTransaction(Long id, TransactionUpdateDTO dto, User staffUser) {
-        // 1. Eski tranzaksiyani topish
-        Transaction tx = transactionRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Transaction topilmadi. ID: " + id));
+        // 1. Eskisini topish
+        Transaction tx = transactionRepository.findByIdWithDetails(id)
+                .orElseThrow(() -> new EntityNotFoundException("Tranzaksiya topilmadi ID: " + id));
 
-        // Xavfsizlik tekshiruvi
-        if (!ALLOWED_ROLES.contains(staffUser.getRole())) {
-            throw new AccessDeniedException("Sizda tahrirlash huquqi yo'q!");
-        }
-
-        // 2. MUHIM: Eski balansni orqaga qaytarish (Hali ma'lumotlar o'zgarmasdan turib)
+        // 2. REVERSE: Bazadagi hozirgi ta'sirni bekor qilish (Mijoz balansini joyiga qaytarish)
         transactionHelperService.reverseClientBalance(tx);
 
-        // 3. QISMAN YANGILASH (Null-safe Merge)
-        // Faqat DTO da null bo'lmagan maydonlarni yangilaymiz
-        if (dto.getAmount() != null) tx.setAmount(dto.getAmount());
-        if (dto.getMarketRate() != null) tx.setMarketRate(dto.getMarketRate());
-        if (dto.getClientRate() != null) tx.setClientRate(dto.getClientRate());
-        if (dto.getReceiverRate() != null) tx.setReceiverRate(dto.getReceiverRate());
-        if (dto.getFeeAmount() != null) tx.setFeeAmount(dto.getFeeAmount());
-        if (dto.getTransactionCurrency() != null) tx.setTransactionCurrency(dto.getTransactionCurrency());
-        if (dto.getDescription() != null) tx.setDescription(dto.getDescription());
+        // 3. CLEAR ITEMS: Eski mahsulotlarni o'chirish (orphanRemoval ishlaydi)
+        tx.getItems().clear();
+        transactionRepository.saveAndFlush(tx); // Bazani majburan tozalash
 
-        // 4. Mahsulotlarni (Items) yangilash logikasi
-        // Agar DTO da items kelsa, ularni butunlay yangilaymiz
-        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
-            tx.getItems().clear(); // OrphanRemoval=true eski itemlarni o'chiradi
-        }
+        // 4. MERGE: Hisoblash uchun to'liq ma'lumotni shakllantirish
+        TransactionCreateDTO calculationDto = mergeToCalculationDto(tx, dto);
 
-        // 5. QAYTA HISOBLASH (Merged ma'lumotlar asosida)
-        // Muhim: calculationDto ni tx (entity) dagi yangilangan ma'lumotlardan yig'amiz
-        TransactionCreateDTO calculationDto = mapToCalculationDto(tx, dto.getItems());
-
+        // 5. RECALCULATE: Mavjud Entity (tx) ni yangi DTO asosida qayta hisoblash
+        // calculateTransaction ichida tx.setAmount, tx.setBalanceEffect va h.k.lar yangilanadi
         transactionCalculationService.calculateTransaction(calculationDto, tx, tx.getClient());
 
-        // 6. Yangi hisoblangan balansni qo'llash
+        // 6. QO'SHIMCHA MA'LUMOTLAR
+        if (dto.getDescription() != null) tx.setDescription(dto.getDescription());
+        // Tranzaksiya statusini update qilish mumkin bo'lsa:
+        // tx.setStatus(TransactionStatus.COMPLETED);
+
+        // 7. APPLY NEW BALANCE: Yangi hisoblangan raqamlarni mijoz balansiga qo'shish
         transactionHelperService.updateClientBalance(tx);
 
-        // 7. Saqlash
+        // 8. SAVE: Hammasini bitta atomar tranzaksiyada saqlash
         Transaction updatedTx = transactionRepository.save(tx);
 
         return transactionMapper.toDTO(updatedTx);
     }
 
-    private TransactionCreateDTO mapToCalculationDto(Transaction tx, List<TransactionItemCreateDTO> newItems) {
-        TransactionCreateDTO createDto = new TransactionCreateDTO();
-        createDto.setType(tx.getType());
+    private TransactionCreateDTO mergeToCalculationDto(Transaction tx, TransactionUpdateDTO updateDto) {
+        TransactionCreateDTO calcDto = new TransactionCreateDTO();
 
-        // Entity dagi (merged qilingan) ma'lumotlarni olamiz
-        createDto.setAmount(tx.getAmount());
-        createDto.setMarketRate(tx.getMarketRate());
-        createDto.setClientRate(tx.getClientRate());
-        createDto.setReceiverRate(tx.getReceiverRate());
-        createDto.setFeeAmount(tx.getFeeAmount());
-        createDto.setTransactionCurrency(tx.getTransactionCurrency());
+        // 1. O'zgarmas maydonlar (Type va Client o'zgarmasligi tavsiya etiladi)
+        calcDto.setType(tx.getType());
+        calcDto.setClientId(tx.getClient().getId());
+        calcDto.setReceiverClientId(tx.getReceiverClient() != null ? tx.getReceiverClient().getId() : updateDto.getReceiverClientId());
 
-        // Agar yangi itemlar kelsa ularni, kelmasa mavjudlarini beramiz
-        if (newItems != null && !newItems.isEmpty()) {
-            createDto.setItems(newItems);
+        // 2. Valyuta va Kurslar (DTOda bo'lsa yangisi, bo'lmasa eskidagisi)
+        calcDto.setTransactionCurrency(updateDto.getTransactionCurrency() != null ?
+                updateDto.getTransactionCurrency() : tx.getTransactionCurrency());
+
+        calcDto.setRateToUsd(updateDto.getRateToUsd() != null ?
+                updateDto.getRateToUsd() : tx.getRateToUsd());
+
+        calcDto.setClientRateToUsd(updateDto.getClientRateToUsd() != null ?
+                updateDto.getClientRateToUsd() : tx.getClientRateSnapshot());
+
+        calcDto.setReceiverRateToUsd(updateDto.getReceiverRateToUsd() != null ?
+                updateDto.getReceiverRateToUsd() : tx.getReceiverRateSnapshot());
+
+        // 3. Summa va Fee
+        calcDto.setAmount(updateDto.getAmount() != null ? updateDto.getAmount() : tx.getAmount());
+
+        // FeeAmount bazada doim USDda turadi. DTOda ham USDda kelyapti deb hisoblaymiz.
+        calcDto.setFeeAmount(updateDto.getFeeAmount() != null ? updateDto.getFeeAmount() : tx.getFeeAmount());
+
+        // 4. MAHSULOTLAR (Items) - Eng muhim joyi
+        if (updateDto.getItems() != null && !updateDto.getItems().isEmpty()) {
+            // Agar Frontend yangi list yuborgan bo'lsa, o'shani olamiz
+            calcDto.setItems(updateDto.getItems());
         } else {
-            // Mavjud itemlarni DTO formatiga o'tkazish (agar kerak bo'lsa)
-            createDto.setItems(mapItemsToCreateDto(tx.getItems()));
+            // Agar Frontend items yubormagan bo'lsa, eskisini DTO formatiga o'girib beramiz
+            calcDto.setItems(mapExistingItemsToDto(tx.getItems()));
         }
 
-        return createDto;
+        return calcDto;
     }
 
-    private List<TransactionItemCreateDTO> mapItemsToCreateDto(List<TransactionItem> items) {
-        if (items == null) return List.of();
+    // Eskilarini DTO formatiga o'tkazish yordamchi metodi
+    private List<TransactionItemCreateDTO> mapExistingItemsToDto(List<TransactionItem> items) {
+        if (items == null) return new ArrayList<>();
         return items.stream().map(item -> {
             TransactionItemCreateDTO itemDto = new TransactionItemCreateDTO();
             itemDto.setProductId(item.getProduct().getId());
             itemDto.setQuantity(item.getQuantity());
-            itemDto.setUnitPrice(item.getUnitPrice()); // TC dagi narxi
+            itemDto.setUnitPrice(item.getUnitPrice()); // Tranzaksiya valyutasidagi narxi
             return itemDto;
         }).collect(Collectors.toList());
     }
 
-//    @Override
-//    @Transactional
-//    public TransactionDTO updateTransaction(Long id, TransactionUpdateDTO dto, User staffUser) {
-//        // Transaction ni topish
-//        Transaction transaction = transactionRepository.findById(id)
-//                .orElseThrow(() -> new EntityNotFoundException("Transaction not found with id: " + id));
-//
-//        // User huquqini tekshirish
-//        User user = userRepository.findByUsername(staffUser.getUsername())
-//                .orElseThrow(() -> new EntityNotFoundException("User not found with id: " + staffUser.getId()));
-//
-//        Role role = user.getRole();
-//        if (!ALLOWED_ROLES.contains(role)) {
-//            throw new AccessDeniedException("You are not allowed to perform this action");
-//        }
-//
-//        // Eski balansni qaytarish (revert) - avval eski transaction ning ta'sirini bekor qilamiz
-////        transactionHelperService.revertClientBalance(transaction);
-//
-//        // Yangi ma'lumotlarni o'rnatish
-//        boolean needsRecalculation = false;
-//
-//        // Client o'zgartirilgan bo'lsa
-//        if (dto.getClientId() != null && !dto.getClientId().equals(transaction.getClient().getId())) {
-//            Client newClient = clientRepository.findById(dto.getClientId())
-//                    .orElseThrow(() -> new EntityNotFoundException("Client not found with id: " + dto.getClientId()));
-//            transaction.setClient(newClient);
-//            needsRecalculation = true;
-//        }
-//
-//        // Receiver client o'zgartirilgan bo'lsa (TRANSFER uchun)
-//        if (dto.getReceiverClientId() != null) {
-//            if (transaction.getType() != TransactionType.TRANSFER) {
-//                throw new BadRequestException("Receiver client can only be set for TRANSFER transactions");
-//            }
-//            Client newReceiverClient = clientRepository.findById(dto.getReceiverClientId())
-//                    .orElseThrow(() -> new EntityNotFoundException("Receiver client not found with id: " + dto.getReceiverClientId()));
-//            transaction.setReceiverClient(newReceiverClient);
-//            needsRecalculation = true;
-//        }
-//
-//        // Currency o'zgartirilgan bo'lsa
-////        if (dto.getCurrencyId() != null && !dto.getCurrencyId().equals(transaction.getCurrency().getId())) {
-////            Currency newCurrency = currencyRepository.findById(dto.getCurrencyId())
-////                    .orElseThrow(() -> new EntityNotFoundException("Currency not found with id: " + dto.getCurrencyId()));
-////            transaction.setCurrency(newCurrency);
-////            needsRecalculation = true;
-////        }
-//
-//        // Exchange rate o'zgartirilgan bo'lsa
-//        if (dto.getExchangeRate() != null) {
-//            transaction.setExchangeRate(dto.getExchangeRate());
-//            needsRecalculation = true;
-//        }
-//
-//        // Client exchange rate o'zgartirilgan bo'lsa
-//        if (dto.getClientExchangeRate() != null) {
-//            transaction.setClientExchangeRate(dto.getClientExchangeRate());
-//            needsRecalculation = true;
-//        }
-//
-//        // Receiver exchange rate o'zgartirilgan bo'lsa (TRANSFER uchun)
-//        if (dto.getReceiverExchangeRate() != null) {
-//            if (transaction.getType() != TransactionType.TRANSFER) {
-//                throw new BadRequestException("Receiver exchange rate can only be set for TRANSFER transactions");
-//            }
-//            transaction.setReceiverExchangeRate(dto.getReceiverExchangeRate());
-//            needsRecalculation = true;
-//        }
-//
-//        // Original amount o'zgartirilgan bo'lsa
-//        if (dto.getOriginalAmount() != null) {
-//            transaction.setOriginalAmount(dto.getOriginalAmount());
-//            needsRecalculation = true;
-//        }
-//
-//        // Fee amount o'zgartirilgan bo'lsa
-//        if (dto.getFeeAmount() != null) {
-//            transaction.setFeeAmount(dto.getFeeAmount());
-//            needsRecalculation = true;
-//        }
-//
-//        // Description o'zgartirilgan bo'lsa
-//        if (dto.getDescription() != null) {
-//            transaction.setDescription(dto.getDescription());
-//        }
-//
-//        // Items o'zgartirilgan bo'lsa (SALE, RETURN, PURCHASE uchun)
-//        if (dto.getItems() != null) {
-//            TransactionType type = transaction.getType();
-//            if (type != TransactionType.SALE && type != TransactionType.RETURN && type != TransactionType.PURCHASE) {
-//                throw new BadRequestException("Items can only be updated for SALE, RETURN, or PURCHASE transactions");
-//            }
-//            // Eski items larni o'chirish
-//            if (transaction.getItems() != null) {
-//                transaction.getItems().clear();
-//            }
-//            needsRecalculation = true;
-//        }
-//
-//        // Status o'zgartirilgan bo'lsa
-//        if (dto.getStatus() != null) {
-//            transaction.setStatus(dto.getStatus());
-//        }
-//
-//        // Agar qayta hisoblash kerak bo'lsa, qayta hisoblaymiz
-//        if (needsRecalculation) {
-////            transactionCalculationService.recalculateTransaction(transaction, dto);
-//        }
-//
-//        // Transactionni saqlash
-//        Transaction savedTransaction = transactionRepository.save(transaction);
-//
-//        // Yangi balansni qo'llash
-
-    /// /        transactionHelperService.updateClientBalance(savedTransaction);
-//
-//        return transactionMapper.toDTO(null);
-//    }
     @Override
     @Transactional
     public void deleteTransaction(Long id, User staffUser) {
@@ -340,5 +226,20 @@ public class TransactionServiceImpl implements TransactionService {
         Page<Transaction> transactionPage = transactionRepository.findAll(pageRequest);
 
         return new PageDTO<>(transactionPage.getContent().stream().map(transactionMapper::toDTO).toList(), transactionPage);
+    }
+
+    @Override
+    public PageDTO<TransactionDTO> getAllTransactionByClientId(Long clientId, Integer page, Integer size) {
+
+        Sort sort = Sort.by(AbsDateEntity.Fields.createdAt);
+        PageRequest pageRequest = PageRequest.of(page, size, sort);
+
+        Page<Transaction> transactions = transactionRepository.findAllByClientOrReceiver(clientId, pageRequest);
+
+        return new PageDTO<>(
+                transactions.getContent().stream().map(transactionMapper::toDTO).toList(),
+                transactions
+        );
+
     }
 }

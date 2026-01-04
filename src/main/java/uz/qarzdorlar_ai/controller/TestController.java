@@ -17,4 +17,9 @@ public class TestController {
         return "transaction-create";
     }
 
+    @GetMapping("/api/open/tx")
+    public String tr2(){
+        return "transaction";
+    }
+
 }

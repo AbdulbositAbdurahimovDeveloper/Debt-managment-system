@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f2f5; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .form-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .item-row { background: #f8f9fa; border: 1px solid #e9ecef; padding: 15px; margin-bottom: 10px; border-radius: 8px; position: relative; }
+        .hidden { display: none; }
+        .response-area { background: #272822; color: #f8f8f2; padding: 20px; border-radius: 10px; margin-top: 20px; overflow-x: auto; max-height: 400px; }
+        .section-title { border-left: 4px solid #0d6efd; padding-left: 10px; margin-bottom: 20px; color: #0d6efd; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2 class="text-center mb-4">Tranzaksiya Yaratish</h2>
+
+        <!-- JWT Token Section -->
+        <div class="mb-4">
+            <label class="form-label fw-bold text-danger">JWT Token (Bearer Authorization)</label>
+            <textarea id="jwtToken" class="form-control" rows="2" placeholder="Tokenni shu yerga qo'ying..."></textarea>
+        </div>
+
+        <form id="transactionForm">
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Asosiy Mijoz (Client) *</label>
+                    <select id="clientId" class="form-select" required>
+                        <option value="">Mijozni tanlang...</option>
+                        <option value="7">Mohid Mirza</option>
+                        <option value="4">Abduqodir</option>
+                        <option value="3">Saxiy Ahmad</option>
+                        <option value="11">Preview</option>
+                        <option value="2">Dilnoza opa</option>
+                        <option value="13">Komil aka</option>
+                        <option value="9">Micro zone</option>
+                        <option value="8">Transworld</option>
+                        <option value="6">Jawel</option>
+                        <option value="12">Arcada</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Tranzaksiya Turi *</label>
+                    <select id="type" class="form-select" onchange="toggleFields()" required>
+                        <option value="SALE">SALE (Sotuv)</option>
+                        <option value="PURCHASE">PURCHASE (Sotib olish)</option>
+                        <option value="RETURN">RETURN (Qaytarish)</option>
+                        <option value="CASH_IN">CASH_IN (Pul kirimi)</option>
+                        <option value="CASH_OUT">CASH_OUT (Pul chiqimi)</option>
+                        <option value="TRANSFER">TRANSFER (O'tkazma)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label class="form-label">Valyuta</label>
+                    <select id="transactionCurrency" class="form-select">
+                        <option value="USD">USD</option>
+                        <option value="UZS">UZS</option>
+                        <option value="AED">AED</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Kurs (Tr. Currency to USD)</label>
+                    <input type="number" id="rateToUsd" class="form-control" step="0.0001" value="1">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Mijoz Balans Kursi</label>
+                    <input type="number" id="clientRateToUsd" class="form-control" step="0.0001" value="1">
+                </div>
+            </div>
+
+            <!-- Transfer uchun Receiver -->
+            <div id="transferSection" class="p-3 mb-3 border border-info rounded bg-light hidden">
+                <h6 class="text-info">Qabul qiluvchi ma'lumotlari (Receiver)</h6>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Qabul qiluvchi mijoz</label>
+                        <select id="receiverClientId" class="form-select">
+                            <option value="">Qabul qiluvchini tanlang...</option>
+                            <option value="7">Mohid Mirza</option>
+                            <option value="4">Abduqodir</option>
+                            <option value="3">Saxiy Ahmad</option>
+                            <option value="11">Preview</option>
+                            <option value="2">Dilnoza opa</option>
+                            <option value="13">Komil aka</option>
+                            <option value="9">Micro zone</option>
+                            <option value="8">Transworld</option>
+                            <option value="6">Jawel</option>
+                            <option value="12">Arcada</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Receiver Kursi</label>
+                        <input type="number" id="receiverRateToUsd" class="form-control" step="0.0001" value="1">
+                    </div>
+                </div>
+            </div>
+
+            <div id="amountRow" class="row g-3 mb-3 hidden">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Summa (Amount)</label>
+                    <input type="number" id="amount" class="form-control" step="0.01">
+                </div>
+                <div id="feeCol" class="col-md-6 hidden">
+                    <label class="form-label fw-bold text-danger">Xizmat haqi (Fee Amount)</label>
+                    <input type="number" id="feeAmount" class="form-control" step="0.01">
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Izoh (Description)</label>
+                <textarea id="description" class="form-control" rows="2"></textarea>
+            </div>
+
+            <!-- Items section for SALE/PURCHASE/RETURN -->
+            <div id="itemsSection">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="section-title mb-0">Mahsulotlar</h5>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addItemRow()">+ Mahsulot qo'shish</button>
+                </div>
+                <div id="itemsContainer"></div>
+            </div>
+
+            <div class="mt-5">
+                <button type="submit" class="btn btn-primary btn-lg w-100">ZAPROS YUBORISH (POST)</button>
+            </div>
+        </form>
+
+        <!-- Response Window -->
+        <div id="responseWrapper" class="hidden">
+            <h5 class="mt-4 text-success">Serverdan kelgan javob:</h5>
+            <div class="response-area">
+                <pre id="jsonResponse">Kutilmoqda...</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFields() {
+        const type = document.getElementById('type').value;
+        const isTrade = ['SALE', 'PURCHASE', 'RETURN'].includes(type);
+        const isMoney = ['CASH_IN', 'CASH_OUT', 'TRANSFER'].includes(type);
+
+        document.getElementById('itemsSection').classList.toggle('hidden', !isTrade);
+        document.getElementById('amountRow').classList.toggle('hidden', !isMoney);
+        document.getElementById('transferSection').classList.toggle('hidden', type !== 'TRANSFER');
+        document.getElementById('feeCol').classList.toggle('hidden', type !== 'CASH_OUT');
+    }
+
+    function addItemRow() {
+        const container = document.getElementById('itemsContainer');
+        const rowId = Date.now();
+        const div = document.createElement('div');
+        div.className = 'item-row row g-2';
+        div.id = `row-${rowId}`;
+        div.innerHTML = `
+            <div class="col-md-5">
+                <label class="small">Mahsulot ID</label>
+                <input type="number" class="form-control prod-id" required>
+            </div>
+            <div class="col-md-3">
+                <label class="small">Soni</label>
+                <input type="number" class="form-control prod-qty" required>
+            </div>
+            <div class="col-md-3">
+                <label class="small">Narxi (Birlik)</label>
+                <input type="number" class="form-control prod-price" step="0.01">
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button type="button" class="btn btn-danger" onclick="document.getElementById('row-${rowId}').remove()">X</button>
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    // Initial load
+    toggleFields();
+    addItemRow();
+
+    document.getElementById('transactionForm').onsubmit = async (e) => {
+        e.preventDefault();
+
+        const responseWrapper = document.getElementById('responseWrapper');
+        const jsonResponse = document.getElementById('jsonResponse');
+        responseWrapper.classList.remove('hidden');
+        jsonResponse.innerText = "Yuborilmoqda...";
+
+        const token = document.getElementById('jwtToken').value;
+        const type = document.getElementById('type').value;
+
+        const payload = {
+            clientId: parseInt(document.getElementById('clientId').value),
+            type: type,
+            transactionCurrency: document.getElementById('transactionCurrency').value,
+            rateToUsd: parseFloat(document.getElementById('rateToUsd').value),
+            clientRateToUsd: parseFloat(document.getElementById('clientRateToUsd').value),
+            description: document.getElementById('description').value,
+            createdAt: new Date().toISOString()
+        };
+
+        if (['CASH_IN', 'CASH_OUT', 'TRANSFER'].includes(type)) {
+            payload.amount = parseFloat(document.getElementById('amount').value);
+        }
+
+        if (type === 'TRANSFER') {
+            payload.receiverClientId = parseInt(document.getElementById('receiverClientId').value);
+            payload.receiverRateToUsd = parseFloat(document.getElementById('receiverRateToUsd').value);
+        }
+
+        if (type === 'CASH_OUT') {
+            payload.feeAmount = parseFloat(document.getElementById('feeAmount').value);
+        }
+
+        if (['SALE', 'PURCHASE', 'RETURN'].includes(type)) {
+            payload.items = Array.from(document.querySelectorAll('.item-row')).map(row => ({
+                productId: parseInt(row.querySelector('.prod-id').value),
+                quantity: parseInt(row.querySelector('.prod-qty').value),
+                unitPrice: parseFloat(row.querySelector('.prod-price').value) || null
+            }));
+        }
+
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/product', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': token.startsWith('Bearer ') ? token : 'Bearer ' + token
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            jsonResponse.innerText = JSON.stringify(result, null, 4);
+
+            if(!response.ok) {
+                jsonResponse.style.color = "#ff6b6b";
+            } else {
+                jsonResponse.style.color = "#a6e22e";
+            }
+        } catch (error) {
+            jsonResponse.innerText = "Xatolik: " + error.message;
+            jsonResponse.style.color = "#ff6b6b";
+        }
+    };
+</script>
+
+</body>
+</html>

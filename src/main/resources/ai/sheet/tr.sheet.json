@@ -1,0 +1,1601 @@
+[
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 8000,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-10-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 7,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 260,
+        "quantity": 1,
+        "unitPrice": 239350
+      }
+    ],
+    "createdAt": "2025-10-27T19:00:00.000Z"
+  },
+  {
+    "clientId": 7,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 36650,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-10-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 40,
+        "quantity": 10,
+        "unitPrice": 1790
+      },
+      {
+        "productId": 46,
+        "quantity": 8,
+        "unitPrice": 23200
+      },
+      {
+        "productId": 16,
+        "quantity": 40,
+        "unitPrice": 17500
+      },
+      {
+        "productId": 52,
+        "quantity": 10,
+        "unitPrice": 1480
+      },
+      {
+        "productId": 26,
+        "quantity": 10,
+        "unitPrice": 18880
+      }
+    ],
+    "createdAt": "2025-11-01T19:00:00.000Z"
+  },
+  {
+    "clientId": 6,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 260,
+        "quantity": 1,
+        "unitPrice": 45190
+      }
+    ],
+    "createdAt": "2025-11-01T19:00:00.000Z"
+  },
+  {
+    "clientId": 3,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 10080,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 80,
+    "description": null,
+    "items": [
+      {
+        "productId": 0,
+        "quantity": 0,
+        "unitPrice": 0
+      }
+    ],
+    "createdAt": "2025-11-04T19:00:00.000Z"
+  },
+  {
+    "clientId": 8,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 76,
+        "quantity": 5,
+        "unitPrice": 3900
+      },
+      {
+        "productId": 77,
+        "quantity": 4,
+        "unitPrice": 3100
+      },
+      {
+        "productId": 69,
+        "quantity": 5,
+        "unitPrice": 2650
+      }
+    ],
+    "createdAt": "2025-11-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 3,
+    "receiverClientId": 8,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 36650,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.665,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": 8,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 4734,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 3.665,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 3300,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 14070,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 70,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 32000,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 159.2,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-07T19:00:00.000Z"
+  },
+  {
+    "clientId": 9,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 30,
+        "quantity": 5,
+        "unitPrice": 4800
+      }
+    ],
+    "createdAt": "2025-11-07T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 8000000,
+    "rateToUsd": 12000,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-10-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 9,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 24000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 14,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 70,
+        "quantity": 4,
+        "unitPrice": 6000
+      }
+    ],
+    "createdAt": "2025-11-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 8,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 3720,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": 5,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 29320,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.665,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 30000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-09T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 58640,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-10T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 30000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 117440,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 5,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 50740,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 6,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 40000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 7,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 37000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 7,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 69,
+        "quantity": 7,
+        "unitPrice": 38000
+      }
+    ],
+    "createdAt": "2025-11-11T19:00:00.000Z"
+  },
+  {
+    "clientId": 14,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 24000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-13T19:00:00.000Z"
+  },
+  {
+    "clientId": 4,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 20100,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 100,
+    "description": null,
+    "items": [
+      {
+        "productId": 0,
+        "quantity": 0,
+        "unitPrice": 0
+      }
+    ],
+    "createdAt": "2025-11-13T19:00:00.000Z"
+  },
+  {
+    "clientId": 4,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 73300,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 0,
+        "quantity": 0,
+        "unitPrice": 0
+      }
+    ],
+    "createdAt": "2025-11-13T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 45,
+        "quantity": 11,
+        "unitPrice": 1950
+      },
+      {
+        "productId": 46,
+        "quantity": 20,
+        "unitPrice": 2200
+      },
+      {
+        "productId": 39,
+        "quantity": 5,
+        "unitPrice": 1940
+      },
+      {
+        "productId": 38,
+        "quantity": 5,
+        "unitPrice": 2290
+      }
+    ],
+    "createdAt": "2025-11-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 69500,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 17000,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 100,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": "skidka qilngan",
+    "items": null,
+    "createdAt": "2025-11-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 13668,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 68,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-18T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 37500,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 186.57,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-18T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 11,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 110100,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": 11,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 45871,
+    "rateToUsd": 3.667,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.667,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 6,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 3.665,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 20,
+        "unitPrice": 7160
+      },
+      {
+        "productId": 3,
+        "quantity": 20,
+        "unitPrice": 4650
+      },
+      {
+        "productId": 10,
+        "quantity": 30,
+        "unitPrice": 2470
+      },
+      {
+        "productId": 11,
+        "quantity": 26,
+        "unitPrice": 2080
+      }
+    ],
+    "createdAt": "2025-11-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 4000.2,
+    "rateToUsd": 3.667,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 4,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 10050,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 50,
+    "description": null,
+    "items": [
+      {
+        "productId": 0,
+        "quantity": 0,
+        "unitPrice": 0
+      }
+    ],
+    "createdAt": "2025-11-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 4,
+    "receiverClientId": 8,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 36660,
+    "rateToUsd": 3.666,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.666,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-11-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 8,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.666,
+    "clientRateToUsd": 3.666,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 262,
+        "quantity": 1,
+        "unitPrice": 14
+      }
+    ],
+    "createdAt": "2025-11-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 8,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.666,
+    "clientRateToUsd": 3.666,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 103,
+        "quantity": 10,
+        "unitPrice": 450
+      },
+      {
+        "productId": 77,
+        "quantity": 10,
+        "unitPrice": 3210
+      }
+    ],
+    "createdAt": "2025-11-25T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 66,
+        "quantity": 6,
+        "unitPrice": 2240
+      }
+    ],
+    "createdAt": "2025-11-26T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 30000,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 149.25,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-02T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 31,
+        "quantity": 20,
+        "unitPrice": 5300
+      }
+    ],
+    "createdAt": "2025-12-03T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 66,
+        "quantity": 4,
+        "unitPrice": 2240
+      },
+      {
+        "productId": 38,
+        "quantity": 10,
+        "unitPrice": 2300
+      }
+    ],
+    "createdAt": "2025-12-04T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 7,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 85050,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-05T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 14300,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 11.14,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-05T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 28000000,
+    "rateToUsd": 11960,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 11.65,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-05T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 20000000,
+    "rateToUsd": 11960,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 2267,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-06T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 3611,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 17.97,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-08T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 6,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 73400,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-08T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 500,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-10T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 20000,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-12T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 12400000,
+    "rateToUsd": 12100,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-12T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 10000,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-13T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 1253.75,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-13T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 4110,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 13000000,
+    "rateToUsd": 12100,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 3450,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 4000000,
+    "rateToUsd": 12100,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-14T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 1320,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-15T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 40146.11,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-18T19:00:00.000Z"
+  },
+  {
+    "clientId": 6,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 100000,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-18T19:00:00.000Z"
+  },
+  {
+    "clientId": 7,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 50000,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-18T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 5000000,
+    "rateToUsd": 12000,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-19T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 7040,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 35.02,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-20T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 20800,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 103.48,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-21T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 500,
+    "rateToUsd": 1,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-22T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 110100,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-23T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 1400,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-23T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 3900,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-23T19:00:00.000Z"
+  },
+  {
+    "clientId": 12,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 91,
+        "quantity": 85,
+        "unitPrice": 202
+      }
+    ],
+    "createdAt": "2025-12-23T19:00:00.000Z"
+  },
+  {
+    "clientId": 12,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 17500,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-23T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 11415,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 14,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 263,
+        "quantity": 2,
+        "unitPrice": 4750
+      },
+      {
+        "productId": 69,
+        "quantity": 5,
+        "unitPrice": 2500
+      },
+      {
+        "productId": 264,
+        "quantity": 5,
+        "unitPrice": 160
+      },
+      {
+        "productId": 77,
+        "quantity": 2,
+        "unitPrice": 2500
+      },
+      {
+        "productId": 104,
+        "quantity": 10,
+        "unitPrice": 60
+      },
+      {
+        "productId": 104,
+        "quantity": 5,
+        "unitPrice": 60
+      }
+    ],
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 14,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 28700,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 26,
+        "quantity": 2,
+        "unitPrice": 2400
+      },
+      {
+        "productId": 33,
+        "quantity": 5,
+        "unitPrice": 2600
+      }
+    ],
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 4000,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 5,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "AED",
+    "amount": 2100,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-24T19:00:00.000Z"
+  },
+  {
+    "clientId": 11,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 265,
+        "quantity": 1,
+        "unitPrice": 4600
+      },
+      {
+        "productId": 262,
+        "quantity": 2,
+        "unitPrice": 2050
+      }
+    ],
+    "createdAt": "2025-12-25T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 14910,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-26T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 10000000,
+    "rateToUsd": 12050,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-26T19:00:00.000Z"
+  },
+  {
+    "clientId": 8,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 77,
+        "quantity": 10,
+        "unitPrice": 3165
+      },
+      {
+        "productId": 91,
+        "quantity": 5,
+        "unitPrice": 190
+      },
+      {
+        "productId": 99,
+        "quantity": 12,
+        "unitPrice": 740
+      },
+      {
+        "productId": 102,
+        "quantity": 7,
+        "unitPrice": 450
+      },
+      {
+        "productId": 98,
+        "quantity": 4,
+        "unitPrice": 7400
+      }
+    ],
+    "createdAt": "2025-12-26T19:00:00.000Z"
+  },
+  {
+    "clientId": 14,
+    "receiverClientId": null,
+    "type": "PURCHASE",
+    "transactionCurrency": "AED",
+    "amount": 0,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 3.67,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": [
+      {
+        "productId": 86,
+        "quantity": 10,
+        "unitPrice": 330
+      }
+    ],
+    "createdAt": "2025-12-26T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 10000000,
+    "rateToUsd": 12000,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-27T19:00:00.000Z"
+  },
+  {
+    "clientId": 2,
+    "receiverClientId": null,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
+    "amount": 836,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 5,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 11700,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 14,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 3300,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 11,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 4129,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": 6,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 90971,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-28T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 13211,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 65.73,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-29T19:00:00.000Z"
+  },
+  {
+    "clientId": 13,
+    "receiverClientId": null,
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
+    "amount": 8100,
+    "rateToUsd": 0,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 0,
+    "feeAmount": 40.3,
+    "description": null,
+    "items": null,
+    "createdAt": "2025-12-29T19:00:00.000Z"
+  }
+]

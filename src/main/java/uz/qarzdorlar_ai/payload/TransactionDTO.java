@@ -14,40 +14,49 @@ import java.util.List;
 /**
  * DTO for {@link uz.qarzdorlar_ai.model.Transaction}
  */
-@Getter
-@Setter
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TransactionDTO implements Serializable {
+public class TransactionDTO {
 
-    private Long id;
-    private Long clientId;
-    private Long receiverClientId;
-    private Long userId; // createdBy
+    // 1. ASOSIY MA'LUMOTLAR (Metadata)
+    private Long id;                  // Tranzaksiya IDsi
+    private Timestamp createdAt;  // Tranzaksiya amalga oshgan vaqt
+    private TransactionType type;     // SALE, TRANSFER, CASH_IN va h.k.
+    private TransactionStatus status; // COMPLETED, PENDING, CANCELED
+    private String description;       // Tranzaksiya izohi
 
-    private TransactionType type;
-    private TransactionStatus status;
+    // 2. ISHTIROKCHILAR (Participants)
+    private Long clientId;            // Asosiy mijoz IDsi
+    private String clientFullName;    // Mijoz ismi (Frontendda ko'rinishi uchun qulay)
 
-    // --- TRANZAKSIYA VALYUTASI ---
-    private CurrencyCode transactionCurrency;
-    private BigDecimal amount; // Amalda berilgan/olingan naqd pul
-    private BigDecimal marketRate; // 1 USD = ? TransactionCurrency
+    private Long receiverId;          // Qabul qiluvchi IDsi (Faqat Transferda)
+    private String receiverFullName;  // Qabul qiluvchi ismi
 
-    // --- USD (PIVOT) ---
-    private BigDecimal usdAmount;
-    private BigDecimal feeAmount; // USD da
+    // 3. TO'LOV TAFSILOTLARI (Transaction Currency)
+    // Mijoz amalda nima berganini ko'rsatadi
+    private CurrencyCode transactionCurrency; // Amalda to'langan valyuta (Masalan: AED)
+    private BigDecimal amount;               // Amalda to'langan summa (Masalan: 367 AED)
+    private BigDecimal rateToUsd;            // To'lov vaqtidagi 1 USD = ? AED kursi
 
-    // --- MIJOZ BALANSI ---
-    private CurrencyCode clientCurrency;
-    private BigDecimal clientRate; // 1 USD = ? ClientCurrency
-    private BigDecimal balanceEffect; // Balansga ta'sir qilgan yakuniy summa
+    // 4. STANDARTLASHTIRILGAN QIYMAT (Pivot Currency)
+    // Juniorga: "Bu hisobotlar uchun eng muhim maydon"
+    private BigDecimal usdAmount;            // Tranzaksiyaning dollardagi qiymati ($100)
 
-    // --- RECEIVER (TRANSFER UCHUN) ---
-    private BigDecimal receiverRate;
+    // 5. MIJOZ BALANSIGA TA'SIRI (Mijozning o'z valyutasida)
+    // Mijoz o'zining "Mening qarzim qancha bo'ldi?" degan savoliga javobni shu yerdan oladi
+    private CurrencyCode clientMainCurrency; // Mijozning balans valyutasi (Masalan: UZS)
+    private BigDecimal balanceEffect;        // Uning balansiga necha so'm bo'lib ta'sir qildi (+/-)
+    private BigDecimal clientRateSnapshot;   // O'sha paytdagi 1 USD = ? UZS kursi
 
-    private String description;
+    // 6. QABUL QILUVCHIGA TA'SIRI (Faqat Transferda)
+    private CurrencyCode receiverMainCurrency; // Qabul qiluvchining balans valyutasi
+    private BigDecimal receiverBalanceEffect;  // Qabul qiluvchi balansiga ta'siri
+    private BigDecimal receiverRateSnapshot;   // Qabul qiluvchi kursi
+
+    // 7. QO'SHIMCHA
+    private BigDecimal feeAmount;              // Olingan xizmat haqi (USDda)
+    private String createdByName;              // Tranzaksiyani qaysi xodim kiritdi?
+
+    // 8. MAHSULOTLAR RO'YXATI (Agar SALE bo'lsa)
     private List<TransactionItemDTO> items;
-
-    private boolean deleted = false;
-    private Timestamp createdAt;
-    private Timestamp updatedAt;
 }

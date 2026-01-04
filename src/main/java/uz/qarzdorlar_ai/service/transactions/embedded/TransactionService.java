@@ -17,4 +17,7 @@ public interface TransactionService {
     TransactionDTO getByIdTransection(Long id);
 
     PageDTO<TransactionDTO> getByAllTransection(Integer page, Integer size);
+
+    PageDTO<TransactionDTO> getAllTransactionByClientId(Long clientId, Integer page, Integer size);
+
 }

@@ -48,6 +48,9 @@ public class User extends AbsLongEntity implements UserDetails {
     @JsonManagedReference
     private UserProfile userProfile;
 
+    @OneToOne(mappedBy = "user")
+    private Client client;
+
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {

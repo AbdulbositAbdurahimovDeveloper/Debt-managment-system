@@ -1,6 +1,6 @@
 ###
 //Dilnoza opa id:2
-POST http://localhost:8080/api/sheet/import
+POST http://localhost:8080/api/open/work/sheet/import
 #POST http://localhost:8080/api/v1/transaction
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
@@ -8,217 +8,180 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3M
 [
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 8000.0,
+    "type": "CASH_OUT",
     "transactionCurrency": "USD",
-    "marketRate": 3.665,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT)",
-    "items": null,
-    "createdAt": "2025-10-22T00:00:00.000Z"
+    "amount": 8000,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 8000$ berildi",
+    "createdAt": "2025-10-22T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 3300.0,
+    "type": "CASH_OUT",
     "transactionCurrency": "USD",
-    "marketRate": 3.665,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT)",
-    "items": null,
-    "createdAt": "2025-11-07T00:00:00.000Z"
+    "amount": 3300,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 3300$ berildi",
+    "createdAt": "2025-11-07T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 14070.0,
+    "type": "CASH_OUT",
     "transactionCurrency": "USD",
-    "marketRate": 3.665,
-    "feeAmount": 70.0,
-    "description": "Dilnoza opa (CASH-OUT 0.50%)",
-    "items": null,
-    "createdAt": "2025-11-07T00:00:00.000Z"
+    "amount": 14070,
+    "feeAmount": 70,
+    "description": "Dilnoza opaga 14070$ berildi 0.5% xizmat haqi -70$",
+    "createdAt": "2025-11-07T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 8000000,
+    "type": "CASH_OUT",
     "transactionCurrency": "UZS",
-    "marketRate": 12000,
-    "feeAmount": 0.0,
-    "description": "8 mln sum olingan (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-10-10T00:00:00.000Z"
+    "amount": 8000000,
+    "rateToUsd": 12000,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 8mln sum berildi",
+    "createdAt": "2025-11-10T13:33:14.886Z"
   },
   {
-    "clientId": 0,
-    "type": "PURCHASE_PAYMENT",
-    "amount": 29320.0,
-    "transactionCurrency": "AED",
-    "marketRate": 3.665,
-    "feeAmount": null,
-    "description": "Khojandi uchun to'lov (Kuryer: Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-11-10T00:00:00.000Z"
-  },
-  {
-    "clientId": 4,
-    "receiverClientId": 1,
+    "clientId": 2,
+    "receiverClientId": 5,
     "type": "TRANSFER",
-    "transactionCurrency": "USD",
-    "amount": 29320.00,
-    "marketRate": 3.665,
-    "clientRate": 1.0,
-    "receiverRate": null,
-    "description": null,
-    "items": [],
-    "createdAt": "2025-11-14T10:00:00.000Z"
-  },
-  {
-    "clientId": 2,
-    "type": "RETURN_PAYMENT",
-    "amount": 58640.0,
     "transactionCurrency": "AED",
-    "marketRate": 3.665,
-    "feeAmount": null,
-    "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-11-11T00:00:00.000Z"
+    "amount": 29320,
+    "rateToUsd": 3.665,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.665,
+    "description": "Khojandiga pul berildi",
+    "createdAt": "2026-11-10T13:52:42.656Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 13668.0,
-    "transactionCurrency": "USD",
-    "marketRate": 3.667,
-    "feeAmount": 68.0,
-    "description": "Dilnoza opa (CASH-OUT 0.50%)",
-    "items": null,
-    "createdAt": "2025-11-19T00:00:00.000Z"
-  },
-  {
-    "clientId": 11,
-    "type": "PURCHASE_PAYMENT",
-    "amount": 45871.0,
+    "type": "CASH_IN",
     "transactionCurrency": "AED",
-    "marketRate": 3.667,
-    "feeAmount": null,
-    "description": "Preview uchun to'lov (Kuryer: Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-11-22T00:00:00.000Z"
+    "amount": 58640,
+    "rateToUsd": 3.665,
+    "feeAmount": 0,
+    "description": "Oybek akam dubaida pul oldilar",
+    "createdAt": "2025-11-11T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
-    "amount": 4000.2,
-    "transactionCurrency": "AED",
-    "marketRate": 3.667,
-    "feeAmount": null,
-    "description": "Mablag' qaytarildi (Supplier: Oybek aka, Kuryer: Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-11-22T00:00:00.000Z"
-  },
-  {
-    "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 1672.24,
+    "type": "CASH_OUT",
     "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "20 mln berilgan (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-12-07T00:00:00.000Z"
+    "amount": 13668,
+    "feeAmount": 68,
+    "description": "Dilnoza opaga 13668$ berildi xizmat haqi 0.5% -68$",
+    "createdAt": "2025-11-22T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
+    "receiverClientId": 11,
+    "type": "TRANSFER",
+    "transactionCurrency": "AED",
+    "amount": 45871,
+    "rateToUsd": 3.67,
+    "clientRateToUsd": 1,
+    "receiverRateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": "Dilnoza opa previewga pul berdi 45871aed (12509.14$)",
+    "createdAt": "2026-11-22T13:52:42.656Z"
+  },
+  {
+    "clientId": 2,
+    "type": "CASH_IN",
+    "transactionCurrency": "AED",
+    "amount": 4000.20,
+    "rateToUsd": 3.67,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 4000.20 dirham berganlar ",
+    "createdAt": "2025-11-22T13:33:14.886Z"
+  },
+  {
+    "clientId": 2,
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 20000000,
+    "rateToUsd": 11960,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 20mln berildi (1672.24$)",
+    "createdAt": "2025-12-07T13:33:14.886Z"
+  },
+  {
+    "clientId": 2,
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
     "amount": 2267.0,
-    "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "pul qaytarildi (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-12-07T00:00:00.000Z"
+    "feeAmount": 0,
+    "description": "Dilnoza opa 2267$ qaytardilar",
+    "createdAt": "2025-12-07T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
-    "amount": 500.0,
+    "type": "CASH_IN",
     "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT negative)",
-    "items": null,
-    "createdAt": "2025-12-11T00:00:00.000Z"
+    "amount": 500,
+    "feeAmount": 0,
+    "description": "Dilnoza opa 500$ qaytardilar ",
+    "createdAt": "2025-12-11T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
+    "type": "CASH_OUT",
+    "transactionCurrency": "USD",
     "amount": 1253.75,
-    "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT)",
-    "items": null,
-    "createdAt": "2025-12-14T00:00:00.000Z"
+    "feeAmount": 0,
+    "description": "Dilnoza opaga payme qilib berilgan",
+    "createdAt": "2025-12-14T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
     "amount": 1320.0,
-    "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "pul qaytti (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-12-16T00:00:00.000Z"
+    "feeAmount": 0,
+    "description": "Dilnoza opa 1320$ qaytardilar",
+    "createdAt": "2025-12-16T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 416.67,
-    "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "5 mln kartaga (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-12-20T00:00:00.000Z"
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 5000000,
+    "rateToUsd": 12000,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 5mln berildi (416.67$)",
+    "createdAt": "2025-12-20T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
     "amount": 500.0,
-    "transactionCurrency": "USD",
-    "marketRate": 3.66,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT negative)",
-    "items": null,
-    "createdAt": "2025-12-23T00:00:00.000Z"
+    "feeAmount": 0,
+    "description": "Dilnoza opa 500$ qaytardilar",
+    "createdAt": "2025-12-23T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "PAYMENT",
-    "amount": 835.83,
-    "transactionCurrency": "USD",
-    "marketRate": 3.67,
-    "feeAmount": 0.0,
-    "description": "10 mln berilgan (Dilnoza opa)",
-    "items": null,
-    "createdAt": "2025-12-28T00:00:00.000Z"
+    "type": "CASH_OUT",
+    "transactionCurrency": "UZS",
+    "amount": 10030000,
+    "rateToUsd": 12000,
+    "feeAmount": 0,
+    "description": "Dilnoza opaga 10.030.000 berildi (835.53$)",
+    "createdAt": "2025-12-28T13:33:14.886Z"
   },
   {
     "clientId": 2,
-    "type": "RETURN_PAYMENT",
+    "type": "CASH_IN",
+    "transactionCurrency": "USD",
     "amount": 836.0,
-    "transactionCurrency": "USD",
-    "marketRate": 3.67,
-    "feeAmount": 0.0,
-    "description": "Dilnoza opa (CASH-OUT negative)",
-    "items": null,
-    "createdAt": "2025-12-29T00:00:00.000Z"
+    "feeAmount": 0,
+    "description": "Dilnoza opa 836$ qaytardilar",
+    "createdAt": "2025-12-29T13:33:14.886Z"
   }
 ]
-
 
 
 
@@ -261,7 +224,19 @@ POST http://localhost:8080/api/v1/transaction
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXZlbG9wIiwiaWF0IjoxNzY3MjY4NzY3LCJleHAiOjE3Njc4NzM1Njd9.b1HD-MxxhlVcKOW_Edms8wxs4P7nJMbophTXXOiCVPg
 
-
+[
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "USD", "amount": 32000, "feeAmount": 159.20, "description": "Komil aka CASH-OUT", "createdAt": "2025-11-08T10:00:00Z" },
+  { "clientId": 13, "receiverClientId": 4, "type": "TRANSFER", "transactionCurrency": "AED", "amount": 117440, "rateToUsd": 3.67, "clientRateToUsd": 1, "receiverRateToUsd": 3.67, "description": "PAY to Oybek aka", "createdAt": "2025-11-12T10:00:00Z" },
+  { "clientId": 13, "receiverClientId": 5, "type": "TRANSFER", "transactionCurrency": "AED", "amount": 50740, "rateToUsd": 3.67, "clientRateToUsd": 1, "receiverRateToUsd": 3.67, "description": "PAY to Khojandi", "createdAt": "2025-11-12T11:00:00Z" },
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "USD", "amount": 37500, "feeAmount": 186.57, "description": "Komil aka CASH-OUT", "createdAt": "2025-11-19T10:00:00Z" },
+  { "clientId": 13, "receiverClientId": 11, "type": "TRANSFER", "transactionCurrency": "AED", "amount": 110100, "rateToUsd": 3.67, "clientRateToUsd": 1, "receiverRateToUsd": 3.67, "description": "PAY to Preview", "createdAt": "2025-11-22T10:00:00Z" },
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "USD", "amount": 30000, "feeAmount": 149.25, "description": "Komil aka CASH-OUT", "createdAt": "2025-12-03T10:00:00Z" },
+  { "clientId": 13, "receiverClientId": 7, "type": "TRANSFER", "transactionCurrency": "AED", "amount": 85050, "rateToUsd": 3.67, "clientRateToUsd": 1, "receiverRateToUsd": 3.67, "description": "PAY to Mohid Mirza", "createdAt": "2025-12-06T09:00:00Z" },
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "USD", "amount": 14300, "feeAmount": 71.14, "description": "Komil aka CASH-OUT", "createdAt": "2025-12-06T10:00:00Z" },
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "UZS", "amount": 28000000, "rateToUsd": 11960, "feeAmount": 11.65, "description": "28mln berildi", "createdAt": "2025-12-06T11:00:00Z" },
+  { "clientId": 13, "type": "CASH_OUT", "transactionCurrency": "USD", "amount": 3611, "feeAmount": 17.97, "description": "Komil aka CASH-OUT", "createdAt": "2025-12-09T10:00:00Z" },
+  { "clientId": 13, "receiverClientId": 6, "type": "TRANSFER", "transactionCurrency": "AED", "amount": 73400, "rateToUsd": 3.67, "clientRateToUsd": 1, "receiverRateToUsd": 3.67, "description": "PAY to Jawel", "createdAt": "2025-12-09T11:00:00Z" }
+]
 
 
 

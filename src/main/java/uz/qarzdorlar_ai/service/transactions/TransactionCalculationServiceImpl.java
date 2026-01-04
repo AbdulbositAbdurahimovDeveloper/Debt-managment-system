@@ -32,18 +32,14 @@ public class TransactionCalculationServiceImpl implements TransactionCalculation
     public void calculateTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
 
         switch (transaction.getType()) {
-            case PURCHASE -> calculatePurchaseTransaction(dto, transaction, client);
             case SALE -> calculateSaleTransaction(dto, transaction, client);
-            case RETURN_FROM_CLIENT -> calculateReturnFromClient(dto, transaction, client);
-            case RETURN_TO_SUPPLIER -> calculateReturnToSupplier(dto, transaction, client);
+            case PURCHASE -> calculatePurchaseTransaction(dto, transaction, client);
+            case RETURN -> calculateReturnTransaction(dto, transaction, client);
 
-            case PAYMENT_FROM_CLIENT -> calculatePaymentFromClient(dto, transaction, client);
-            case PAYMENT_FROM_SUPPLIER -> calculatePaymentFromSuplier(dto, transaction, client);
+            case CASH_IN -> calculateCashInTransaction(dto, transaction, client);
+            case CASH_OUT -> calculateCashOutTransaction(dto, transaction, client);
 
-            case PAYMENT_TO_CLIENT -> calculatePaymentToClient(dto, transaction, client);
-            case PAYMENT_TO_SUPPLIER -> calculatePaymentToSuplier(dto, transaction, client);
-
-            case TRANSFER -> calculateTransferTransaction(dto,transaction,client);
+            case TRANSFER -> calculateTransferTransaction(dto, transaction, client);
 
             default -> throw new BadRequestException("Unsupported transaction type: " + transaction.getType());
         }
@@ -51,630 +47,331 @@ public class TransactionCalculationServiceImpl implements TransactionCalculation
 
     }
 
-    private void calculateTransferTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiyalar (Siz yozgan qismlar)
-        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
-            throw new BadRequestException("TRANSFER uchun mahsulotlar kiritilishi mumkin emas!");
-        }
-        if (dto.getReceiverClientId() == null) {
-            throw new BadRequestException("Oluvchi (Receiver) ko'rsatilishi shart!");
+    private void calculateSaleTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
+
+        if (dto.getItems() == null || dto.getItems().isEmpty()) {
+            throw new BadRequestException("Sotuv tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
         }
 
-        Client receiver = clientRepository.findById(dto.getReceiverClientId())
-                .orElseThrow(() -> new EntityNotFoundException("Oluvchi topilmadi!"));
-
-        if (client.getId().equals(receiver.getId())) {
-            throw new BadRequestException("O'z-o'ziga pul o'tkazish mumkin emas!");
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Transaksiya dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
         }
 
-        // 2. Kurslarni aniqlash
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency()) ? BigDecimal.ONE : dto.getMarketRate();
-        BigDecimal sRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-        BigDecimal rRate = dto.getReceiverRate() != null ? dto.getReceiverRate() : BigDecimal.ONE;
-
-        // 3. Summalarni hisoblash
-        BigDecimal transferAmountTC = dto.getAmount() != null ? dto.getAmount() : BigDecimal.ZERO;
-        if (transferAmountTC.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new BadRequestException("O'tkazma summasi noldan katta bo'lishi kerak!");
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
         }
 
-        // 4. USD PIVOT va FEE mantiqi
-        // Jami dollardagi qiymat
-        BigDecimal totalUsd = transferAmountTC.divide(mRate, 6, RoundingMode.HALF_UP);
+        List<TransactionItem> items = new ArrayList<>();
+        BigDecimal amount = BigDecimal.ZERO; // item larning umumiy summasi uchun
+        for (TransactionItemCreateDTO item : dto.getItems()) {
 
-        // Xizmat haqi (Fee) - uni ham dollarga o'giramiz
-        BigDecimal feeTC = dto.getFeeAmount() != null ? dto.getFeeAmount() : BigDecimal.ZERO;
-        BigDecimal feeUsd = feeTC.divide(mRate, 6, RoundingMode.HALF_UP);
+            Long productId = item.getProductId();
+            Product product = productRepository.findById(productId)
+                    .orElseThrow(() ->
+                            new EntityNotFoundException("Product not found with id : " + productId)
+                    );
+            Integer quantity = item.getQuantity();
+            BigDecimal oneItemPrice;
+            if (item.getUnitPrice() != null) {
+                oneItemPrice = item.getUnitPrice();
+            } else {
+                oneItemPrice = product.getPriceUsd().multiply(rateToUsd);
+            }
+            BigDecimal totalPrice = oneItemPrice.multiply(BigDecimal.valueOf(quantity));
 
-        // MUHIM: Oluvchiga yetib boradigan sof summa (Net Amount)
-        // Agar xizmat haqi yuborilgan summaning ichidan olinadigan bo'lsa:
-        BigDecimal netUsdAmount = totalUsd.subtract(feeUsd);
+            TransactionItem transactionItem = new TransactionItem();
+            transactionItem.setProduct(product); // clinetga tanlangan product
+            transactionItem.setQuantity(quantity); // soni
+            transactionItem.setUnitPrice(oneItemPrice); // tr valyutasidagi product price
+            transactionItem.setTotalPrice(totalPrice); // itemdani soniga kopaytirdim
 
-        // 5. Entity maydonlarini to'ldirish
-        transaction.setReceiverClient(receiver);
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setAmount(transferAmountTC); // Beruvchi bergan jami summa
-        transaction.setMarketRate(mRate);
+            transactionItem.setTransaction(transaction);
 
-        // usdAmount - BU Oluvchiga yetib boradigan SOF dollar qiymati
-        transaction.setUsdAmount(netUsdAmount);
-        transaction.setFeeAmount(feeUsd);
-
-        // 6. SENDER BALANSIGA TA'SIR
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(sRate);
-        // Beruvchidan JAMI summa chiqib ketadi (Xizmat haqi bilan birga)
-        transaction.setBalanceEffect(totalUsd.multiply(sRate));
-
-        // 7. RECEIVER BALANSI UCHUN SNAPSHOT
-        transaction.setReceiverRate(rRate);
-
-        transaction.setStatus(TransactionStatus.COMLATED);
-    }
-
-    private void calculatePurchasePaymentTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: To'lovda mahsulotlar bo'lishi mumkin emas
-        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
-            throw new BadRequestException("Purchase payment tranzaksiyasi uchun mahsulotlar kiritilishi mumkin emas!");
+            items.add(transactionItem); // entity qilib listga yig`amiz
+            amount = amount.add(totalPrice); // item larni umumiy sumasini qoshamiz
         }
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
 
-        // 2. Summani tekshirish
-        BigDecimal cashAmount = dto.getAmount() != null ? dto.getAmount() : BigDecimal.ZERO;
-        if (cashAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new BadRequestException("To'lov summasi noldan katta bo'lishi kerak!");
-        }
+        transaction.setAmount(amount); // bu yerda tr paytida itemning umumiy summasi bu valyuta tr paytidagi boladi
+        transaction.setRateToUsd(rateToUsd); // tr valyutasi USD nisbati
+        transaction.setUsdAmount(usdAmount); // itemning dolordagi qiymadi
+        transaction.setClientRateSnapshot(clientRateToUsd); // clinet valyutasining dolorga nisbati
 
-        // 3. Kurslarni aniqlash (USD Pivot qoidasi)
-        // MarketRate: To'langan valyutani USDga keltirish uchun
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
+        BigDecimal balanceEffect = usdAmount.multiply(clientRateToUsd);
+        transaction.setBalanceEffect(balanceEffect.negate());
 
-        // ClientRate: Taminotchining balans valyutasi kursi (USD -> SupplierCurrency)
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        // 4. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setAmount(cashAmount); // Biz bergan naqd pul (Masalan: 10,000,000 UZS)
-        transaction.setMarketRate(mRate);
-
-        // USD Pivot qiymati (10,000,000 / 12,800 = 781.25 USD)
-        BigDecimal usdAmount = cashAmount.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(usdAmount);
-
-        // 5. Xizmat haqi (Fee)
-        // Agar taminotchiga pulni kuryer orqali yuborgan bo'lsak va kuryer xizmat haqi olsa
-        if (dto.getFeeAmount() != null && dto.getFeeAmount().compareTo(BigDecimal.ZERO) > 0) {
-            transaction.setFeeAmount(dto.getFeeAmount().divide(mRate, 6, RoundingMode.HALF_UP));
-        } else {
-            transaction.setFeeAmount(BigDecimal.ZERO);
-        }
-
-        // 6. TAMINOTCHI BALANSIGA TA'SIR
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: Taminotchining bizdagi haqi (bizning qarzimiz) kamayishi
-        // usdAmount * clientRate
-        BigDecimal effect = usdAmount.multiply(cRate);
-        transaction.setBalanceEffect(effect);
-
-        transaction.setStatus(TransactionStatus.COMLATED);
+        transaction.setItems(items);
     }
 
     private void calculatePurchaseTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: Sotib olishda mahsulotlar bo'lishi shart
-        List<TransactionItemCreateDTO> itemDTOs = dto.getItems();
-        if (itemDTOs == null || itemDTOs.isEmpty()) {
-            throw new BadRequestException("Purchase tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
+
+        if (dto.getItems() == null || dto.getItems().isEmpty()) {
+            throw new BadRequestException("Purchase  tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
         }
 
-        // 2. Kurslarni aniqlash (USD Pivot uchun)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
-
-        // Taminotchining shaxsiy kursi (USD -> SupplierCurrency)
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        // 3. Mahsulotlarni hisoblash (TRANZAKSIYA VALYUTASIDA)
-        List<TransactionItem> calculatedItems = new ArrayList<>();
-        BigDecimal totalPurchaseAmountTC = BigDecimal.ZERO; // Jami yuk summasi TCda
-
-        for (TransactionItemCreateDTO itemDto : itemDTOs) {
-            Product product = productRepository.findById(itemDto.getProductId())
-                    .orElseThrow(() -> new EntityNotFoundException("Mahsulot topilmadi: " + itemDto.getProductId()));
-
-            // Narxni aniqlash: Tranzaksiya valyutasida (TC) saqlaymiz
-            // Taminotchi bizga bergan narx (AED yoki UZSda)
-            BigDecimal unitPriceTC = (itemDto.getUnitPrice() != null)
-                    ? itemDto.getUnitPrice()
-                    : product.getPriceUsd().multiply(mRate);
-
-            BigDecimal itemTotalTC = unitPriceTC.multiply(BigDecimal.valueOf(itemDto.getQuantity()));
-            totalPurchaseAmountTC = totalPurchaseAmountTC.add(itemTotalTC);
-
-            // TransactionItem (Snapshot)
-            TransactionItem item = new TransactionItem();
-            item.setTransaction(transaction);
-            item.setProduct(product);
-            item.setQuantity(itemDto.getQuantity());
-
-            // MUHIM: Endi narxlar dollarda emas, tranzaksiya valyutasida saqlanadi!
-            item.setUnitPrice(unitPriceTC);
-            item.setTotalPrice(itemTotalTC);
-
-            calculatedItems.add(item);
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Puchase dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
         }
 
-        // 4. Orphan Removal xatosini oldini olish (Mavjud listni tozalab qo'shish)
-        if (transaction.getItems() == null) {
-            transaction.setItems(new ArrayList<>());
-        } else {
-            transaction.getItems().clear();
-        }
-        transaction.getItems().addAll(calculatedItems);
-
-        // 5. Qo'shimcha xarajatlar (Masalan: Yuk tashish/Logistika - Fee)
-        // Purchase holatida fee bizning taminotchidan qarzimizni oshiradi
-        BigDecimal feeTC = dto.getFeeAmount() != null ? dto.getFeeAmount() : BigDecimal.ZERO;
-        BigDecimal totalWithFeeTC = totalPurchaseAmountTC.add(feeTC);
-
-        // 6. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setMarketRate(mRate);
-
-        // amount: Jami taminotchidan olingan yuk + xarajat (TCda)
-        transaction.setAmount(totalWithFeeTC);
-
-        // 7. USD PIVOT (Tizimning ichki o'lchov birligi)
-        // Hamma narsa baribir dollarga keltiriladi, chunki bu markaziy ko'prik
-        BigDecimal totalUsd = totalWithFeeTC.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(totalUsd);
-
-        // Fee-ni ham USDda muhrlaymiz
-        transaction.setFeeAmount(feeTC.divide(mRate, 6, RoundingMode.HALF_UP));
-
-        // 8. TAMINOTCHI BALANSIGA TA'SIR (Mijozning o'z valyutasida)
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: usdAmount * clientRate
-        // Masalan: $10,000 lik yuk oldik -> Taminotchi AEDda ishlasa -> 36,700 AED qarzimiz ko'payadi
-        transaction.setBalanceEffect(totalUsd.multiply(cRate));
-
-        transaction.setStatus(TransactionStatus.COMLATED);
-    }
-
-    private void calculateReturnPaymentTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: Pul qaytarishda mahsulotlar bo'lmaydi
-        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
-            throw new BadRequestException("Return payment tranzaksiyasi uchun mahsulotlar kiritilishi mumkin emas!");
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
         }
 
-        // 2. Summani tekshirish
-        BigDecimal cashAmount = dto.getAmount() != null ? dto.getAmount() : BigDecimal.ZERO;
-        if (cashAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new BadRequestException("Qaytariladigan summa noldan katta bo'lishi kerak!");
+        List<TransactionItem> items = new ArrayList<>();
+        BigDecimal amount = BigDecimal.ZERO; // item larning umumiy summasi uchun
+        for (TransactionItemCreateDTO item : dto.getItems()) {
+
+            Long productId = item.getProductId();
+            Product product = productRepository.findById(productId)
+                    .orElseThrow(() ->
+                            new EntityNotFoundException("Product not found with id : " + productId)
+                    );
+            Integer quantity = item.getQuantity();
+            BigDecimal oneItemPrice;
+            if (item.getUnitPrice() != null) {
+                oneItemPrice = item.getUnitPrice();
+            } else {
+                oneItemPrice = product.getPriceUsd().multiply(rateToUsd);
+            }
+            BigDecimal totalPrice = oneItemPrice.multiply(BigDecimal.valueOf(quantity));
+
+            TransactionItem transactionItem = new TransactionItem();
+            transactionItem.setProduct(product); // clinetga tanlangan product
+            transactionItem.setQuantity(quantity); // soni
+            transactionItem.setUnitPrice(oneItemPrice); // tr valyutasidagi product price
+            transactionItem.setTotalPrice(totalPrice); // itemdani soniga kopaytirdim
+
+            transactionItem.setTransaction(transaction);
+
+            items.add(transactionItem); // entity qilib listga yig`amiz
+            amount = amount.add(totalPrice); // item larni umumiy sumasini qoshamiz
         }
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
 
-        // 3. Kurslarni aniqlash (USD Pivot)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
+        transaction.setAmount(amount); // bu yerda tr paytida itemning umumiy summasi bu valyuta tr paytidagi boladi
+        transaction.setRateToUsd(rateToUsd); // tr valyutasi USD nisbati
+        transaction.setUsdAmount(usdAmount); // itemning dolordagi qiymadi
+        transaction.setClientRateSnapshot(clientRateToUsd); // clinet valyutasining dolorga nisbati
 
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
+        BigDecimal balanceEffect = usdAmount.multiply(clientRateToUsd);
+        transaction.setBalanceEffect(balanceEffect);
 
-        // 4. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setAmount(cashAmount); // Mijozga berilgan naqd pul (Masalan: 1,280,000 UZS)
-        transaction.setMarketRate(mRate);
+        transaction.setItems(items);
 
-        // USD Pivot qiymati (1,280,000 / 12,800 = 100 USD)
-        BigDecimal usdAmount = cashAmount.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(usdAmount);
-
-        // 5. Xizmat haqi (Fee)
-        // Agar kuryer pulni mijozga olib borib bergani uchun haq olsa
-        if (dto.getFeeAmount() != null && dto.getFeeAmount().compareTo(BigDecimal.ZERO) > 0) {
-            transaction.setFeeAmount(dto.getFeeAmount().divide(mRate, 6, RoundingMode.HALF_UP));
-        } else {
-            transaction.setFeeAmount(BigDecimal.ZERO);
-        }
-
-        // 6. MIJOZ BALANSIGA TA'SIR
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // BalanceEffect: Mijoz valyutasidagi summa
-        // RETURN_PAYMENT mijozning qarzini oshiradi (biz unga pul berdik)
-        // 100 USD * 3.67 = 367 AED
-        BigDecimal effect = usdAmount.multiply(cRate);
-        transaction.setBalanceEffect(effect);
-
-        transaction.setStatus(TransactionStatus.COMLATED);
     }
 
     private void calculateReturnTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: Qaysi mahsulotlar qaytayotganini bilishimiz shart
-        List<TransactionItemCreateDTO> itemDTOs = dto.getItems();
-        if (itemDTOs == null || itemDTOs.isEmpty()) {
-            throw new BadRequestException("Return tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
-        }
 
-        // 2. Kurslarni aniqlash (USD Pivot uchun)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
-
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        // 3. Qaytarilayotgan mahsulotlarni hisoblash (TRANZAKSIYA VALYUTASIDA)
-        List<TransactionItem> calculatedItems = new ArrayList<>();
-        BigDecimal totalReturnAmountTC = BigDecimal.ZERO; // Jami qaytgan tovarlar summasi TCda
-
-        for (TransactionItemCreateDTO itemDto : itemDTOs) {
-            Product product = productRepository.findById(itemDto.getProductId())
-                    .orElseThrow(() -> new EntityNotFoundException("Mahsulot topilmadi: " + itemDto.getProductId()));
-
-            // Narxni aniqlash: Tranzaksiya valyutasida (TC) saqlaymiz
-            // Agar DTO-da narx bo'lmasa, bazadagi USD narxni marketRate-ga ko'paytiramiz
-            BigDecimal unitPriceTC = (itemDto.getUnitPrice() != null)
-                    ? itemDto.getUnitPrice()
-                    : product.getPriceUsd().multiply(mRate);
-
-            BigDecimal itemTotalTC = unitPriceTC.multiply(BigDecimal.valueOf(itemDto.getQuantity()));
-            totalReturnAmountTC = totalReturnAmountTC.add(itemTotalTC);
-
-            // TransactionItem (Snapshot)
-            TransactionItem item = new TransactionItem();
-            item.setTransaction(transaction);
-            item.setProduct(product);
-            item.setQuantity(itemDto.getQuantity());
-
-            // MUHIM: Narxlarni dollarda emas, tranzaksiya valyutasida saqlaymiz (Audit uchun)
-            item.setUnitPrice(unitPriceTC);
-            item.setTotalPrice(itemTotalTC);
-
-            calculatedItems.add(item);
-        }
-
-        // 4. Orphan Removal xatosini oldini olish (Mavjud listni tozalab qo'shish)
-        if (transaction.getItems() == null) {
-            transaction.setItems(new ArrayList<>());
-        } else {
-            transaction.getItems().clear();
-        }
-        transaction.getItems().addAll(calculatedItems);
-
-        // 5. Xizmat haqi (Fee) - Vozvrat qilish xizmati yoki jarima
-        BigDecimal feeTC = dto.getFeeAmount() != null ? dto.getFeeAmount() : BigDecimal.ZERO;
-
-        // 6. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setMarketRate(mRate);
-
-        // amount: Qaytarilgan tovarlarning jami qiymati (TCda)
-        transaction.setAmount(totalReturnAmountTC);
-
-        // 7. USD PIVOT (Hisob-kitob markazi)
-        // Tovar summasidan xizmat haqini ayiramiz, chunki fee mijozga qaytadigan pulni kamaytiradi
-        BigDecimal totalAfterFeeTC = totalReturnAmountTC.subtract(feeTC);
-
-        // Dollardagi qiymat (Pivot)
-        BigDecimal usdAmountAfterFee = totalAfterFeeTC.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(usdAmountAfterFee);
-
-        // Fee-ni ham USDda saqlaymiz
-        transaction.setFeeAmount(feeTC.divide(mRate, 6, RoundingMode.HALF_UP));
-
-        // 8. MIJOZ BALANSIGA TA'SIR
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: usdAmount * clientRate
-        // Bu summa mijozning qarzini kamaytiradi (Balansiga plyus bo'lib qo'shiladi)
-        transaction.setBalanceEffect(usdAmountAfterFee.multiply(cRate));
-
-        transaction.setStatus(TransactionStatus.COMLATED);
-    }
-
-    private void calculatePaymentTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: To'lovda mahsulotlar bo'lishi mumkin emas
-        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
-            throw new BadRequestException("To'lov tranzaksiyasi uchun mahsulotlar kiritilishi mumkin emas!");
-        }
-
-        // 2. Kurslarni aniqlash
-        // MarketRate: Tranzaksiya valyutasini USDga o'girish uchun (Masalan: UZS -> USD)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
-
-        // ClientRate: USDni mijozning balans valyutasiga o'girish uchun (Masalan: USD -> AED)
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        // 3. Summalarni hisoblash
-        BigDecimal cashAmount = dto.getAmount() != null ? dto.getAmount() : BigDecimal.ZERO;
-
-        // 4. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setAmount(cashAmount); // Naqd olingan summa (UZSda)
-        transaction.setMarketRate(mRate);
-
-        // USD Pivot (Hamma narsa bazada USD qiymatida muhrlanishi shart)
-        BigDecimal usdAmount = cashAmount.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(usdAmount);
-
-        // 5. Xizmat haqi (Fee) - Agar kuryer pulni olib kelgan bo'lsa
-        if (dto.getFeeAmount() != null && dto.getFeeAmount().compareTo(BigDecimal.ZERO) > 0) {
-            // Fee ham USDga o'girilib saqlanadi
-            transaction.setFeeAmount(dto.getFeeAmount().divide(mRate, 6, RoundingMode.HALF_UP));
-        } else {
-            transaction.setFeeAmount(BigDecimal.ZERO);
-        }
-
-        // 6. MIJOZ BALANSIGA TA'SIR (Kredit/To'lov)
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: Mijozning o'z valyutasida qarzidan chegiriladigan summa
-        // Formula: usdAmount * clientRate
-        BigDecimal effect = usdAmount.multiply(cRate);
-        transaction.setBalanceEffect(effect);
-
-        // Status va boshqalar
-        transaction.setStatus(TransactionStatus.COMLATED);
-    }
-
-    private void calculateSaleTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya
-        List<TransactionItemCreateDTO> itemDTOs = dto.getItems();
-        if (itemDTOs == null || itemDTOs.isEmpty()) {
+        if (dto.getItems() == null || dto.getItems().isEmpty()) {
             throw new BadRequestException("Sotuv tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
         }
 
-        // 2. Kurslarni aniqlash (USD Pivot uchun)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
-
-        // Mijozning shaxsiy kursi (USD -> ClientCurrency)
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        // 3. Mahsulotlarni hisoblash (TRANZAKSIYA VALYUTASIDA)
-        List<TransactionItem> calculatedItems = new ArrayList<>();
-        BigDecimal totalItemsAmountTC = BigDecimal.ZERO; // Jami summa Tranzaksiya Valyutasida
-
-        for (TransactionItemCreateDTO itemDto : itemDTOs) {
-            Product product = productRepository.findById(itemDto.getProductId())
-                    .orElseThrow(() -> new EntityNotFoundException("Mahsulot topilmadi: " + itemDto.getProductId()));
-
-            // Narxni aniqlash (Tranzaksiya valyutasida saqlaymiz)
-            // Agar DTO-da narx bo'lmasa, bazadagi USD narxni marketRate-ga ko'paytirib TC-ga o'giramiz
-            BigDecimal unitPriceTC = (itemDto.getUnitPrice() != null)
-                    ? itemDto.getUnitPrice()
-                    : product.getPriceUsd().multiply(mRate);
-
-            BigDecimal itemTotalTC = unitPriceTC.multiply(BigDecimal.valueOf(itemDto.getQuantity()));
-            totalItemsAmountTC = totalItemsAmountTC.add(itemTotalTC);
-
-            // TransactionItem yaratish
-            TransactionItem item = new TransactionItem();
-            item.setTransaction(transaction);
-            item.setProduct(product);
-            item.setQuantity(itemDto.getQuantity());
-
-            // MUHIM: Endi unitPrice va totalPrice tranzaksiya valyutasida saqlanadi!
-            item.setUnitPrice(unitPriceTC);
-            item.setTotalPrice(itemTotalTC);
-
-            calculatedItems.add(item);
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Transaksiya dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
         }
 
-        // 4. Orphan Removal xatosini oldini olish uchun listni yangilash
-        if (transaction.getItems() == null) {
-            transaction.setItems(new ArrayList<>());
-        } else {
-            transaction.getItems().clear();
-        }
-        transaction.getItems().addAll(calculatedItems);
-
-        // 5. Xizmat haqi (Fee) - bu ham Tranzaksiya Valyutasida keladi
-        BigDecimal feeTC = dto.getFeeAmount() != null ? dto.getFeeAmount() : BigDecimal.ZERO;
-        BigDecimal totalWithFeeTC = totalItemsAmountTC.add(feeTC);
-
-        // 6. Entity maydonlarini to'ldirish
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setMarketRate(mRate);
-
-        // amount: Mijozning chekidagi jami summa (Tranzaksiya valyutasida)
-        transaction.setAmount(totalWithFeeTC);
-
-        // 7. USD PIVOT (Hamma narsa baribir dollarga keladi, chunki bu "ko'prik")
-        // totalWithFeeTC / marketRate = usdAmount
-//        BigDecimal totalUsd = totalWithFeeTC.divide(mRate, 6, RoundingMode.HALF_UP);
-//        transaction.setUsdAmount(totalUsd);
-
-
-        // 7. USD PIVOT
-        BigDecimal totalUsd = totalWithFeeTC.divide(mRate, 10, RoundingMode.HALF_UP); // Bo'lishda scale kattaroq bo'lishi kerak (10)
-        transaction.setUsdAmount(totalUsd.setScale(6, RoundingMode.HALF_UP)); // Bazaga 6 xonali saqlaymiz
-
-        // feeAmount: Kuryer haqi ham USD pivotda saqlanadi
-        transaction.setFeeAmount(feeTC.divide(mRate, 6, RoundingMode.HALF_UP));
-
-        // 8. MIJOZ BALANSIGA TA'SIR (Mijozning o'z valyutasida)
-        transaction.setClientCurrency(client.getCurrencyCode());
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: usdAmount * clientRate
-        // Masalan: 12,800,000 UZS -> $1000 (Pivot) -> 3,670 AED (Balance Effect)
-        transaction.setBalanceEffect(totalUsd.multiply(cRate));
-
-        transaction.setStatus(TransactionStatus.COMLATED);
-    }
-
-/*
-    private void calculateSaleTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-        // 1. Validatsiya: Sotuvda mahsulotlar bo'lishi shart
-        List<TransactionItemCreateDTO> itemDTOs = dto.getItems();
-        if (itemDTOs == null || itemDTOs.isEmpty()) {
-            throw new BadRequestException("Sotuv tranzaksiyasi uchun mahsulotlar kiritilishi shart!");
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
         }
 
-        // 2. Kurslarni aniqlash (USD bo'lsa 1, aks holda MarketRate)
-        BigDecimal mRate = CurrencyCode.USD.equals(dto.getTransactionCurrency())
-                ? BigDecimal.ONE
-                : dto.getMarketRate();
+        List<TransactionItem> items = new ArrayList<>();
+        BigDecimal amount = BigDecimal.ZERO; // item larning umumiy summasi uchun
+        for (TransactionItemCreateDTO item : dto.getItems()) {
 
-        // Mijozning shaxsiy kursi (Mijoz balans valyutasiga o'girish uchun)
-        BigDecimal cRate = dto.getClientRate() != null ? dto.getClientRate() : BigDecimal.ONE;
-
-        List<TransactionItem> transactionItems = new ArrayList<>();
-        BigDecimal totalTransactionAmount = BigDecimal.ZERO; // Tranzaksiya valyutasida (UZS/AED...)
-
-        // 3. Mahsulotlarni aylanish va USD qiymatga keltirish
-        for (TransactionItemCreateDTO itemDto : itemDTOs) {
-            Product product = productRepository.findById(itemDto.getProductId())
-                    .orElseThrow(() -> new EntityNotFoundException("Mahsulot topilmadi: " + itemDto.getProductId()));
-
-            // Narxni aniqlash: Agar DTOda bo'lmasa, bazadagi USD narxni kursga ko'paytiramiz
-            BigDecimal unitPriceInTC = (itemDto.getUnitPrice() != null)
-                    ? itemDto.getUnitPrice()
-                    : product.getPriceUsd().multiply(mRate);
-
-            BigDecimal itemTotalInTC = unitPriceInTC.multiply(BigDecimal.valueOf(itemDto.getQuantity()));
-            totalTransactionAmount = totalTransactionAmount.add(itemTotalInTC);
-
-            // TransactionItem yaratish (Narxlar har doim USDda saqlanadi - pivot qoida)
-            TransactionItem item = new TransactionItem();
-            item.setTransaction(transaction);
-            item.setProduct(product);
-            item.setQuantity(itemDto.getQuantity());
-            // USD qiymat = Tranzaksiya summasi / MarketRate
-            item.setUnitPrice(unitPriceInTC.divide(mRate, 6, RoundingMode.HALF_UP));
-            item.setTotalPrice(itemTotalInTC.divide(mRate, 6, RoundingMode.HALF_UP));
-            transactionItems.add(item);
-        }
-
-        // 4. Xizmat haqi (Fee) mantiqi (Tranzaksiya valyutasidan USDga o'girish)
-        BigDecimal feeInTC = dto.getFeeAmount() != null ? dto.getFeeAmount() : BigDecimal.ZERO;
-        BigDecimal totalWithFeeInTC = totalTransactionAmount.add(feeInTC);
-
-        // 5. Entity maydonlarini to'ldirish (Siz bergan Entityga mos)
-        transaction.setItems(transactionItems);
-        transaction.setTransactionCurrency(dto.getTransactionCurrency());
-        transaction.setMarketRate(mRate);
-
-        // amount: Amalda berilgan jami summa (Mahsulotlar + Xizmat haqi)
-        transaction.setAmount(totalWithFeeInTC);
-
-        // usdAmount: Tizim ichki USD qiymati (Pivot)
-        BigDecimal totalUsd = totalWithFeeInTC.divide(mRate, 6, RoundingMode.HALF_UP);
-        transaction.setUsdAmount(totalUsd);
-
-        // feeAmount: Kuryer haqi (Siz aytgandek USD da saqlaymiz)
-        transaction.setFeeAmount(feeInTC.divide(mRate, 6, RoundingMode.HALF_UP));
-
-        // 6. Mijoz Balansiga ta'sir
-        transaction.setClientCurrency(client.getCurrencyCode()); // Snapshot
-        transaction.setClientRate(cRate);
-
-        // balanceEffect: Mijoz valyutasidagi yakuniy summa (usdAmount * clientRate)
-        // Masalan: $1000 * 3.67 = 3670 AED
-        transaction.setBalanceEffect(totalUsd.multiply(cRate));
-
-        // Statusni o'rnatish
-        transaction.setStatus(TransactionStatus.COMLATED); // Siz yozgan typo bo'yicha
-    }
-
-    /*
-    private void calculateSaleTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
-
-        List<TransactionItemCreateDTO> items = dto.getItems();
-        if (items == null || items.isEmpty()) {
-            throw new BadRequestException("Items are required for SALE transaction");
-        }
-
-        List<TransactionItem> transactionItems = new ArrayList<>();
-        BigDecimal totalUsdAmount = BigDecimal.ZERO;
-
-        for (TransactionItemCreateDTO item : items) {
             Long productId = item.getProductId();
-            Integer quantity = item.getQuantity();
-
-            if (quantity == null || quantity <= 0) {
-                throw new BadRequestException("Quantity must be greater than zero for product id: " + productId);
-            }
-
             Product product = productRepository.findById(productId)
-                    .orElseThrow(() -> new EntityNotFoundException("Product not found with id: " + productId));
-
-            BigDecimal basePriceInTransactionCurrency = product.getPriceUsd().multiply(dto.getMarketRate());
-            BigDecimal unitPriceInTransactionCurrency = item.getUnitPrice() != null
-                    ? item.getUnitPrice()
-                    : basePriceInTransactionCurrency;
-
-            // Custom price audit
+                    .orElseThrow(() ->
+                            new EntityNotFoundException("Product not found with id : " + productId)
+                    );
+            Integer quantity = item.getQuantity();
+            BigDecimal oneItemPrice;
             if (item.getUnitPrice() != null) {
-                BigDecimal priceDifference = unitPriceInTransactionCurrency.subtract(basePriceInTransactionCurrency);
-                BigDecimal priceDifferencePercent = basePriceInTransactionCurrency.compareTo(BigDecimal.ZERO) > 0
-                        ? priceDifference.divide(basePriceInTransactionCurrency, 4, RoundingMode.HALF_UP)
-                        .multiply(BigDecimal.valueOf(100))
-                        : BigDecimal.ZERO;
-
-                if (priceDifferencePercent.abs().compareTo(BigDecimal.valueOf(5)) > 0) {
-                    String auditNote = String.format(" [AUDIT: Custom price used. Base: %s, Actual: %s, Difference: %.2f%%]",
-                            basePriceInTransactionCurrency, unitPriceInTransactionCurrency, priceDifferencePercent);
-                    String currentDescription = transaction.getDescription() != null ? transaction.getDescription() : "";
-                    transaction.setDescription(currentDescription + auditNote);
-                }
-            }
-
-            BigDecimal itemUsdAmount;
-            if (CurrencyCode.USD.equals(dto.getTransactionCurrency())) {
-                itemUsdAmount = unitPriceInTransactionCurrency.multiply(BigDecimal.valueOf(quantity));
+                oneItemPrice = item.getUnitPrice();
             } else {
-                itemUsdAmount = unitPriceInTransactionCurrency
-                        .divide(dto.getMarketRate(), 6, RoundingMode.HALF_UP)
-                        .multiply(BigDecimal.valueOf(quantity));
+                oneItemPrice = product.getPriceUsd().multiply(rateToUsd);
             }
+            BigDecimal totalPrice = oneItemPrice.multiply(BigDecimal.valueOf(quantity));
 
             TransactionItem transactionItem = new TransactionItem();
-            transactionItem.setTransaction(transaction);
-            transactionItem.setProduct(product);
-            transactionItem.setQuantity(quantity);
-            transactionItem.setUnitPrice(itemUsdAmount.divide(BigDecimal.valueOf(quantity), 6, RoundingMode.HALF_UP));
-            transactionItem.setTotalPrice(itemUsdAmount);
+            transactionItem.setProduct(product); // clinetga tanlangan product
+            transactionItem.setQuantity(quantity); // soni
+            transactionItem.setUnitPrice(oneItemPrice); // tr valyutasidagi product price
+            transactionItem.setTotalPrice(totalPrice); // itemdani soniga kopaytirdim
 
-            transactionItems.add(transactionItem);
-            totalUsdAmount = totalUsdAmount.add(itemUsdAmount);
+            items.add(transactionItem); // entity qilib listga yig`amiz
+            amount = amount.add(totalPrice); // item larni umumiy sumasini qoshamiz
         }
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
 
-        BigDecimal feeAmount = transaction.getFeeAmount() != null ? transaction.getFeeAmount() : BigDecimal.ZERO;
-        BigDecimal feeAmountInUsd = BigDecimal.ZERO;
+        transaction.setAmount(amount); // bu yerda tr paytida itemning umumiy summasi bu valyuta tr paytidagi boladi
+        transaction.setRateToUsd(rateToUsd); // tr valyutasi USD nisbati
+        transaction.setUsdAmount(usdAmount); // itemning dolordagi qiymadi
+        transaction.setClientRateSnapshot(clientRateToUsd); // clinet valyutasining dolorga nisbati
 
-        if (feeAmount.compareTo(BigDecimal.ZERO) > 0) {
-            if (CurrencyCode.USD.equals(dto.getTransactionCurrency())) {
-                feeAmountInUsd = feeAmount;
-            } else {
-                feeAmountInUsd = feeAmount.divide(dto.getMarketRate(), 6, RoundingMode.HALF_UP);
-            }
-        }
+        BigDecimal balanceEffect = usdAmount.multiply(clientRateToUsd);
+        transaction.setBalanceEffect(balanceEffect);
 
-        transaction.setMarketRate(dto.getMarketRate());
-        transaction.setClientRate(dto.getClientRate());
-        transaction.setUsdAmount(totalUsdAmount);
-        transaction.setClientCurrency(client.getCurrencyCode());
-
-        // MUHIM: SALE holatida fee qarzga QO'SHILADI (qarz ko'payadi), ayirilmaydi
-        BigDecimal totalBalanceAmount = totalUsdAmount.multiply(dto.getMarketRate());
-        BigDecimal feeBalanceAmount = feeAmountInUsd.multiply(dto.getMarketRate());
-        transaction.setBalanceEffect(totalBalanceAmount.add(feeBalanceAmount));
-
-        transaction.setItems(transactionItems);
+        transaction.setItems(items);
 
     }
-    */
+
+    private void calculateCashInTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
+
+        if (dto.getItems() != null && dto.getItems().isEmpty()) {
+            throw new BadRequestException("Cash-in tranzaksiyasi uchun mahsulot kirtilmaydi");
+        }
+
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Cash-in dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
+        }
+
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
+        }
+
+        BigDecimal amount = dto.getAmount();
+        if (dto.getAmount() == null || amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new BadRequestException(
+                    "Cash-in paytida qancha pul olinayotgani 0 dan katta bo‘lishi shart"
+            );
+        }
+
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
+
+        transaction.setRateToUsd(rateToUsd);
+        transaction.setAmount(amount);
+        transaction.setUsdAmount(usdAmount);
+        transaction.setClientRateSnapshot(clientRateToUsd);
+        BigDecimal balanceEffect = usdAmount.multiply(clientRateToUsd);
+        transaction.setBalanceEffect(balanceEffect);
+
+
+    }
+
+    private void calculateCashOutTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
+
+        if (dto.getItems() != null && !dto.getItems().isEmpty()) {
+            throw new BadRequestException("Cash-out tranzaksiyasi uchun mahsulot kirtilmaydi");
+        }
+
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Cash-out dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
+        }
+
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
+        }
+
+        BigDecimal amount = dto.getAmount();
+        if (dto.getAmount() == null || amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new BadRequestException(
+                    "Cash-out paytida qancha pul olinayotgani 0 dan katta bo‘lishi shart"
+            );
+        }
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
+
+        BigDecimal feeAmount = dto.getFeeAmount();
+
+        BigDecimal clxBalance = usdAmount.subtract(feeAmount == null ? BigDecimal.ZERO : feeAmount);
+
+        transaction.setRateToUsd(rateToUsd);
+
+        transaction.setAmount(amount);
+        transaction.setUsdAmount(usdAmount);
+        transaction.setClientRateSnapshot(clientRateToUsd);
+
+        BigDecimal balanceEffect = clxBalance.multiply(clientRateToUsd);
+
+        transaction.setBalanceEffect(balanceEffect.negate());
+
+    }
+
+    private void calculateTransferTransaction(TransactionCreateDTO dto, Transaction transaction, Client client) {
+
+
+        if (dto.getItems() != null && dto.getItems().isEmpty()) {
+            throw new BadRequestException("Transfer tranzaksiyasi uchun mahsulot kirtilmaydi");
+        }
+
+        BigDecimal rateToUsd = BigDecimal.ONE;
+        if (!transaction.getTransactionCurrency().equals(CurrencyCode.USD)) {
+            if (dto.getRateToUsd() == null)
+                throw new BadRequestException("Transfer dolorda amalga oshirilmasa rate kiritsh majburiy");
+            rateToUsd = dto.getRateToUsd(); // tr valyutasi usd bolmasa client kiritgan rate olinadi
+        }
+
+        BigDecimal clientRateToUsd = BigDecimal.ONE;
+        if (!client.getCurrencyCode().equals(CurrencyCode.USD)) {
+            if (dto.getClientRateToUsd() == null)
+                throw new BadRequestException("Client dolorda qarzdor bolmasa rate kiritsh majburiy");
+            clientRateToUsd = dto.getClientRateToUsd(); // clinet valyutasi dolor bolsa clinet kiritgan rate
+        }
+
+        if (dto.getReceiverClientId() == null) {
+            throw new BadRequestException("Transfer paytida Receiver bolishi shart");
+        }
+
+        Client receiverClient = clientRepository.findById(dto.getReceiverClientId())
+                .orElseThrow(() ->
+                        new EntityNotFoundException("Receiver client not found with receiver id : " + dto.getReceiverClientId())
+                );
+
+        BigDecimal receiverRateUsd = BigDecimal.ONE;
+        if (!receiverClient.getCurrencyCode().equals(CurrencyCode.USD)) {
+            receiverRateUsd = dto.getReceiverRateToUsd();
+        }
+
+        BigDecimal amount = dto.getAmount();
+        if (dto.getAmount() == null || amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new BadRequestException(
+                    "Transfer paytida qancha pul olinayotgani 0 dan katta bo‘lishi shart"
+            );
+        }
+
+        transaction.setRateToUsd(rateToUsd);
+        transaction.setAmount(amount);
+        BigDecimal usdAmount = amount.divide(rateToUsd, 4, RoundingMode.HALF_UP);
+        transaction.setUsdAmount(usdAmount);
+        transaction.setClientRateSnapshot(clientRateToUsd);
+
+        BigDecimal clientBalanceEffect = usdAmount.multiply(clientRateToUsd);
+        transaction.setBalanceEffect(clientBalanceEffect);
+
+        transaction.setReceiverClient(receiverClient);
+        transaction.setReceiverRateSnapshot(receiverRateUsd);
+
+        BigDecimal receiverBalanceEffect = usdAmount.multiply(receiverRateUsd);
+
+        transaction.setReceiverBalanceEffect(receiverBalanceEffect.negate());
+    }
 }

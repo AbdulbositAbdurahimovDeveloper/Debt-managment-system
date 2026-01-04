@@ -1,6 +1,7 @@
 package uz.qarzdorlar_ai.payload;
 
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +21,7 @@ public class TransactionItemCreateDTO implements Serializable {
     @NotNull
     private Long productId;
 
-    @NotNull
+    @Positive
     private Integer quantity;
 
     @PositiveOrZero

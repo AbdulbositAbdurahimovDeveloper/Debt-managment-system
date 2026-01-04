@@ -39,7 +39,7 @@ public class ClientServiceImpl implements ClientService {
         client.setPhoneNumber(phoneNumber);
         client.setType(clientCreateDTO.getType());
         client.setCurrencyCode(clientCreateDTO.getCurrencyCode());
-        client.setInitialBalance(clientCreateDTO.getInitialBalance());
+//        client.setInitialBalance(clientCreateDTO.getInitialBalance());
         client.setCurrentBalance(clientCreateDTO.getInitialBalance());
         client.setAddress(clientCreateDTO.getAddress());
         client.setComment(clientCreateDTO.getComment());

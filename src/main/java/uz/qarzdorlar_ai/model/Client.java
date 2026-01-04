@@ -24,7 +24,7 @@ import java.math.BigDecimal;
 @SQLRestriction("deleted = false")
 public class Client extends AbsLongEntity {
 
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private String fullName;
 
     @Column(unique = true, nullable = false)
@@ -51,4 +51,8 @@ public class Client extends AbsLongEntity {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user; // Linked user for system login
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "addresses_od")
+    private Address clientAddress;
 }

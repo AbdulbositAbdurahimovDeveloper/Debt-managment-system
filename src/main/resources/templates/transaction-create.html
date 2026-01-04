@@ -2,272 +2,199 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Manager - Create</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Transaction Manager</title>
     <style>
-        .form-section { display: none; }
-        .active { display: block; }
-        input, select, textarea {
-            border: 1px solid #d1d5db;
-            padding: 0.5rem;
-            border-radius: 0.375rem;
-            width: 100%;
-        }
-        input:focus { outline: 2px solid #3b82f6; border-color: transparent; }
+        body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .section { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        .hidden { display: none; }
+        .item-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-end; }
+        .item-row div { flex: 1; }
+        button { background: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; margin-top: 10px; }
+        button.add-btn { background: #007bff; }
+        button.remove-btn { background: #dc3545; padding: 8px; }
+        pre { background: #eee; padding: 10px; overflow-x: auto; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+<body>
 
-<div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-    <!-- Header: API Settings -->
-    <div class="bg-blue-600 p-6 text-white">
-        <h1 class="text-2xl font-bold mb-4">Transaction Yaratish (Post Request)</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-                <label class="block text-sm opacity-80">Host (IP:Port)</label>
-                <input type="text" id="apiHost" value="localhost:8080" class="text-black">
-            </div>
-            <div>
-                <label class="block text-sm opacity-80">Path</label>
-                <input type="text" id="apiPath" value="/api/transactions" class="text-black">
-            </div>
-            <div>
-                <label class="block text-sm opacity-80">JWT Token</label>
-                <input type="text" id="jwtToken" placeholder="Bearer eyJhbG..." class="text-black">
-            </div>
-        </div>
+<div class="container">
+    <h2>Transaction Yaratish</h2>
+
+    <div class="section" style="background: #e9ecef;">
+        <label>Bearer Token (JWT)</label>
+        <input type="text" id="token" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
     </div>
 
-    <form id="transactionForm" class="p-6 space-y-6">
-        <!-- Asosiy Maydonlar -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-                <label class="block font-medium mb-1">Mijoz ID (Client ID) *</label>
-                <input type="number" name="clientId" required>
-            </div>
-            <div>
-                <label class="block font-medium mb-1">Tranzaksiya Turi (Type) *</label>
-                <select name="type" id="typeSelect" onchange="toggleSections()" required>
-                    <option value="SALE">SALE (Sotuv)</option>
-                    <option value="PAYMENT">PAYMENT (Mijozdan to'lov)</option>
-                    <option value="RETURN">RETURN (Vozvrat - Mahsulot)</option>
-                    <option value="RETURN_PAYMENT">RETURN_PAYMENT (Pulni qaytarish)</option>
-                    <option value="PURCHASE">PURCHASE (Taminotchidan yuk olish)</option>
-                    <option value="PURCHASE_PAYMENT">PURCHASE_PAYMENT (Taminotchiga to'lov)</option>
-                    <option value="TRANSFER">TRANSFER (P2P o'tkazma)</option>
-                </select>
-            </div>
-            <div>
-                <label class="block font-medium mb-1">Valyuta (Currency) *</label>
-                <select name="transactionCurrency" required>
-                    <option value="USD">USD</option>
-                    <option value="UZS">UZS</option>
-                    <option value="AED">AED</option>
-                </select>
-            </div>
-            <div>
-                <label class="block font-medium mb-1">Market Rate (1 USD = ? TC) *</label>
-                <input type="number" step="0.0001" name="marketRate" value="12800" required>
-            </div>
-            <div>
-                <label class="block font-medium mb-1">Mijoz Kursi (Client Rate) *</label>
-                <input type="number" step="0.0001" name="clientRate" value="1" required>
-            </div>
-            <div>
-                <label class="block font-medium mb-1">Xizmat Haqi (Fee Amount - USD/TC)</label>
-                <input type="number" step="0.01" name="feeAmount" value="0">
-            </div>
+    <form id="transactionForm">
+        <div class="section">
+            <label>Mijoz (Client)</label>
+            <select id="clientId" required>
+                <option value="7">Mohid Mirza</option>
+                <option value="4">Abduqodir</option>
+                <option value="3">Saxiy Ahmad</option>
+                <option value="11">Preview</option>
+                <option value="2">Dilnoza opa</option>
+                <option value="13">Komil aka</option>
+                <option value="9">Micro zone</option>
+                <option value="8">Transworld</option>
+                <option value="6">Jawel</option>
+                <option value="12">Arcada</option>
+            </select>
+
+            <label>Tranzaksiya Turi</label>
+            <select id="type" onchange="toggleFields()" required>
+                <option value="SALE">SALE (Sotish)</option>
+                <option value="PURCHASE">PURCHASE (Sotib olish)</option>
+                <option value="RETURN">RETURN (Qaytarish)</option>
+                <option value="CASH_IN">CASH_IN (Pul olish)</option>
+                <option value="CASH_OUT">CASH_OUT (Pul berish)</option>
+                <option value="TRANSFER">TRANSFER (O'tkazma)</option>
+            </select>
         </div>
 
-        <!-- Dinamik Section: PAYMENT variantlari uchun -->
-        <div id="amountSection" class="form-section">
-            <label class="block font-medium mb-1 text-blue-600">To'lov Summasi (Amount) *</label>
-            <input type="number" step="0.01" name="amount" id="amountInput" placeholder="Pul summasini kiriting">
+        <div class="section">
+            <label>To'lov Valyutasi (transactionCurrency)</label>
+            <select id="transactionCurrency">
+                <option value="USD">USD</option>
+                <option value="UZS">UZS</option>
+                <option value="AED">AED</option>
+            </select>
+
+            <label>Summa (Amount)</label>
+            <input type="number" id="amount" step="0.01" placeholder="0.00">
+
+            <label>USD Kursi (rateToUsd)</label>
+            <input type="number" id="rateToUsd" step="0.0001" value="1" placeholder="Masalan: 12800">
+
+            <label>Mijoz Balans Kursi (clientRateToUsd)</label>
+            <input type="number" id="clientRateToUsd" step="0.0001" value="1">
         </div>
 
-        <!-- Dinamik Section: TRANSFER uchun -->
-        <div id="transferSection" class="form-section border-t pt-4">
-            <h3 class="font-bold text-lg mb-2 text-purple-600">Transfer Ma'lumotlari</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label class="block font-medium mb-1 text-sm">Oluvchi ID (Receiver ID) *</label>
-                    <input type="number" name="receiverClientId" id="receiverIdInput">
+        <div id="transferFields" class="hidden section" style="background: #fff3cd;">
+            <label>Qabul qiluvchi (Receiver Client)</label>
+            <select id="receiverClientId">
+                <option value="4">Abduqodir</option>
+                <option value="7">Mohid Mirza</option>
+            </select>
+            <label>Qabul qiluvchi Kursi (receiverRateToUsd)</label>
+            <input type="number" id="receiverRateToUsd" step="0.0001" value="1">
+        </div>
+
+        <div id="feeField" class="hidden section">
+            <label>Xizmat haqi (Fee Amount - USD)</label>
+            <input type="number" id="feeAmount" step="0.01" value="0">
+        </div>
+
+        <div id="itemsSection" class="section">
+            <label>Mahsulotlar (Items)</label>
+            <div id="itemsContainer">
+                <div class="item-row">
+                    <div>Product ID <input type="number" class="p-id"></div>
+                    <div>Soni <input type="number" class="p-qty"></div>
+                    <div>Narxi <input type="number" class="p-price" step="0.01"></div>
+                    <button type="button" class="remove-btn" onclick="this.parentElement.remove()">X</button>
                 </div>
-                <div>
-                    <label class="block font-medium mb-1 text-sm">Oluvchi Kursi (Receiver Rate) *</label>
-                    <input type="number" step="0.0001" name="receiverRate" id="receiverRateInput" value="1">
-                </div>
             </div>
+            <button type="button" class="add-btn" onclick="addItem()">+ Mahsulot qo'shish</button>
         </div>
 
-        <!-- Dinamik Section: ITEMS (SALE, RETURN, PURCHASE uchun) -->
-        <div id="itemsSection" class="form-section border-t pt-4">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="font-bold text-lg text-green-600">Mahsulotlar (Items)</h3>
-                <button type="button" onclick="addItemRow()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 text-sm">+ Mahsulot Qo'shish</button>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                    <tr class="bg-gray-200">
-                        <th class="p-2 border text-sm">Product ID</th>
-                        <th class="p-2 border text-sm">Quantity</th>
-                        <th class="p-2 border text-sm">Unit Price (TC)</th>
-                        <th class="p-2 border"></th>
-                    </tr>
-                    </thead>
-                    <tbody id="itemsTableBody">
-                    <!-- Rows go here -->
-                    </tbody>
-                </table>
-            </div>
+        <div class="section">
+            <label>Izoh (Description)</label>
+            <textarea id="description" rows="2"></textarea>
         </div>
 
-        <div>
-            <label class="block font-medium mb-1">Izoh (Description)</label>
-            <textarea name="description" rows="2" placeholder="Tranzaksiya haqida qo'shimcha ma'lumot..."></textarea>
-        </div>
-
-        <div class="flex gap-4">
-            <button type="submit" class="flex-1 bg-blue-700 text-white font-bold py-3 rounded-lg hover:bg-blue-800 transition">REQUEST JO'NATISH</button>
-            <button type="button" onclick="generatePreview()" class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600">JSON PREVIEW</button>
-        </div>
+        <button type="submit" style="width: 100%; font-size: 1.2em;">POST Zapros Jo'natish</button>
     </form>
 
-    <!-- Response Window -->
-    <div id="responseContainer" class="hidden p-6 border-t bg-gray-50">
-        <h3 class="font-bold mb-2">Server Response:</h3>
-        <pre id="jsonResponse" class="bg-black text-green-400 p-4 rounded overflow-x-auto text-sm"></pre>
-    </div>
+    <h3>Natija:</h3>
+    <pre id="response">Zapros kutilmoqda...</pre>
 </div>
 
 <script>
-    // Formani yuklanganda sale bo'lib turadi
-    window.onload = () => toggleSections();
+    function toggleFields() {
+        const type = document.getElementById('type').value;
+        const itemsSection = document.getElementById('itemsSection');
+        const transferFields = document.getElementById('transferFields');
+        const feeField = document.getElementById('feeField');
 
-    function toggleSections() {
-        const type = document.getElementById('typeSelect').value;
-        const itemsTypes = ['SALE', 'RETURN', 'PURCHASE'];
-        const paymentTypes = ['PAYMENT', 'PURCHASE_PAYMENT', 'RETURN_PAYMENT', 'TRANSFER'];
+        // Mahsulotlar bo'limi faqat SALE, PURCHASE, RETURN uchun
+        itemsSection.className = (['SALE', 'PURCHASE', 'RETURN'].includes(type)) ? 'section' : 'hidden';
 
-        // Hamma sectionlarni yopish
-        document.getElementById('itemsSection').classList.remove('active');
-        document.getElementById('amountSection').classList.remove('active');
-        document.getElementById('transferSection').classList.remove('active');
+        // Transfer maydonlari
+        transferFields.className = (type === 'TRANSFER') ? 'section' : 'hidden';
 
-        if (itemsTypes.includes(type)) {
-            document.getElementById('itemsSection').classList.add('active');
-            if (document.getElementById('itemsTableBody').children.length === 0) addItemRow();
-        }
-
-        if (paymentTypes.includes(type)) {
-            document.getElementById('amountSection').classList.add('active');
-        }
-
-        if (type === 'TRANSFER') {
-            document.getElementById('transferSection').classList.add('active');
-        }
+        // Fee faqat CASH_OUT va TRANSFER uchun
+        feeField.className = (type === 'CASH_OUT' || type === 'TRANSFER') ? 'section' : 'hidden';
     }
 
-    function addItemRow() {
-        const tbody = document.getElementById('itemsTableBody');
-        const row = document.createElement('tr');
-        row.className = "item-row";
-        row.innerHTML = `
-                <td class="p-2 border"><input type="number" class="productId" required></td>
-                <td class="p-2 border"><input type="number" class="quantity" value="1" required></td>
-                <td class="p-2 border"><input type="number" step="0.01" class="unitPrice" placeholder="Auto"></td>
-                <td class="p-2 border text-center">
-                    <button type="button" onclick="this.parentElement.parentElement.remove()" class="text-red-500 font-bold">X</button>
-                </td>
-            `;
-        tbody.appendChild(row);
+    function addItem() {
+        const div = document.createElement('div');
+        div.className = 'item-row';
+        div.innerHTML = `
+            <div>Product ID <input type="number" class="p-id"></div>
+            <div>Soni <input type="number" class="p-qty"></div>
+            <div>Narxi <input type="number" class="p-price" step="0.01"></div>
+            <button type="button" class="remove-btn" onclick="this.parentElement.remove()">X</button>
+        `;
+        document.getElementById('itemsContainer').appendChild(div);
     }
 
-    function collectData() {
-        const formData = new FormData(document.getElementById('transactionForm'));
-        const data = Object.fromEntries(formData.entries());
-        const type = data.type;
-
-        // List-to-Number conversions
-        data.clientId = parseInt(data.clientId);
-        data.marketRate = parseFloat(data.marketRate);
-        data.clientRate = parseFloat(data.clientRate);
-        data.feeAmount = parseFloat(data.feeAmount || 0);
-
-        // Amount field
-        if (data.amount) data.amount = parseFloat(data.amount);
-
-        // Transfer logic
-        if (type === 'TRANSFER') {
-            data.receiverClient = { id: parseInt(data.receiverClientId) };
-            data.receiverRate = parseFloat(data.receiverRate);
-            delete data.receiverClientId;
-        } else {
-            delete data.receiverClientId;
-            delete data.receiverRate;
-        }
-
-        // Items logic
-        if (['SALE', 'RETURN', 'PURCHASE'].includes(type)) {
-            data.items = [];
-            document.querySelectorAll('.item-row').forEach(row => {
-                const productId = row.querySelector('.productId').value;
-                const quantity = row.querySelector('.quantity').value;
-                const unitPrice = row.querySelector('.unitPrice').value;
-                if (productId) {
-                    data.items.push({
-                        productId: parseInt(productId),
-                        quantity: parseInt(quantity),
-                        unitPrice: unitPrice ? parseFloat(unitPrice) : null
-                    });
-                }
-            });
-        } else {
-            data.items = null;
-        }
-
-        return data;
-    }
-
-    function generatePreview() {
-        const data = collectData();
-        document.getElementById('responseContainer').classList.remove('hidden');
-        document.getElementById('jsonResponse').textContent = JSON.stringify(data, null, 2);
-    }
-
-    document.getElementById('transactionForm').onsubmit = async (e) => {
+    document.getElementById('transactionForm').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const data = collectData();
 
-        const host = document.getElementById('apiHost').value;
-        const path = document.getElementById('apiPath').value;
-        const token = document.getElementById('jwtToken').value;
-        const url = `http://${host}${path}`;
+        const token = document.getElementById('token').value;
+        const type = document.getElementById('type').value;
 
-        document.getElementById('responseContainer').classList.remove('hidden');
-        document.getElementById('jsonResponse').textContent = "Jo'natilmoqda...";
+        // Mahsulotlarni yig'ish
+        const items = [];
+        if (['SALE', 'PURCHASE', 'RETURN'].includes(type)) {
+            document.querySelectorAll('.item-row').forEach(row => {
+                items.push({
+                    productId: row.querySelector('.p-id').value,
+                    quantity: row.querySelector('.p-qty').value,
+                    unitPrice: row.querySelector('.p-price').value
+                });
+            });
+        }
+
+        const payload = {
+            clientId: document.getElementById('clientId').value,
+            receiverClientId: type === 'TRANSFER' ? document.getElementById('receiverClientId').value : null,
+            type: type,
+            transactionCurrency: document.getElementById('transactionCurrency').value,
+            amount: document.getElementById('amount').value,
+            rateToUsd: document.getElementById('rateToUsd').value,
+            clientRateToUsd: document.getElementById('clientRateToUsd').value,
+            receiverRateToUsd: type === 'TRANSFER' ? document.getElementById('receiverRateToUsd').value : null,
+            feeAmount: document.getElementById('feeAmount').value,
+            description: document.getElementById('description').value,
+            items: items.length > 0 ? items : null,
+            createdAt: new Date().toISOString()
+        };
 
         try {
-            const response = await fetch(url, {
+            const response = await fetch('http://localhost:8080/api/v1/transaction', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`
+                    'Authorization': 'Bearer ' + token
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(payload)
             });
 
             const result = await response.json();
-            document.getElementById('jsonResponse').textContent = JSON.stringify(result, null, 2);
-            if(response.ok) alert("Muvaffaqiyatli!");
-            else alert("Xatolik: " + (result.message || "Server error"));
-
+            document.getElementById('response').innerText = JSON.stringify(result, null, 2);
         } catch (error) {
-            document.getElementById('jsonResponse').textContent = "ERROR: " + error.message;
+            document.getElementById('response').innerText = "Xatolik: " + error.message;
         }
-    };
+    });
+
+    // Boshlang'ich holatni sozlash
+    toggleFields();
 </script>
+
 </body>
 </html>
