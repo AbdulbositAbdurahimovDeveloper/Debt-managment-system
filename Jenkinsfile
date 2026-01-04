@@ -30,23 +30,11 @@ pipeline {
 
         stage('3. Deploy Application') {
             steps {
-                echo "Log infratuzilmasi tayyorlanmoqda..."
+                echo "Log papkasi tayyorlanmoqda..."
                 sh '''
-                    # 1. Eski loglarni tozalash (Permission muammosini oldini olish uchun)
-                    rm -rf "$WORKSPACE/logs"
-
-                    # 2. Logback kutayotgan barcha ichki papkalarni oldindan yaratish
-                    mkdir -p "$WORKSPACE/logs/errorlog"
-                    mkdir -p "$WORKSPACE/logs/log200"
-                    mkdir -p "$WORKSPACE/logs/log400"
-                    mkdir -p "$WORKSPACE/logs/log500"
-                    mkdir -p "$WORKSPACE/logs/archived"
-                    mkdir -p "$WORKSPACE/logs/errorlog/archived"
-                    mkdir -p "$WORKSPACE/logs/log200/archived"
-                    mkdir -p "$WORKSPACE/logs/log400/archived"
-                    mkdir -p "$WORKSPACE/logs/log500/archived"
-
-                    # 3. Konteyner ichidagi user (UID 101) yozishi uchun to'liq ruxsat berish
+                    mkdir -p "$WORKSPACE/logs"
+                    # Papkani tozalaymiz va ruxsat beramiz
+                    rm -rf "$WORKSPACE/logs/*"
                     chmod -R 777 "$WORKSPACE/logs"
                 '''
 
@@ -57,8 +45,13 @@ pipeline {
                     file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_FILE')
                 ]) {
                     sh '''
+                        # Hostdagi jenkins userining UID va GID sini olamiz
+                        USER_ID=$(id -u)
+                        GROUP_ID=$(id -g)
+
                         docker run -d \
                           --name "$CONTAINER_NAME" \
+                          --user "$USER_ID:$GROUP_ID" \
                           -p $APP_PORT:8080 \
                           --network $NETWORK_NAME \
                           --restart unless-stopped \
