@@ -30,19 +30,11 @@ pipeline {
 
         stage('3. Deploy Application') {
             steps {
+                echo "Log papkasi workspace ichida ochilmoqda..."
                 sh """
-                    # Serverdagi log papkasini yaratish
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs
-
-                    # Ichki papkalarni oldindan yaratib qo'yish (Logback xato bermasligi uchun)
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs/errorlog
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs/log200
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs/log400
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs/log500
-                    mkdir -p /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs/archived
-
-                    # Eng muhimi: barcha papkalarga to'liq ruxsat berish
-                    chmod -R 777 /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs
+                    # Loyiha papkasi ichida logs papkasini ochish
+                    mkdir -p ${WORKSPACE}/logs
+                    chmod -R 777 ${WORKSPACE}/logs
                 """
 
                 sh "docker rm -f ${CONTAINER_NAME} || true"
@@ -59,13 +51,17 @@ pipeline {
                           --restart unless-stopped \
                           --env-file "${ENV_FILE}" \
                           -v "${GOOGLE_KEY_FILE}:/google-key.json" \
-                          -v /var/lib/jenkins/workspace/DEBT_NOT_UZ/logs:/app/logs \
+                          \
+                          /* MANA BU JOYIGA E'TIBOR BER: Hardcode yo'l o'rniga ${WORKSPACE} ishlatamiz */
+                          -v "${WORKSPACE}/logs:/app/logs" \
+                          \
                           -e SPRING_PROFILES_ACTIVE=prod \
                           "${LATEST_IMAGE}"
                     """
                 }
             }
         }
+
 
         stage('4. Cleanup') {
             steps {
