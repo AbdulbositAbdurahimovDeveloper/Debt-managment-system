@@ -1,14 +1,11 @@
 pipeline {
     agent any
-
     environment {
         IMAGE_NAME = "debt-managment/app"
         CONTAINER_NAME = "debt-managment-container"
         LATEST_IMAGE = "${IMAGE_NAME}:latest"
         APP_PORT = "7214"
         NETWORK_NAME = "app-network"
-        // SERVERDAGI FAYLNING ANIQ MANZILI (Sizning rasmingiz bo'yicha)
-        HOST_GOOGLE_KEY = "/home/debt-managment/google-key.json"
     }
 
     stages {
@@ -16,19 +13,31 @@ pipeline {
             steps {
                 cleanWs()
                 checkout scm
-                echo "Kod yuklab olindi."
             }
         }
 
         stage('2. Build Docker Image') {
             steps {
-                echo "Docker image qurilmoqda..."
-                sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} -t ${LATEST_IMAGE} ."
+                echo "Google Key-ni image ichiga joylash va Build qilish..."
+                // Jenkins Credentials-dagi Secret File-ni chaqiramiz
+                withCredentials([file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'SECRET_KEY')]) {
+                    sh """
+                        # Maxfiy faylni Dockerfile turgan joyga nusxalash
+                        cp ${SECRET_KEY} google-key.json
+
+                        # Docker build (fayl endi image ichiga kirib ketadi)
+                        docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} -t ${LATEST_IMAGE} .
+
+                        # Xavfsizlik uchun vaqtinchalik nusxasini o'chirish
+                        rm google-key.json
+                    """
+                }
             }
         }
 
         stage('3. Deploy Application') {
             steps {
+                echo "Konteynerni ishga tushirish..."
                 sh """
                     mkdir -p ${WORKSPACE}/logs
                     chmod -R 777 ${WORKSPACE}/logs
@@ -36,27 +45,22 @@ pipeline {
                 """
 
                 withCredentials([file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE')]) {
-                    sh '''
+                    sh """
                         docker run -d \
-                          --name "$CONTAINER_NAME" \
-                          -p $APP_PORT:8080 \
-                          --network $NETWORK_NAME \
+                          --name "${CONTAINER_NAME}" \
+                          -p ${APP_PORT}:8080 \
+                          --network ${NETWORK_NAME} \
                           --restart unless-stopped \
-                          --env-file "$ENV_FILE" \
-                          -v "$HOST_GOOGLE_KEY:/google-key.json" \
-                          -v "$WORKSPACE/logs:/app/logs" \
+                          --env-file "${ENV_FILE}" \
+                          \
+                          # ENDI GOOGLE KEY-NI MOUNT QILISH SHART EMAS!
+                          # Chunki u image ichida tayyor turibdi.
+                          -v "${WORKSPACE}/logs:/app/logs" \
+                          \
                           -e SPRING_PROFILES_ACTIVE=prod \
-                          -e GOOGLE_SHEETS_CREDENTIALS_PATH=/google-key.json \
-                          "$LATEST_IMAGE"
-                    '''
+                          "${LATEST_IMAGE}"
+                    """
                 }
-            }
-        }
-
-
-        stage('4. Cleanup') {
-            steps {
-                sh "docker image prune -f"
             }
         }
     }
