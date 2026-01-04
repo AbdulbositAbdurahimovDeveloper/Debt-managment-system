@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+
+
+  banner:
+    location: classpath:banner.txt
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/debts_managment
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+      format_sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+application:
+  jwt:
+    secret: ${JWT_SECRET_KEY}
+    access-token-expiration: ${ACCESS_TOKEN_EXPIRATION}
+    refresh-token-expiration: ${REFRESH_TOKEN_EXPIRATION}
+
+google:
+  sheets:
+    application-name: Debts
+    credentials-path: /google-key.json
+    spreadsheet-id: ${SHEET_SPREADSHEET_ID}
+    spreadsheet-work-id: ${SHEET_SPREADSHEET_WORK_ID}
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN}
+    username: ${TELEGRAM_BOT_USERNAME}
+    webhook-path: ${TELEGRAM_BOT_PATH}
+    secret-token: ${TELEGRAM_BOT_SECRET_TOKEN}
+  health:
+    token: ${TELEGRAM_HEALTH_TOKEN}
+    username: ${TELEGRAM_HEALTH_USERNAME}
+    webhook-path: ${TELEGRAM_HEALTH_PATH}
+    secret-token: ${TELEGRAM_HEALTH_SECRET_TOKEN}
+    develop-chat-id: ${TELEGRAM_HEALTH_DEVELOP_CHAT_ID}
+
+
