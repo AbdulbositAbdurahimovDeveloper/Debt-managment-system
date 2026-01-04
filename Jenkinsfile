@@ -30,38 +30,45 @@ pipeline {
 
         stage('3. Deploy Application') {
             steps {
-                echo "Log infratuzilmasini server darajasida to'g'irlash..."
-                sh '''
-                    # Workspace ichida logs papkasini yaratamiz
-                    mkdir -p "$WORKSPACE/logs"
-
-                    # Ichki papkalarni yaratamiz
-                    mkdir -p "$WORKSPACE/logs/errorlog" "$WORKSPACE/logs/log200" "$WORKSPACE/logs/log400" "$WORKSPACE/logs/log500"
-
-                    # MUHIM: Papka egasini konteyner ichidagi user UID-siga (101) o'tkazamiz
-                    # Agar sudo so'rasa, jenkins useriga sudo ruxsati kerak bo'ladi
-                    # Agar sudo bo'lmasa, chmod 777 yetarli bo'lishi kerak
-                    chmod -R 777 "$WORKSPACE/logs"
-                '''
-
-                sh "docker rm -f $CONTAINER_NAME || true"
+                echo "Infratuzilmani tayyorlash va maxfiy fayllarni sozlash..."
 
                 withCredentials([
-                    file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE'),
-                    file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_FILE')
+                    file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE_PATH'),
+                    file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_TEMP')
                 ]) {
-                    sh '''
+                    sh """
+                        # 1. Log papkasini va faylni tayyorlash
+                        mkdir -p ${WORKSPACE}/logs
+
+                        # 2. Google JSON faylini workspace-ga nusxalash
+                        cp ${GOOGLE_KEY_TEMP} ${WORKSPACE}/google-key.json
+
+                        # 3. Ruxsatlarni to'liq ochish (Permission Denied bo'lmasligi uchun)
+                        chmod 777 ${WORKSPACE}/google-key.json
+                        chmod -R 777 ${WORKSPACE}/logs
+
+                        # 4. Eski konteynerni o'chirish
+                        docker rm -f ${CONTAINER_NAME} || true
+
+                        # 5. Konteynerni ishga tushirish
                         docker run -d \
-                          --name "$CONTAINER_NAME" \
-                          -p $APP_PORT:8080 \
-                          --network $NETWORK_NAME \
+                          --name "${CONTAINER_NAME}" \
+                          -p ${APP_PORT}:8080 \
+                          --network ${NETWORK_NAME} \
                           --restart unless-stopped \
-                          --env-file "$ENV_FILE" \
-                          -v "$GOOGLE_KEY_FILE:/google-key.json" \
-                          -v "$WORKSPACE/logs:/app/logs" \
+                          --env-file "${ENV_FILE_PATH}" \
+                          \
+                          /* Mount qilish: hostdagi faylni konteynerning ildiziga (/google-key.json) bog'laymiz */
+                          -v "${WORKSPACE}/google-key.json:/google-key.json" \
+                          -v "${WORKSPACE}/logs:/app/logs" \
+                          \
                           -e SPRING_PROFILES_ACTIVE=prod \
-                          "$LATEST_IMAGE"
-                    '''
+                          "${LATEST_IMAGE}"
+
+                        # 6. Tekshirish (Debug uchun logda ko'rinadi)
+                        echo "Konteyner ichidagi fayllar tekshirilmoqda:"
+                        docker exec "${CONTAINER_NAME}" ls -la /google-key.json || echo "Fayl topilmadi!"
+                    """
                 }
             }
         }
