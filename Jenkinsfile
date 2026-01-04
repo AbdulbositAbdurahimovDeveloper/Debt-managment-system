@@ -30,21 +30,32 @@ pipeline {
 
         stage('3. Deploy Application') {
             steps {
-                echo "Log papkasi workspace ichida ochilmoqda..."
-                sh """
-                    mkdir -p ${WORKSPACE}/logs
-                    chmod -R 777 ${WORKSPACE}/logs
-                """
+                echo "Log infratuzilmasi tayyorlanmoqda..."
+                sh '''
+                    # 1. Eski loglarni tozalash (Permission muammosini oldini olish uchun)
+                    rm -rf "$WORKSPACE/logs"
 
-                // Eski konteynerni o'chirish
-                sh "docker rm -f ${CONTAINER_NAME} || true"
+                    # 2. Logback kutayotgan barcha ichki papkalarni oldindan yaratish
+                    mkdir -p "$WORKSPACE/logs/errorlog"
+                    mkdir -p "$WORKSPACE/logs/log200"
+                    mkdir -p "$WORKSPACE/logs/log400"
+                    mkdir -p "$WORKSPACE/logs/log500"
+                    mkdir -p "$WORKSPACE/logs/archived"
+                    mkdir -p "$WORKSPACE/logs/errorlog/archived"
+                    mkdir -p "$WORKSPACE/logs/log200/archived"
+                    mkdir -p "$WORKSPACE/logs/log400/archived"
+                    mkdir -p "$WORKSPACE/logs/log500/archived"
+
+                    # 3. Konteyner ichidagi user (UID 101) yozishi uchun to'liq ruxsat berish
+                    chmod -R 777 "$WORKSPACE/logs"
+                '''
+
+                sh "docker rm -f $CONTAINER_NAME || true"
 
                 withCredentials([
                     file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE'),
                     file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_FILE')
                 ]) {
-                    // DIQQAT: sh '''...''' (bittalik uchta qo'shtirnoq) ishlatamiz.
-                    // Bu Groovy interpolation xatolarini oldini oladi.
                     sh '''
                         docker run -d \
                           --name "$CONTAINER_NAME" \
@@ -58,7 +69,6 @@ pipeline {
                           "$LATEST_IMAGE"
                     '''
                 }
-                echo "Ilova muvaffaqiyatli ishga tushirildi!"
             }
         }
 
