@@ -2,7 +2,7 @@
 <configuration>
 
     <!-- Asosiy loglar papkasi -->
-    <property name="LOG_PATH" value="logs" />
+    <property name="LOG_PATH" value="/app/logs" />
 
     <!-- 1. KONSOL (Rangli loglar uchun) -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
