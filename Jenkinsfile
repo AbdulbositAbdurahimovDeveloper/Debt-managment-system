@@ -32,33 +32,33 @@ pipeline {
             steps {
                 echo "Log papkasi workspace ichida ochilmoqda..."
                 sh """
-                    # Loyiha papkasi ichida logs papkasini ochish
                     mkdir -p ${WORKSPACE}/logs
                     chmod -R 777 ${WORKSPACE}/logs
                 """
 
+                // Eski konteynerni o'chirish
                 sh "docker rm -f ${CONTAINER_NAME} || true"
 
                 withCredentials([
                     file(credentialsId: 'NOT_UZ_PROD_ENV_FILE', variable: 'ENV_FILE'),
                     file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_FILE')
                 ]) {
-                    sh """
+                    // DIQQAT: sh '''...''' (bittalik uchta qo'shtirnoq) ishlatamiz.
+                    // Bu Groovy interpolation xatolarini oldini oladi.
+                    sh '''
                         docker run -d \
-                          --name "${CONTAINER_NAME}" \
-                          -p ${APP_PORT}:8080 \
-                          --network ${NETWORK_NAME} \
+                          --name "$CONTAINER_NAME" \
+                          -p $APP_PORT:8080 \
+                          --network $NETWORK_NAME \
                           --restart unless-stopped \
-                          --env-file "${ENV_FILE}" \
-                          -v "${GOOGLE_KEY_FILE}:/google-key.json" \
-                          \
-                          /* MANA BU JOYIGA E'TIBOR BER: Hardcode yo'l o'rniga ${WORKSPACE} ishlatamiz */
-                          -v "${WORKSPACE}/logs:/app/logs" \
-                          \
+                          --env-file "$ENV_FILE" \
+                          -v "$GOOGLE_KEY_FILE:/google-key.json" \
+                          -v "$WORKSPACE/logs:/app/logs" \
                           -e SPRING_PROFILES_ACTIVE=prod \
-                          "${LATEST_IMAGE}"
-                    """
+                          "$LATEST_IMAGE"
+                    '''
                 }
+                echo "Ilova muvaffaqiyatli ishga tushirildi!"
             }
         }
 
