@@ -30,11 +30,17 @@ pipeline {
 
         stage('3. Deploy Application') {
             steps {
-                echo "Log papkasi tayyorlanmoqda..."
+                echo "Log infratuzilmasini server darajasida to'g'irlash..."
                 sh '''
+                    # Workspace ichida logs papkasini yaratamiz
                     mkdir -p "$WORKSPACE/logs"
-                    # Papkani tozalaymiz va ruxsat beramiz
-                    rm -rf "$WORKSPACE/logs/*"
+
+                    # Ichki papkalarni yaratamiz
+                    mkdir -p "$WORKSPACE/logs/errorlog" "$WORKSPACE/logs/log200" "$WORKSPACE/logs/log400" "$WORKSPACE/logs/log500"
+
+                    # MUHIM: Papka egasini konteyner ichidagi user UID-siga (101) o'tkazamiz
+                    # Agar sudo so'rasa, jenkins useriga sudo ruxsati kerak bo'ladi
+                    # Agar sudo bo'lmasa, chmod 777 yetarli bo'lishi kerak
                     chmod -R 777 "$WORKSPACE/logs"
                 '''
 
@@ -45,13 +51,8 @@ pipeline {
                     file(credentialsId: 'NOT_UZ_GOOGLE_KEY_JSON', variable: 'GOOGLE_KEY_FILE')
                 ]) {
                     sh '''
-                        # Hostdagi jenkins userining UID va GID sini olamiz
-                        USER_ID=$(id -u)
-                        GROUP_ID=$(id -g)
-
                         docker run -d \
                           --name "$CONTAINER_NAME" \
-                          --user "$USER_ID:$GROUP_ID" \
                           -p $APP_PORT:8080 \
                           --network $NETWORK_NAME \
                           --restart unless-stopped \
