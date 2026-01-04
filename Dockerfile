@@ -5,23 +5,25 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# 2-qadam: Runtime bosqichi
+# ... (Build bosqichi o'zgarishsiz)
+
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 
+# User yaratish
 RUN addgroup --system spring && adduser --system spring --ingroup spring
-RUN mkdir -p /app/logs && chown -R spring:spring /app
 
-# JAR faylni nusxalash
+# 1. Log papkasini yaratamiz
+# 2. Google Keyni nusxalaymiz
+# 3. BUTUN /app papkasiga spring userini ega qilamiz
+RUN mkdir -p /app/logs
+
 COPY --from=build /app/target/*.jar app.jar
-
-# MUHIM: Google Key faylini konteyner ildiziga nusxalash
-# Bu fayl Build bosqichida Jenkins tomonidan yetkazib beriladi
 COPY google-key.json /google-key.json
 
-# Faylga spring useri uchun ruxsat berish
-RUN chown spring:spring /google-key.json && chmod 444 /google-key.json
-RUN chown spring:spring app.jar
+# BU QATOR JUDA MUHIM: Hammasiga ruxsat berish
+RUN chown -R spring:spring /app /app/logs /google-key.json && \
+    chmod -R 775 /app/logs
 
 USER spring:spring
 EXPOSE 8080
