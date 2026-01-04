@@ -39,8 +39,11 @@ pipeline {
             steps {
                 echo "Konteynerni ishga tushirish..."
                 sh """
+                    # Loglar uchun papka tayyorlash
                     mkdir -p ${WORKSPACE}/logs
                     chmod -R 777 ${WORKSPACE}/logs
+
+                    # Eski konteynerni o'chirish
                     docker rm -f ${CONTAINER_NAME} || true
                 """
 
@@ -52,15 +55,12 @@ pipeline {
                           --network ${NETWORK_NAME} \
                           --restart unless-stopped \
                           --env-file "${ENV_FILE}" \
-                          \
-                          # ENDI GOOGLE KEY-NI MOUNT QILISH SHART EMAS!
-                          # Chunki u image ichida tayyor turibdi.
                           -v "${WORKSPACE}/logs:/app/logs" \
-                          \
                           -e SPRING_PROFILES_ACTIVE=prod \
                           "${LATEST_IMAGE}"
                     """
                 }
+                echo "Ilova muvaffaqiyatli ishga tushirildi!"
             }
         }
     }
